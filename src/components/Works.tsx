@@ -32,7 +32,7 @@ export function WorkPost(post: {title: string, organisation: string, date:string
 {
     return(
         <main>
-            <div className='pb-3'>
+            <div className='pb-4 w-[500]'>
                 <ul>{post.title}</ul>
                 <ul className='text-slate-400'>{post.organisation}. {(post.date)}</ul>  
             </div>

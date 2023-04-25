@@ -47,7 +47,7 @@ export function ConferencePost(post: {title: string, organisation: string, date:
 {
     return(
         <main>
-            <div className='pb-4'>
+            <div className='pb-4 w-[500]'>
                 <ul>{post.title}</ul>
                 <ul className='text-slate-400'>{post.organisation}. {(post.date)}</ul>
                 <ul className='text-slate-500'><a href={post.link}>More Details</a></ul>

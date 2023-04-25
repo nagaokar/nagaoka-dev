@@ -25,10 +25,11 @@ export default function Work() {
         <Nav />
       </div>
 
+      <div className='flex flex-row justify-start text-start align-top'>
       {/* START: Publications  */}
-      <div className='flex w-[500] flex-col mt-10 items-center justify-center p-6'>
+      <div className='flex flex-col mt-10 items-center justify-start p-6'>
         <h2 className='text-2xl pb-4'>publications</h2>
-        <div className='flex p-2 w-[500]'>
+        <div className='flex p-2'>
           <div className='basis'>
               <li className='list-none'>
                 <PublicationPost items={PublicationList}/>
@@ -39,10 +40,10 @@ export default function Work() {
       {/* END: Publications  */}
       
       {/* START: Conferences  */}
-      <div className='flex w-[500] flex-col mt-10 items-center justify-center p-6'>
+      <div className='flex flex-col mt-10 items-center justify-start p-6'>
         <h2 className='text-2xl pb-4'>conferences + talks</h2>
-        <div className='flex p-2 w-[500]'>
-          <div className='basis'>
+        <div className='flex p-2'>
+          <div className='basis m-w-11'>
               <li className='list-none'>
                 <ConferencePost items={ConferenceList}/>
               </li>
@@ -53,8 +54,8 @@ export default function Work() {
 
 
       {/* START: Works: Games  */}
-      <div className='flex w-[500] flex-col mt-10 items-center justify-center p-6'>
-        <h2 className='text-2xl  pb-4'>games</h2>
+      <div className='flex flex-col mt-10 items-center justify-start p-6'>
+        <h2 className='text-2xl pb-4'>games</h2>
         <div className='flex p-2 w-[500]'>
           <div className='basis'>
               <li className='list-none'>
@@ -64,18 +65,10 @@ export default function Work() {
         </div>
       </div>
       {/* END: Works: Games  */}
+      
+      </div>
 
       <Footer/>
     </main>
   );
 }
-
-
-// <div className='flex w-100 flex-col mt-10 items-center justify-center p-6'>
-// <h2 className='text-2xl m-3'>Publications</h2>
-// <div className='flex p-2'>
-//   <div className='flex-basis pr-5'>
-//     <li className='list-none'>
-//     <PublicationPost items={PublicationList}/>
-//     </li>
-// </div>

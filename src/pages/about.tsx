@@ -14,11 +14,12 @@ export default function Home() {
       <div className={'text-4xl m-10'}>
         <h1>about</h1>
       </div>
-      <div className='pb-4'>
+      <div className='pb-4 static'>
         <Nav/>
       </div>
       {/* END: Title */}
 
+      <div className='flex flex-row justify-start text-start align-top'>
       {/* START: Work */}
       <div className='flex flex-col w-[500px] mt-10 items-center justify-center p-6'>
         <h2 className='text-2xl m-3'>employment</h2>
@@ -61,6 +62,7 @@ export default function Home() {
     </div>
     {/* END: Education */}
 
+    </div>
     </main>
   )
 }

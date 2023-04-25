@@ -33,7 +33,7 @@ export function PublicationPost(post: {title: string, organisation: string, inde
 {
     return(
         <>
-            <div className='pb-3'>
+            <div className='pb-3 w-[500]'>
                 <ul>{post.title}</ul>
                 <ul className='text-slate-400'>{post.organisation}</ul>  
             </div>
