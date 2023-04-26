@@ -15,60 +15,16 @@ import Footer from '@/components/Footer';
 
 export default function Work() {
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-top p-24 ${jost.className}`}>
+    <main className={`flex min-h-screen max-h-screen flex-col items-center justify-top p-8 ${jost.className}`}>
+    <nav className='flex items-center'>
+      <Nav/>
+    </nav>
       
-      <div className={'text-4xl m-10'}>
-        <h1>work</h1>
-      </div>
-      
-      <div className='pb-4'>
-        <Nav />
-      </div>
 
-      <div className='flex flex-row justify-start text-start align-top'>
-      {/* START: Publications  */}
-      <div className='flex flex-col mt-10 items-center justify-start p-6'>
-        <h2 className='text-2xl pb-4'>publications</h2>
-        <div className='flex p-2'>
-          <div className='basis'>
-              <li className='list-none'>
-                <PublicationPost items={PublicationList}/>
-              </li>
-          </div>
-        </div>
-      </div>
-      {/* END: Publications  */}
-      
-      {/* START: Conferences  */}
-      <div className='flex flex-col mt-10 items-center justify-start p-6'>
-        <h2 className='text-2xl pb-4'>conferences + talks</h2>
-        <div className='flex p-2'>
-          <div className='basis m-w-11'>
-              <li className='list-none'>
-                <ConferencePost items={ConferenceList}/>
-              </li>
-          </div>
-        </div>
-      </div>
-      {/* END: Works: Conferences  */}
+      {/* <div class="flex flex-wrap pt-12">
+        <WorkPost items={WorkList}/>
+      </div> */}
 
-
-      {/* START: Works: Games  */}
-      <div className='flex flex-col mt-10 items-center justify-start p-6'>
-        <h2 className='text-2xl pb-4'>games</h2>
-        <div className='flex p-2 w-[500]'>
-          <div className='basis'>
-              <li className='list-none'>
-                <WorkPost items={WorkList}/>
-              </li>
-          </div>
-        </div>
-      </div>
-      {/* END: Works: Games  */}
-      
-      </div>
-
-      <Footer/>
     </main>
   );
 }
