@@ -5,8 +5,7 @@ import { Job, JobPost, JobPostProps, jobs } from '@/components/Jobs';
 
 import Layout from '@/components/layouts/layout';  
 import NestedLayout from '@/components/layouts/nested-layout';
-
-
+import work from './work'
 
 
 const About: NextPageWithLayout = () => 
@@ -52,6 +51,7 @@ About.getLayout = function getLayout(about: ReactElement) {
     <Layout>
       <NestedLayout>
         {about}
+        {work}
       </NestedLayout>
     </Layout>
   )
