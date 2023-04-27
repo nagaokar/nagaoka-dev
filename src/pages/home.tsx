@@ -21,15 +21,13 @@ const Home: NextPageWithLayout = () => {
 
 
 
-Home.getLayout = function getLayout(home: ReactElement, about: ReactElement,work: ReactElement, contact: ReactElement ) {
+Home.getLayout = function getLayout(home: ReactElement) {
   return(
     <Layout>
       <NestedLayout>
-        {home}
-        {about}
-        {work}
-        {contact}
-
+        <About/>
+        <Work/>
+        <Contact/>
       </NestedLayout>
     </Layout>
   )

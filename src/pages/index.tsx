@@ -11,7 +11,7 @@ export default function Home()
     h-screen overflow-x-hidden overflow-h-hidden">
       <div className={`flex flex-col h-screen justify-center align-middle 
       text-7xl ${noto.className} cursor-default`}>
-        <Link href='/about'>
+        <Link href='/home'>
           <p>長岡</p>
           <div className='mt-3'>
             <p>礼二</p>
