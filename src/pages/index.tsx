@@ -1,39 +1,23 @@
-import type { ReactElement } from 'react';
-import Image from 'next/image'
-import { Inter, Jost } from 'next/font/google'
+
+import { Noto_Sans_JP } from 'next/font/google'
+const noto = Noto_Sans_JP({weight:['100'], subsets: ['latin']})
+
 import Link from 'next/link'
 
-import Nav from '@/components/NavBar';
-import Footer from '@/components/Footer';
-import Layout from '@/components/layouts/layout';  
-import NestedLayout from '@/components/layouts/nested-layout';
-import { NextPageWithLayout } from './_app'
-
-
-const inter = Inter({ subsets: ['latin'] });
-const jost = Jost({ subsets: ['latin']})
-
-
-const Home: NextPageWithLayout = () => {
-  return (
-  <main className='sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl
-  flex flex-col justify-center text-center
-  '>
-    <div className='flex flex-col text center bg-white h-12 w-24'> 
-    <p>Hello World</p>
-    </div>
-    
-  </main>
-  )
-}
-
-Home.getLayout = function getLayout(home: ReactElement) {
+export default function Home()
+{
   return(
-    <Layout>
-      <NestedLayout>
-        {home}
-      </NestedLayout>
-    </Layout>
+    <main className="flex flex-col text-center pb-2 w-screen bg-blue-200
+    h-screen overflow-x-hidden overflow-h-hidden">
+      <div className={`flex flex-col h-screen justify-center align-middle 
+      text-7xl ${noto.className} cursor-default`}>
+        <Link href='/about'>
+          <p>長岡</p>
+          <div className='mt-3'>
+            <p>礼二</p>
+          </div>
+        </Link>
+      </div>
+    </main>
   )
 }
-export default Home;

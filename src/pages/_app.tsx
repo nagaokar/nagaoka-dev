@@ -3,13 +3,6 @@ import type { AppProps } from 'next/app'
 import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 
-import Layout from '../components/layouts/layout'
-import NestedLayout from '../components/layouts/nested-layout'
-import Footer from '@/components/Footer'
-import Nav from '@/components/NavBar'
-
-
-
 export type NextPageWithLayout<P = {}, IP =P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
 }

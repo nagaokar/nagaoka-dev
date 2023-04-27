@@ -1,10 +1,12 @@
-import { AppProps } from "next/app";
-import { ReactElement } from "react";
+import Footer from "../Footer";
 
-export default function NestedLayout({ children })  {
+
+export default function NestedLayout({ children }: any)  {
   return (
-    <main className="h-screen pt-10">
+  <main 
+  className='sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl
+  flex flex-col justify-center text-center overflow-x-hidden overflow-y-hidden'>
     {children}
-    </main>
+  </main>
   )
 }

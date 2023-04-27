@@ -1,8 +1,13 @@
+import { Noto_Sans_JP } from 'next/font/google'
+const noto = Noto_Sans_JP({weight:['100'], subsets: ['latin']})
+
 export default function Footer()
 {
     return(
-        <footer className="flex flex-col text-center justify-end mt-1">
-            <p className="pt-4 mb-1 pb-1 text-sm text-slate-600">Website created by Reiji Nagaoka</p>
-        </footer>
+        <main className= {`flex flex-col text-center justify-end ${noto.className}`}>
+            <p className="pt-4 text-sm text-white/20">
+                Website created by Reiji Nagaoka
+            </p>
+        </main>
     )
 }

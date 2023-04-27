@@ -1,28 +1,26 @@
 import type { ReactElement } from 'react';
-import { Inter, Jost } from 'next/font/google'
+import { Noto_Sans_JP } from 'next/font/google'
+const noto = Noto_Sans_JP({weight:['100'], subsets: ['latin']})
 
 import Layout from '@/components/layouts/layout';  
 import NestedLayout from '@/components/layouts/nested-layout';
 import { NextPageWithLayout } from './_app'
 
-const inter = Inter({ subsets: ['latin'] });
-const jost = Jost({ subsets: ['latin']})
-
-const Contact: NextPageWithLayout = () => {
+const Work: NextPageWithLayout = () => {
   return (
     <main className='flex flex-col justify-center align-middle h-screen'>
-      <p>Contact</p>
+      <p>Work</p>
     </main>
   )
 }
 
-Contact.getLayout = function getLayout(contact: ReactElement) {
+Work.getLayout = function getLayout(work: ReactElement) {
   return(
     <Layout>
       <NestedLayout>
-        {contact}
+        {work}
       </NestedLayout>
     </Layout>
   )
 }
-export default Contact;
+export default Work;
