@@ -11,8 +11,8 @@ export default function WorkList()
         {
             title: 'Ecoville',
             desc: 'An online multiplayer eco-planning game',
-            organisation: 'May 2023',
-            date: ''
+            organisation: 'AESOP Conference',
+            date: 'May 2023'
         },
     ]
     
@@ -41,27 +41,3 @@ export function WorkPost(post: {title: string, organisation: string, desc: strin
 
     )
 }
-
-
-//CARD
-{/* <div className="max-w-sm rounded overflow-hidden shadow-lg m-2 border-solid border border-white">
-<img className="w-full" src="https://generative-placeholders.glitch.me/image?width=300&height=300" alt="Sunset in the mountains" />
-<div className="px-6 py-4">
-    <div className="font-bold text-xl">{post.title}</div>
-    <p className="text-gray-400 text-base">
-    {post.organisation}
-    </p>
-</div>
-</div> */}
-
-
-// ORIGINAL
-// <main>
-// <div className='pb-4'>
-//     <div>
-//         <p className='p-6'>{post.title}</p>
-
-//     </div>
-//     <p className='text-slate-400'>{post.organisation}. {(post.date)}</p>  
-// </div>
-// </main>

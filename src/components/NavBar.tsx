@@ -10,7 +10,7 @@ export default function Nav() {
     flex items-center justify-center h-16 w-screen flex-wrap 
       fixed z-40
       sm:text-sm md:text-md lg:text-l l:text-l 2xl:text-xl
-    
+      bg-blue-200
     `}  
       >
       <ul className="flex items-center">
