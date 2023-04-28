@@ -41,19 +41,37 @@ export interface JobPostProps
 export function JobPost(props: JobPostProps) 
 {
     return (
-        <div className="flex flex-col max-w-sm min-h-[300] h-[300] rounded overflow-hidden m-2">
-            <div className="px-6 py-4 pb-2">
-                <div className="text-xl mb-2">
+        <div className="flex flex-col bg-white m-2 p-4 rounded-md w-64 h-auto">
+            <div className="flex">
+                <img src="https://placehold.co/250"/>
+            </div>
+            <div className="flex flex-col p-2 text-center h-24">
+                <p className="text-xl text-blue-200 mx-2 my-3">
                     {props.title}
-                </div>
-                <p className="text-gray-700 text-base mb-3">
+                </p>
+            </div>
+            <div className="flex justify-center align-bottom">
+                <p className="text-base text-blue-200">
                     {props.desc}
                 </p>
-                <div className="flex flex-col text-gray-400 text-sm justify-center align-bottom">
-                    <p>{props.organisation}</p>
-                    <p>{props.date}</p>
-                </div>
             </div>
         </div>
+
     );
 }
+
+
+{/* <div className="flex flex-col max-w-sm min-h-[300] h-[300] rounded overflow-hidden m-2">
+<div className="px-6 py-4 pb-2">
+    <div className="text-xl mb-2">
+        {props.title}
+    </div>
+    <p className="text-gray-700 text-base mb-3">
+        {props.desc}
+    </p>
+    <div className="flex flex-col text-gray-400 text-sm justify-center align-bottom">
+        <p>{props.organisation}</p>
+        <p>{props.date}</p>
+    </div>
+</div>
+</div> */}

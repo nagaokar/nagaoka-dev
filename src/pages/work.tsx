@@ -2,9 +2,10 @@ import type { ReactElement } from 'react';
 import { Noto_Sans_JP } from 'next/font/google'
 const noto = Noto_Sans_JP({weight:['100'], subsets: ['latin']})
 
-import {Publication, PublicationPost, publications } from '@/components/Works';
-import {Talk, TalkPost, talks } from '@/components/Works';
-import {Game, GamePost, games } from '@/components/Works';
+import { Job, JobPost, jobs } from '@/components/Jobs';
+import { Publication, PublicationPost, publications } from '@/components/Works';
+import { Talk, TalkPost, talks } from '@/components/Works';
+import { Game, GamePost, games } from '@/components/Works';
 
 import Layout from '@/components/layouts/layout';  
 import NestedLayout from '@/components/layouts/nested-layout';
@@ -17,9 +18,25 @@ const Work: NextPageWithLayout = () =>
   //const game: Game[] = games;
   
   return (
-    <main className='flex flex-col justify-center align-middle overflow-x-hidden'>
-      
-      <div className='flex flex-col justify-center h-screen'>
+    <main className='flex flex-wrap justify-center align-middle overflow-x-hidden py-16'>
+      <div className='flex flex-col justify-center'>
+          <p>Employment</p>
+
+          <div className='flex flex-wrap my-6 mx-6 justify-center'>
+          {jobs.map((job: Job, index:number) => (
+            <JobPost
+            key={index}
+            index={index}
+            title={job.title}
+            desc={job.desc}
+            organisation={job.organisation}
+            date={job.date}
+            />
+            ))}
+          </div>
+        </div>
+
+      <div className='flex flex-col justify-center'>
           <p>Publications</p>
           <div className='flex flex-wrap mt-6 ml-6 mr-6 text-align-left justify-center'>
           {publications.map((publication: Publication, index:number) => (

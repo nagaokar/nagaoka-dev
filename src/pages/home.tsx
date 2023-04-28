@@ -7,16 +7,16 @@ import NestedLayout from '@/components/layouts/nested-layout';
 import { NextPageWithLayout } from './_app'
 import About from './about';
 import Work from './work';
+import Footer from '@/components/Footer';
 
 const Home: NextPageWithLayout = () => {
   return (
-    <main className='flex flex-col justify-center align-middle overflow-x-hidden'>
+    <main className='flex flex-col justify-center align-middle overflow-x-hidden cursor-default'>
       
       <div className='flex flex-col justify-center h-screen'>
-        <p>Hi. I&apos;m Reiji Nagaoka.</p>
-        <div className='flex flex-col mt-6 ml-6 mr-6 text-align-left justify-center'>
-        <p className='text-base'>
-            An eco-game and urban studies scholar working in Manchester, UK.
+        <div className='flex flex-col py-6 px-6 text-align-left justify-center'>
+          <p className='bold'>
+            Hi, I&apos;m Reiji Nagaoka.
           </p>
         </div>
       </div>
