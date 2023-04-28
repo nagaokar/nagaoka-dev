@@ -111,9 +111,6 @@ export function PublicationPost(props: PublicationPostProps)
             <div className="text-xl mb-2">
                 {props.title}
             </div>
-            <p className="text-gray-700 text-base mb-3">
-                {props.desc}
-            </p>
             <div className="flex flex-col text-gray-400 text-sm justify-center align-bottom">
                 <p>{props.organisation}</p>
                 <p>{props.date}</p>
@@ -122,9 +119,6 @@ export function PublicationPost(props: PublicationPostProps)
     </div>
     )
 }
-
-
-
 
 export interface TalkPostProps 
 {
