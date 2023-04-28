@@ -14,17 +14,8 @@ const About: NextPageWithLayout = () =>
 
   return (
     <main className='flex flex-col justify-center align-middle overflow-x-hidden'>
-      
-      <div className='flex flex-col justify-center h-screen'>
-        <p>Hi. I&apos;m Reiji Nagaoka.</p>
-        <div className='flex flex-col mt-6 ml-6 mr-6 text-align-left justify-center'>
-        <p className='text-base'>
-            An eco-game and urban studies scholar working in Manchester, UK.
-          </p>
-        </div>
-      </div>
       <div>
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col justify-center h-screen'>
           <p>Employment</p>
 
           <div className='flex flex-wrap mt-6 ml-6 mr-6 text-align-left justify-center'>
@@ -40,7 +31,6 @@ const About: NextPageWithLayout = () =>
             ))}
           </div>
         </div>
-
       </div>
     </main>
   )
@@ -51,7 +41,6 @@ About.getLayout = function getLayout(about: ReactElement) {
     <Layout>
       <NestedLayout>
         {about}
-        {work}
       </NestedLayout>
     </Layout>
   )

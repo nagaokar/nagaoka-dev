@@ -29,21 +29,6 @@ export const jobs: Job[] = [
     }
 ];
 
-    // return(
-    //     <>
-    //         {jobs.map((job: Job, index:number) => (
-    //             <JobPost
-    //             key={index}
-    //             index={index}
-    //             title={job.title}
-    //             desc={job.desc}
-    //             organisation={job.organisation}
-    //             date={job.date}
-    //             />
-    //         ))}
-    //     </>
-    // )
-
 export interface JobPostProps 
 {
     title: string;
