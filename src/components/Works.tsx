@@ -8,7 +8,6 @@ export interface Game
     date: string; 
 }
 
-
 export interface Talk {
     title: string;
     organisation: string;
@@ -67,10 +66,6 @@ export function GamePost(props: GamePostProps)
     </div>
     )
 }
-
-
-
-
 
 export const publications: Publication[] = [
     {

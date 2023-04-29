@@ -16,7 +16,7 @@ export const jobs: Job[] = [
         date: '2022 - 2023'
     },
     {
-        title: 'Graduate Digital Engineer',
+        title: 'Digital Engineer',
         desc: 'Design and development of computational tools for national infrastructure.', 
         organisation: 'Costain',
         date: '2021 - Present'
@@ -51,7 +51,7 @@ export function JobPost(props: JobPostProps)
                 </p>
             </div>
             <div className="flex justify-center align-bottom">
-                <p className="text-base text-blue-200">
+                <p className="text-base text-slate-400">
                     {props.desc}
                 </p>
             </div>

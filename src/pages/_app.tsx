@@ -1,6 +1,9 @@
-import '@/styles/globals.css'
+import '../styles/globals.css'
+import localFont from 'next/font/local'
+
+
 import type { AppProps } from 'next/app'
-import type { ReactElement, ReactNode } from 'react'
+import { ReactElement, ReactNode, useEffect } from 'react'
 import type { NextPage } from 'next'
 
 export type NextPageWithLayout<P = {}, IP =P> = NextPage<P, IP> & {
@@ -8,7 +11,7 @@ export type NextPageWithLayout<P = {}, IP =P> = NextPage<P, IP> & {
 }
 
 type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
+  Component: NextPageWithLayout;
 }
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {

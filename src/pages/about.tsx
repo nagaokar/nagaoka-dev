@@ -13,15 +13,16 @@ const About: NextPageWithLayout = () =>
   const job: Job[] = jobs;
 
   return (
-    <main className='flex flex-col justify-center p-12 align-middle overflow-x-hidden h-content bg-white text-blue-300'>
-      <div className='align-middle text-start sm:justify-left md:justify-left lg:justify-center text-2xl md:p-12 lg:p-16 xl:p-24'>
-        <div className='sm:text-sm md:text-sm lg:text-base xl:text-lg md:mx-12 lg:mx-16 xl:scroll-mx-24'>
+    <main className='flex flex-col justify-center p-12 align-middle overflow-x-hidden h-content mt-[-10] bg-white text-blue-200 border-8 border-blue-200 10 bg-blur-2xl'>
+      <div className='align-middle text-start sm:justify-left md:justify-left lg:justify-center md:p-12 lg:p-16 xl:p-24'>
+        <div className='sm:text-sm md:text-md lg:text-base xl:text-lg sm: mx-2 md:mx-12 lg:mx-16 xl:scroll-mx-24 font-light'>
         <p>
-            I am a Ph.D Researcher working at Manchester Metropolitan University.
-            My Leverhulme-funded PhD project is part of the Leverhulme Unit for the Design of Future Cities (LuDEC) and it examines
-            climate-related collective player actions in an Online Multiplayer Environmental Videogame. 
+            I am primarily a Ph.D Researcher working at Manchester Metropolitan University.
+            My Leverhulme-funded PhD project is part of the Leverhulme Unit for the Design of Future Cities (LuDEC), which seeks to
+            overcome interdisciplinary boundaries and challenge contemporary academic paradigms.
           </p>
           <p className='mt-6'>
+            My research examines climate-related collective player actions in an Online Multiplayer Environmental Videogame.
             It adopts an interdisciplinary approach to analyse collective player actions within a (simulated) 
             urban context where interactive and collective player behaviours in a dynamic game environment have explicit climate implications 
             and ecological impacts at a systemic level. My thesis is currently titled: 

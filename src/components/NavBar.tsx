@@ -13,17 +13,14 @@ export default function Nav() {
       bg-blue-200
     `}  
       >
-      <ul className="flex items-center">
-        <li className="p-2">
-          <Link className=''href='/about'>about</Link>
-        </li>
-        <li className="p-2">
-          <Link className=''href='/work'>work</Link>
-        </li>
-        <li className="p-2">
-          <Link className=''href='/work'>contact</Link>
-        </li>
-      </ul>
+      <div className='font-thin'>
+        <p className='m-1'>
+          礼二
+        </p>
+        <p>
+          長岡
+        </p>
+      </div>
     </nav>
   )
 }
