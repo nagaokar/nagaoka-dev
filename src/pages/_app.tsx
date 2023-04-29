@@ -1,7 +1,6 @@
 import '../styles/globals.css'
 import localFont from 'next/font/local'
 
-
 import type { AppProps } from 'next/app'
 import { ReactElement, ReactNode, useEffect } from 'react'
 import type { NextPage } from 'next'

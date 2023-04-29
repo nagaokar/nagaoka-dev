@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import { Inter, Jost } from 'next/font/google'
 
-import Layout from '@/components/layouts/layout';  
+import Layout from '@/components/layout';  
 import NestedLayout from '@/components/layouts/nested-layout';
 import { NextPageWithLayout } from './_app'
 
