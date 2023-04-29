@@ -5,6 +5,7 @@ import Publications from './publications';
 import Talks from './talks';
 import Games from './games';
 import Footer from '@/components/Footer';
+import About from './about';
 
 
 export default function Home() 
@@ -12,31 +13,43 @@ export default function Home()
   return (
     <Layout>
         <main>
-          <section id='intro' className='flex m-auto align-middle h-screen cursor-default'>
+          <section id='intro' className='flex flex-row m-auto align-middle justify-center h-screen cursor-default'>
             <div className='flex flex-col justify-center text-start'>
-              <div className='flex flex-row mb-2'>
-                <p className='text-5xl font-black'>
-                  nagaoka.dev 
+              <div className='flex flex-row mb-2 justify-center text-center'>
+                <p className='text-5xl font-normal'>
+                  nagaoka.dev                  
                 </p>
               </div>
-                <div className='border-b-2 border-white mt-2 mb-1'></div>
-                  <div className='flex flex-row m-0 justify-start font-extralight text-start
-                  xs:text-xl sm:text-xl md:text-xl lg:text-2xl xl:text-2xl'>
-                  <p className='mr-2 font-normal'>Reiji Nagaoka</p>
-                  <p>長岡礼二</p>
-                  </div>
-                <div className='flex flex-wrap max-w-sm font-normal mt-5 px-0
-                sm:text-xs md:text-base lg:text-lg xl:text-lg'>
+              
+              <div className='border-b-2 border-white mt-3'>
+              </div>
+
+              <div className='flex flex-row m-0 justify-center font-light text-start
+                xs:text-xl sm:text-xl md:text-xl lg:text-2xl xl:text-2xl
+                '>
+                <p className='mr-2'>Reiji Nagaoka</p>
+                <p> | </p>
+                <p className='ml-2'> 長岡礼二</p>
+              </div>
+{/*               
+              <div className='flex flex-wrap font-light px-0
+                sm:text-xs md:text-base lg:text-lg xl:text-lg
+                xs:justify-center sm:justify-center
+                '>
                 <p className='mt-2 mr-3'>Academic</p>
                 <p className='mt-2 mr-3'>Computational Designer</p>
                 <p className='mt-2 mr-3'>Web Developer</p>
                 <p className='mt-2 mr-3'>Writer</p>
                 <p className='mt-2 mr-3'>Game-maker</p>
                 <p className='mt-2 mr-3'>Musician</p>
-              </div>
+              </div> */}
             </div>
           </section>
           
+          <section>
+            <About />
+          </section>
+
           <section id='work'>
           <Work/>
           </section>
