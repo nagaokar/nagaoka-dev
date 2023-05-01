@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export interface Job {
     title: string;
@@ -43,7 +44,7 @@ export function JobPost(props: JobPostProps)
     return (
         <div className="flex flex-col bg-white m-2 p-4 rounded-md w-64 h-auto">
             <div className="flex">
-                <img src="https://placehold.co/250"/>
+                <Image src="https://placehold.co/250" alt="placeholder"></Image>
             </div>
             <div className="flex flex-col p-2 text-center h-24">
                 <p className="text-xl text-blue-200 mx-2 my-3">

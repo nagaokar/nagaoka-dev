@@ -50,7 +50,7 @@ export default function Home()
             <About />
           </section>
 
-          <section id='work'>
+          {/* <section id='work'>
           <Work/>
           </section>
 
@@ -71,7 +71,7 @@ export default function Home()
 
         <section id='footer' className='my-2'>
           <Footer />
-        </section>
+        </section> */}
         </main>
     </Layout>
   )
