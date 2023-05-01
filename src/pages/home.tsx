@@ -1,37 +1,44 @@
-import Layout from '@/components/layout';  
+import Layout from '@/components/layout';
 
-import Work from './work';
+import Employment from './employment';
 import Publications from './publications';
 import Talks from './talks';
 import Games from './games';
 import Footer from '@/components/Footer';
 import About from './about';
+import Contact from './contact';
 
-
-export default function Home() 
+export default function Home()
 {
   return (
     <Layout>
         <main>
           <section id='intro' className='flex flex-row m-auto align-middle justify-center h-screen cursor-default'>
             <div className='flex flex-col justify-center text-start'>
-              <div className='flex flex-row mb-2 justify-center text-center'>
+              <div className='flex flex-col justify-center text-center bg-white p-6 rounded-2xl'>
                 <p className='text-5xl font-normal'>
-                  nagaoka.dev                  
+                  nagaoka.dev
                 </p>
+                <div className='flex flex-col mt-4 font-light justify-center'>
+                  <p className='mx-4'>Reiji Nagaoka</p>
+                  <p className='mx-4 mt-1'> 長岡礼二</p>
+                </div>
               </div>
-              
-              <div className='border-b-2 border-white mt-3'>
-              </div>
-
-              <div className='flex flex-row m-0 justify-center font-light text-start
+              {/* <div className='flex flex-wrap w-96 justify-center text-center px-3 bg-white text-gray-600 font-light'>
+              <p className='my-2 mr-3'>Academic</p>
+                <p className='my-2 mr-3'>Computational Designer</p>
+                <p className='my-2 mr-3'>Web Developer</p>
+                <p className='my-2 mr-3'>Writer</p>
+                <p className='my-2 mr-3'>Game-maker</p>
+                <p className='my-2 mr-3'>Musician</p>
+              </div> */}
+{/* 
+              <div className='flex flex-row justify-center font-light text-start bg-white py-6 rounded-b-2xl
                 xs:text-xl sm:text-xl md:text-xl lg:text-2xl xl:text-2xl
                 '>
-                <p className='mr-2'>Reiji Nagaoka</p>
-                <p> | </p>
-                <p className='ml-2'> 長岡礼二</p>
-              </div>
-{/*               
+
+              </div> */}
+{/*
               <div className='flex flex-wrap font-light px-0
                 sm:text-xs md:text-base lg:text-lg xl:text-lg
                 xs:justify-center sm:justify-center
@@ -45,19 +52,19 @@ export default function Home()
               </div> */}
             </div>
           </section>
-          
+
           <section>
             <About />
           </section>
 
           <section id='work'>
-          <Work/>
+          <Employment />
           </section>
 
           <section id='publications'>
           <Publications/>
-          </section>          
-          
+          </section>
+
           <section id='talks'>
           <Talks/>
           </section>
@@ -67,6 +74,7 @@ export default function Home()
           </section>
 
           <section id='contact'>
+            <Contact />
           </section>
 
         <section id='footer' className='my-2'>

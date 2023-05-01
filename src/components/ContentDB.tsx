@@ -1,5 +1,44 @@
 import React from 'react';
 
+export interface Job {
+    title: string;
+    desc: string;
+    organisation: string;
+    date: string;
+}
+
+export const jobs: Job[] = [
+
+    {
+        title: 'Research Assistant',
+        desc: 'Managing the online presence of MGC. Assisting with general duties. ',
+        organisation: 'Manchester Game Centre',
+        date: '2022 - 2023',
+    },
+    {
+        title: 'Digital Engineer',
+        desc: 'Design and development of computational tools for national infrastructure.', 
+        organisation: 'Costain',
+        date: '2021 - Present',
+    },
+    {
+        title: 'MArch Y6 Tutor',
+        desc: 'Informal tutor of the Complexity, Planning, and Urbanism (CPU) taught MA.', 
+        organisation: 'Manchester School of Architecture',
+        date: '2022 - Present',
+    }
+];
+
+export interface JobPostProps 
+{
+    title: string;
+    organisation: string;
+    desc: string;
+    date: string;
+    index: number;
+}
+  
+
 export interface Game 
 {
     title: string;
@@ -25,16 +64,16 @@ export interface Publication {
 
 export const games: Game[] = [
     {
-        title: 'Cityzen',
-        desc: 'An online multiplayer eco-planning game', 
-        organisation: 'Final Thesis, MA Architecture',
-        date: '2021'
-    },
-    {
         title: 'Ecoville',
         desc: 'An online multiplayer eco-planning game',
         organisation: 'AESOP Conference',
         date: 'May 2023'
+    },
+    {
+        title: 'Cityzen',
+        desc: 'An online multiplayer eco-planning game', 
+        organisation: 'Final Thesis, MA Architecture',
+        date: '2021'
     },
 ]
 export interface GamePostProps 
@@ -47,44 +86,24 @@ export interface GamePostProps
 }
 
 
-export function GamePost(props: GamePostProps)
-{
-    return(
-        <div className="flex flex-col max-w-sm min-h-[300] h-[300] rounded overflow-hidden m-2">
-        <div className="px-6 py-4 pb-2">
-            <div className="text-xl mb-2">
-                {props.title}
-            </div>
-            <p className="text-gray-700 text-base mb-3">
-                {props.desc}
-            </p>
-            <div className="flex flex-col text-gray-400 text-sm justify-center align-bottom">
-                <p>{props.organisation}</p>
-                <p>{props.date}</p>
-            </div>
-        </div>
-    </div>
-    )
-}
-
 export const publications: Publication[] = [
     {
         title: 'Planetary Play: Games and the Environment',
         organisation: 'Uppercut Crit',
         date: 'May 2023 (currently in edit)',
-        link: '-',
+        link: '',
     },
     {
         title: 'Collaborative Play in an Online Multiplayer Urban Planning Eco-Game',
-        organisation: 'Forthcoming',
-        date: 'May 2023 (currently in edit)',
-        link: '-',
+        organisation: 'Research Paper',
+        date: 'Forthcoming',
+        link: '',
     },
     {
         title: 'Virtual Eco-Cities: An Eco-game Conceptual Framework for the Analysis of Virtual Cities',
-        organisation: '-',
-        date: 'May 2023 (currently in edit)',
-        link: '-',
+        organisation: 'Research Paper',
+        date: 'Forthcoming',
+        link: '',
     },
 ]
 
@@ -98,22 +117,6 @@ export interface PublicationPostProps
 }
   
 
-export function PublicationPost(props: PublicationPostProps)
-{
-    return(
-        <div className="flex flex-col max-w-sm min-h-[300] h-[300] rounded overflow-hidden m-2">
-        <div className="px-6 py-4 pb-2">
-            <div className="text-xl mb-2">
-                {props.title}
-            </div>
-            <div className="flex flex-col text-gray-400 text-sm justify-center align-bottom">
-                <p>{props.organisation}</p>
-                <p>{props.date}</p>
-            </div>
-        </div>
-    </div>
-    )
-}
 
 export interface TalkPostProps 
 {
@@ -149,20 +152,3 @@ export const talks: Talk[] = [
         link: 'https://manchestergamecentre.org/events/2023/6/7/multiplatform-3-remake-reuse-replay'
     },
 ]
-
-export function TalkPost(props: TalkPostProps)
-{
-    return(
-        <div className="flex flex-col max-w-sm min-h-[300] h-[300] rounded overflow-hidden m-2">
-        <div className="px-6 py-4 pb-2">
-            <div className="text-xl mb-2">
-                {props.title}
-            </div>
-            <div className="flex flex-col text-gray-400 text-sm justify-center align-bottom">
-                <p>{props.organisation}</p>
-                <p>{props.date}</p>
-            </div>
-        </div>
-    </div>
-    )
-}
