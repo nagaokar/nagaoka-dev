@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import 'sharp';
 import type { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
