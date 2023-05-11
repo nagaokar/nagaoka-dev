@@ -1,6 +1,8 @@
 import Layout from '@/components/layout';
 import Image from 'next/image';
 
+import Nav from '@/components/NavBar';
+
 import Employment from './employment';
 import Publications from './publications';
 import Talks from './talks';
@@ -10,7 +12,6 @@ import About from './about';
 import Contact from './contact';
 
 import ghost from '../icons/undraw/undraw_ghost.svg'
-import Nav from '@/components/NavBar';
 
 export default function Home()
 {
@@ -33,11 +34,7 @@ export default function Home()
             <div className='flex flex-row justify-center align-middle'>
               <Image
                 className='mx-7 translate-y-6
-                xs:w-32
-                sm:w-48
-                md:w-48
-                lg:w-48
-                xl:w-48'
+                xs:w-32 sm:w-48 md:w-48 lg:w-48 xl:w-48'
                 src={ghost}
                 width={150}
                 height={150}
