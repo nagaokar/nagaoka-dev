@@ -10,19 +10,29 @@ import About from './about';
 import Contact from './contact';
 
 import ghost from '../icons/undraw/undraw_ghost.svg'
+import Nav from '@/components/NavBar';
 
 export default function Home()
 {
   return (
-    <Layout>
-        <main>
-          <section id='intro' className='flex h-screen align-middle justify-center'>
-          <div className='flex flex-row justify-center'>
+    <main>
+
+      {/* START: HOME SCREEN CONTENT */}
+      <Layout>
+
+      {/* START: NAVIGATION BAR */}
+      <section id='nav'>
+        <Nav/>
+      </section>
+      {/* END: NAVIGATION BAR */}
+
+          <section id='intro' className='flex h-screen align-middle justify-center overflow-y-hidden'>
+          <div className='flex flex-row justify-center -translate-y-15'>
             
-            {/* INTRO IMAGE*/}
+            {/* START: INTRO IMAGE*/}
             <div className='flex flex-row justify-center align-middle'>
               <Image
-                className='mx-7 translate-y-8
+                className='mx-7 translate-y-6
                 xs:w-32
                 sm:w-48
                 md:w-48
@@ -34,13 +44,14 @@ export default function Home()
                 alt='line drawing of a ghost'
               />
             </div>
+            {/* END: INTRO IMAGE*/}
             
-            {/* INTRO TEXT*/}
+            {/* START: INTRO TEXT*/}
             <div className='flex flex-row justify-center align-middle'>
               <div className='flex flex-col justify-center font-bold'>
                 <p className='
                 origin-top-left -rotate-12 
-                -translate-x-8 translate-y-2 
+                -translate-x-8
                 xs:text-7xl 
                 sm:text-8xl 
                 md:text-4xl  
@@ -68,19 +79,13 @@ export default function Home()
                 </p>
               </div>
             </div>
+            {/* END: INTRO TEXT*/}
 
 
           </div>
           </section>
-        </main>
-    </Layout>
+      </Layout>
+      {/* END: HOME SCREEN CONTENT */}
+    </main>
   )
 }
-
-{/* <section id='intro' className='flex flex-row m-auto align-middle justify-center h-screen cursor-default'>
-<div className='flex flex-col justify-center text-start'>
-<div className='flex flex-col justify-start p-6 rounded-2xl'>
-
-</div>
-</div>
-</section>   */}
