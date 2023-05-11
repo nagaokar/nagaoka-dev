@@ -9,11 +9,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily:{ body: 'Noto Sans JP', ...defaultTheme.fontFamily.body },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily:{ 
+        body: 'More Sugar', ...defaultTheme.fontFamily.body,
       },
     },
   },

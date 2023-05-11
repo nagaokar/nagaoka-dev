@@ -1,4 +1,5 @@
 import Layout from '@/components/layout';
+import Image from 'next/image';
 
 import Employment from './employment';
 import Publications from './publications';
@@ -15,7 +16,7 @@ export default function Home()
         <main>
           <section id='intro' className='flex flex-row m-auto align-middle justify-center h-screen cursor-default'>
             <div className='flex flex-col justify-center text-start'>
-              <div className='flex flex-col justify-center text-center bg-white p-6 rounded-2xl'>
+              <div className='flex flex-col justify-center text-center p-6 rounded-2xl'>
                 <p className='text-5xl font-normal'>
                   nagaoka.dev
                 </p>

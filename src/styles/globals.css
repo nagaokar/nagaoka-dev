@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -19,14 +17,8 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));  
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    font-family: Noto Sans JP, sans-serif;
+    background-color: white;
+    font-family: More Sugar, sans-serif;
 }
 
 .bgWrap {
@@ -38,73 +30,21 @@ body {
 }       
 
 @font-face {
-  font-family: Noto Sans JP;
-  font-weight: 100;
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  font-family: More Sugar;
+  font-display: swap;
+  font-weight: normal;
+  src: url('./fonts/moresugar/MoreSugar-Thin.ttf');
 }
 
 @font-face {
-  font-family: Noto Sans JP;
+  font-family: More Sugar;
+  font-display: swap;
+  font-weight: bold;
+  src: url('./fonts/moresugar/MoreSugar-Regular.ttf');
+}
+
+.regular {
+  font-family: More Sugar;
+  font-variant: normal;
   font-weight: 200;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
 }
-
-@font-face {
-  font-family: Noto Sans JP;
-  font-weight: 300;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: Noto Sans JP;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: Noto Sans JP;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: Noto Sans JP;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: Noto Sans JP;
-  font-weight: 700;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: Noto Sans JP;
-  font-weight: 800;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: Noto Sans JP;
-  font-weight: 900;
-  font-display: swap;
-  src: url('./fonts/NotoSansJP-VariableFont_wght.ttf');
-}
-
-.thin  { font-weight: 100; }
-.extralight { font-weight: 200; }
-.light { font-weight: 300; }
-.regular { font-weight: 400; }
-.medium { font-weight: 500; }
-.semi-bold { font-weight: 600; }
-.bold { font-weight: 700; }
-.extrabold { font-weight: 800; }
-.black { font-weight: 900; }

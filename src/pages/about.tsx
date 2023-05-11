@@ -14,9 +14,6 @@ export default function About()
               My research sits at an intersection between urban planning, game studies, and climate change communication. 
               It examines climate-related collective player actions online multiplayer videogames.
           </p>
-          <p className='mt-6'>
-
-          </p>
         </div>
       </div>
     </main>
