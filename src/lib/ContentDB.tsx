@@ -12,13 +12,13 @@ export interface Job {
 export const jobs: Job[] = [
     {
         title: 'Freelance Writer',
-        desc: "Article written for an online gaming blog titled: 'Planetary Play: Games and the Environment'.",
+        desc: "Article written for an online gaming blog titled: 'Planetary Play: Games and the Environment'. you can read it here: https://uppercutcrit.com/planetary-play-games-and-the-environment",
         organisation: 'Uppercut Crit',
         date: '2023',
     },
     {
         title: 'Research Assistant',
-        desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence.',
+        desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence. for more information visit: https://manchestergamecentre.org/',
         organisation: 'Manchester Game Centre',
         date: '2022',
     },
