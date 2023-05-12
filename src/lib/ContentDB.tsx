@@ -97,7 +97,7 @@ export const educations: Education[] = [
         date: 'wip'
     },
     {
-        title: 'm.a. Architecture',
+        title: 'MA Architecture',
         desc: 'Specialised in computational design for architectural & urban design within the CPU.AI (Complexity, Planning & Urbanism. Architectural Intelligence).',
         organisation: 'manchester school of architecture',
         date: '2021'
