@@ -1,8 +1,7 @@
-import { Job, jobs } from  '../lib/ContentDB';
-import { JobPost } from '@/components/EmploymentCard';
-
 import Image from 'next/image';
-import Underline from '../icons/undraw/undraw_underline.svg'
+import { Job, jobs } from  '../../lib/ContentDB';
+import { JobPost } from '@/components/cards/EmploymentCard';
+import Underline from '../../icons/undraw/undraw_underline.svg'
 
 export default function Employment() {
   return (

@@ -1,17 +1,20 @@
 import React from "react";
 import { useState } from "react";
-import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
-import { EducationPostProps } from "../lib/ContentDB";
-import ExpandIcon from '../icons/undraw/undraw_circled-plus.svg'
+import Image from "next/image";
 
 
-export function EducationCard(props: EducationPostProps) 
+import { Game, GamePostProps, games } from '../../lib/ContentDB';
+
+import ExpandIcon from '../../icons/undraw/undraw_circled-plus.svg'
+import Underline from '../../icons/undraw/undraw_underline.svg'
+
+export function GamePost(props: GamePostProps) 
 {
     const [ open, setOpen ] = useState(false);
 
     return (
-        <div className="flex flex-row my-1
+        <div className="flex flex-row my-1 
         xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg
         ">
             {/* START: CARD DATE */}
@@ -20,15 +23,14 @@ export function EducationCard(props: EducationPostProps)
             </div>
             {/* END: CARD DATE */}
             {/* START: CARD TITLE CONTAINER*/}
-            <div className="flex flex-row w-72 mb-1 px-2 pb-2 border-b-2 border-black
+            <div className="flex flex-row w-72 mb-1 px-2 border-b-2 border-black
             xs:pr-12 sm:pr-10 md:pr-8 lg:pr-6 xl:pr-12">
                 {/* START: CARD TITLE SUB-CONTAINER */}
                     <div className="flex flex-col">
                         {/* CARD TITLE */}
                         <p className="font-bold">{props.title}</p>
                         {/* CARD ORGANISATION */}
-                        <p>{props.organisation}</p>
-
+                        <p>{props.organisation}</p>            
                         {/* START: CARD DESCRIPTION  */}
                         <div className="py-2">
                             <Disclosure>
@@ -52,7 +54,6 @@ export function EducationCard(props: EducationPostProps)
                             </Disclosure>
                         </div>
                         {/* END: CARD DESCRIPTION  */}
-
                     </div>
                     {/* END: CARD TITLE SUB-CONTAINER */} 
             </div>

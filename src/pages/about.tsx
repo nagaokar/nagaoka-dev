@@ -1,18 +1,18 @@
 import React from "react";
 import Image from "next/image";
 
-import TreeIcon from '../icons/undraw/undraw_tree.svg'
-import CodeIcon from '../icons/undraw/undraw_code.svg'
-
-import Layout from "@/components/layout";
-import Employment from "./employment";
-import Academic from "../components/academic";
-import Education from "./education";
+import Layout from "@/components/layouts/layout";
+import Employment from "@/components/content/employment";
+import Academic from "@/components/content/academic";
+import Education from "@/components/content/education";
 import Underline from '../icons/undraw/undraw_underline.svg'
-import Games from "./games";
+import Games from "@/components/content/games";
 import Spacer from "@/components/Spacer";
-import Profile from "@/components/profile";
-import Work from "../components/work";
+import Profile from "@/components/content/profile";
+import Work from "../components/content/work";
+
+import TreeIcon from '../../icons/undraw/undraw_tree.svg'
+import CodeIcon from '../../icons/undraw/undraw_code.svg'
 
 export default function About() 
 {

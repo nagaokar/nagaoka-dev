@@ -1,17 +1,16 @@
 import React from "react";
 import Image from "next/image";
 
-import Layout from "@/components/layout";
-import Employment from "../pages/employment";
+import Layout from "../layouts/layout";
+import Employment from "./employment";
 import Academic from "./academic";
-import Education from "../pages/education";
-import Games from "../pages/games";
+import Education from "./education";
+import Games from "./games";
 
-import Underline from '../icons/undraw/undraw_underline.svg'
+import Underline from '../icons/undraw/undraw_underline.svg';
 import Spacer from "@/components/Spacer";
-
-import TreeIcon from '../icons/undraw/undraw_tree.svg'
-import CodeIcon from '../icons/undraw/undraw_code.svg'
+import TreeIcon from '../../icons/undraw/undraw_tree.svg';
+import CodeIcon from '../../icons/undraw/undraw_code.svg';
 
 export default function Profile() {
     return(

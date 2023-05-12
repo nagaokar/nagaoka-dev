@@ -1,4 +1,4 @@
-import LayoutNoFooter from '@/components/layout-no_footer';
+import LayoutNoFooter from '@/components/layouts/layout-no_footer';
 import Image from 'next/image';
 import ghost from '../icons/undraw/undraw_ghost.svg'
 

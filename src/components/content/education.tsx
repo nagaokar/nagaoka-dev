@@ -1,8 +1,8 @@
-import { Education, educations } from '../lib/ContentDB'
-import { EducationCard } from '@/components/EducationCard';
-
 import Image from 'next/image';
-import Underline from '../icons/undraw/undraw_underline.svg'
+
+import { Education, educations } from '../../lib/ContentDB'
+import { EducationCard } from '@/components/cards/EducationCard';
+import Underline from '../../icons/undraw/undraw_underline.svg'
 
 export default function Education() {
   return (

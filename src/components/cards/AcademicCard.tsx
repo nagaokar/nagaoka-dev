@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Image from "next/image";
-import { Disclosure } from "@headlessui/react";
-import { AcademicPostProps } from "../lib/ContentDB";
-import ExpandIcon from '../icons/undraw/undraw_circled-plus.svg'
+import { AcademicPostProps } from "../../lib/ContentDB";
 
 
 export function AcademicCard(props: AcademicPostProps) 

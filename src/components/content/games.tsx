@@ -1,7 +1,8 @@
-import { Game, games } from '../lib/ContentDB';
-import { GamePost } from '@/components/GameCard';
 import Image from 'next/image';
-import Underline from '../icons/undraw/undraw_underline.svg'
+
+import { Game, games } from '../../lib/ContentDB';
+import { GamePost } from '@/components/cards/GameCard';
+import Underline from '../../icons/undraw/undraw_underline.svg'
 
 export default function Games() {
   return (

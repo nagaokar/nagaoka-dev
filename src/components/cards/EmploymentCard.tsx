@@ -1,14 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
-import { Game, GamePostProps, games } from '../lib/ContentDB';
+import { Disclosure } from "@headlessui/react";
+
+import { JobPostProps } from "../../lib/ContentDB";
 
 
-import ExpandIcon from '../icons/undraw/undraw_circled-plus.svg'
-import Underline from '../icons/undraw/undraw_underline.svg'
+import ExpandIcon from '../../icons/undraw/undraw_circled-plus.svg'
+import Underline from '../../icons/undraw/undraw_underline.svg'
 
-export function GamePost(props: GamePostProps) 
+export function JobPost(props: JobPostProps) 
 {
     const [ open, setOpen ] = useState(false);
 

@@ -2,13 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import Layout from '@/components/layout';
+import Layout from '@/components/layouts/layout';
 
-import ghost from '../icons/undraw/undraw_ghost.svg'
+import ghost from '..icons/undraw/undraw_ghost.svg'
 import EmailIcon from '../icons/remix/mail-line.svg'
 import linkedInIcon from '../icons/remix/linkedin-box-line.svg'
 import TwitterIcon from '../icons/remix/twitter-line.svg'
-import LayoutNoFooter from '@/components/layout-no_footer';
+import LayoutNoFooter from '@/components/layouts/layout-no_footer';
 
 export default function Contact() {
   return(

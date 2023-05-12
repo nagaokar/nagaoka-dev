@@ -1,8 +1,10 @@
-import { Academic, academics } from '../lib/ContentDB'
-import { AcademicCard } from '@/components/AcademicCard';
-
+import React from 'react';
 import Image from 'next/image';
-import Underline from '../icons/undraw/undraw_underline.svg'
+
+import { Academic, academics } from '../../lib/ContentDB'
+import { AcademicCard } from '@/components/cards/AcademicCard';
+
+import Underline from '../../icons/undraw/undraw_underline.svg'
 
 export default function Academic() {
   return (

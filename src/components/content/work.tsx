@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import Layout from "@/components/layout";
+import Layout from "@/components/layouts/layout";
 import Employment from "./employment";
 import Academic from "./academic";
 import Education from "./education";
@@ -15,7 +15,7 @@ export default function Work() {
         <>
             {/* START: WORK SECTION */}
             <section>
-                {/* START: WORK TITLE */}
+                {/* START: WORK TITLE */}       
                 <div className='font-bold text-5xl mt-2 mb-24 text-center -rotate-2'>
                     cv  
                 </div>

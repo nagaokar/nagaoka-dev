@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "./NavBar";
-import Spacer from "./Spacer";
-import Footer from "./Footer";
+import Nav from "../NavBar";
+import Spacer from "../Spacer";
+import Footer from "../Footer";
 
 export default function Layout({ children }: any) {
 
