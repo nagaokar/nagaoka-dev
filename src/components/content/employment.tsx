@@ -19,14 +19,15 @@ export default function Employment() {
       {/* END: EMPLOYMENT TITLE */}
       {/* START: EMPLOYMENT CARD */}
       <div>
-        {jobs.map((job: Job, index:number) => (
+        {jobs.map((props: Job, index:number) => (
           <JobPost
           key={index}
           index={index}
-          title={job.title}
-          desc={job.desc}
-          organisation={job.organisation}
-          date={job.date}
+          title={props.title}
+          desc={props.desc}
+          organisation={props.organisation}
+          link={props.link}
+          date={props.date}
           />
         ))}
       </div>

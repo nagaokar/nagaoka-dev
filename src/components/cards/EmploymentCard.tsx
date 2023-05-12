@@ -5,9 +5,9 @@ import { Disclosure } from "@headlessui/react";
 
 import { JobPostProps } from "../../lib/ContentDB";
 
-
 import ExpandIcon from '../../icons/undraw/undraw_circled-plus.svg'
 import Underline from '../../icons/undraw/undraw_underline.svg'
+import CircledArrow from '../../icons/undraw/undraw_circled-arrow.svg'
 
 export function JobPost(props: JobPostProps) 
 {
@@ -40,13 +40,34 @@ export function JobPost(props: JobPostProps)
                                         <Disclosure.Button>
                                             <div className={open ? "rotate-90 transform" : ''}>
                                                 <Image 
-                                                src={ExpandIcon} width={20} height={40}
+                                                src={ExpandIcon} width={25} height={40}
                                                 alt='sketched line drawing of circle with an addition symbol inside.'/>
                                             </div>
                                         </Disclosure.Button>
                                         <Disclosure.Panel>
-                                            <div className="">
-                                                {props.desc}
+                                            <div className="flex flex-col">
+                                                <p>{props.desc}</p>
+
+                                                {/* START: MORE INFO LINK */}
+                                                <div className="flex flex-row mt-2 align-middle">
+                                                    <div className="flex flex-row">
+                                                    <a href={props.link} target="_blank" rel="noopener noreferrer"> 
+                                                        more info.
+                                                    </a>
+                                                    </div>
+                                                        <div className="flex flex-row mx-2">
+                                                        <a href={props.link} target="_blank" rel="noopener noreferrer"> 
+                                                            <Image 
+                                                            className="-rotate-90"
+                                                            src={CircledArrow}
+                                                            width={24}
+                                                            height={25}
+                                                            alt="a line drawing of an arrow inside a circle"
+                                                            />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                {/* END: MORE INFO LINK */}
                                             </div>
                                         </Disclosure.Panel>
                                     </>

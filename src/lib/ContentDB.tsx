@@ -6,32 +6,37 @@ export interface Job {
     title: string;
     desc: string;
     organisation: string;
+    link: string;
     date: string;
 }
 
 export const jobs: Job[] = [
     {
         title: 'Freelance Writer',
-        desc: "Article written for an online gaming blog titled: 'Planetary Play: Games and the Environment'. you can read it here: https://uppercutcrit.com/planetary-play-games-and-the-environment",
+        desc: "Article written for an online gaming blog titled: 'Planetary Play: Games and the Environment'.",
         organisation: 'Uppercut Crit',
+        link: "https://uppercutcrit.com/planetary-play-games-and-the-environment",
         date: '2023',
     },
     {
         title: 'Research Assistant',
-        desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence. for more information visit: https://manchestergamecentre.org/',
+        desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence.',
         organisation: 'Manchester Game Centre',
+        link: 'https://manchestergamecentre.org/',
         date: '2022',
     },
     {
         title: 'MArch Y6 Tutor',
         desc: 'i am an informal tutor of the 6th year master’s atelier: ‘complexity, planning, and urbanism’ (cpu) at the manchester school of architecture. the atelier specialises in computational methods for architectural and urban design.', 
         organisation: 'Manchester School of Architecture',
+        link: 'https://twitter.com/CPU_Ai_atelier',
         date: '2022',
     },
     {
         title: 'Digital Engineer',
         desc: 'i work in the automated design department of costain. my work involves the design and development of computational design tools for critical national infrastructure.', 
         organisation: 'Costain',
+        link: 'https://www.costain.com/',
         date: '2021',
     },
 ];
@@ -39,8 +44,9 @@ export const jobs: Job[] = [
 export interface JobPostProps 
 {
     title: string;
-    organisation: string;
     desc: string;
+    organisation: string;
+    link: string;
     date: string;
     index: number;
 }
