@@ -4,7 +4,7 @@ export default function Nav() {
   return (
 
     // START: MAIN NAV CONTAINER
-    <nav className='flex flex-col z-40 h-12 justify-center align-top bg-white 
+    <nav className='flex flex-col w-screen z-40 h-12 justify-center align-top bg-white 
       sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl
     '>
       {/* START: NAV-ITEM CONTAINER */}
