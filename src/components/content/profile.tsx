@@ -31,9 +31,8 @@ export default function Profile() {
         xs:text-xl sm:text-xl md:text-xl lg:text-lg xl:text-xl 2xl:text-xl 
         '>
           {/* START: TAGLINE */}
-          <div className="flex flex-wrap font-bold justify-center align-middle text-center px-2 max-w-[840px] 
-          mt-7 mb-5
-          xs:text-start sm:text-start md:text-center lg:text-center xl:text-center 2xl:text-center
+          <div className="flex flex-wrap font-bold justify-center align-middle text-center px-2 w-content 
+          mt-7 mb-5 xs:text-start sm:text-start md:text-center lg:text-center xl:text-center 2xl:text-center
           ">
             <p>
               i primarily work as a phd researcher, specialising in eco-games and urban studies,

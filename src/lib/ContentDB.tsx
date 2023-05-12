@@ -92,21 +92,21 @@ export interface Education
 export const educations: Education[] = [
     {
         title: 'Ph.D. Architecture',
-        desc: 'Due to be completed in 2025, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed',
+        desc: 'Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed',
         organisation: 'manchester metropolitan university',
-        date: '2022-2026'
+        date: 'wip'
     },
     {
         title: 'm.a. Architecture',
         desc: 'Specialised in computational design for architectural & urban design within the CPU.AI (Complexity, Planning & Urbanism. Architectural Intelligence).',
         organisation: 'manchester school of architecture',
-        date: '2019-2021'
+        date: '2021'
     },
     {
         title: 'BA(hons) Architecture',
         desc: 'Joined the Continuity In Architecture atelier during final year, which specialises in applying critical regionalism to sensitive placemaking',
         organisation: 'manchester school of architecture',
-        date: '2015-2018'
+        date: '2018'
     },
 ]
 
