@@ -1,16 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import Layout from "../layouts/layout";
-import Employment from "./employment";
-import Academic from "./academic";
-import Education from "./education";
-import Games from "./games";
-
-import Underline from '../icons/undraw/undraw_underline.svg';
-import Spacer from "@/components/Spacer";
 import TreeIcon from '../../icons/undraw/undraw_tree.svg';
 import CodeIcon from '../../icons/undraw/undraw_code.svg';
+import CurvedUnderline from '../../icons/undraw/undraw_curved-underline.svg'
 
 export default function Profile() {
     return(
@@ -19,8 +12,13 @@ export default function Profile() {
       <section id='about'>
 
         {/* START: PAGE TITLE */}
-        <div className='font-bold text-5xl text-center -rotate-2'>
-          about
+        <div className='flex flex-col font-bold text-5xl text-center -rotate-2'>
+          <p>about</p>
+          <div className="flex justify-center">
+            <Image className="-rotate-6"
+            src={CurvedUnderline} width={175} height={10} alt="a line drawn curved line."
+            />  
+          </div>
         </div>
         {/* END: PAGE TITLE */}
         

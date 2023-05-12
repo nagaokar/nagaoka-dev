@@ -1,14 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-import Layout from "@/components/layouts/layout";
 import Employment from "./employment";
 import Academic from "./academic";
 import Education from "./education";
 import Games from './games';
 
-import Underline from '../icons/undraw/undraw_underline.svg'
-import Spacer from "@/components/Spacer";
+import StarIcon from '../../icons/undraw/undraw_star.svg'
 
 export default function Work() {
     return(
@@ -16,9 +14,18 @@ export default function Work() {
             {/* START: WORK SECTION */}
             <section>
                 {/* START: WORK TITLE */}       
-                <div className='font-bold text-5xl mt-2 mb-24 text-center -rotate-2'>
-                    cv  
+                <div className="flex flex-row w-screen justify-center">
+                    <div className='font-bold text-5xl mt-2 mb-24 text-center -rotate-2'>
+                        <p className="translate-y-24">
+                            cv
+                        </p>
+                        <Image
+                        src={StarIcon} width={125} height={100} alt="a line drawn star"
+                        />
+                    </div>
                 </div>
+
+
                 {/* END: PAGE TITLE */}
 
                 {/* START: WORK CONTENT CONTAINER */}
