@@ -2,10 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 import Layout from "@/components/layout";
-import Publication from "../pages/publications";
 import Employment from "./employment";
-
-
+import Academic from "./academic";
+import Education from "./education";
 import Underline from '../icons/undraw/undraw_underline.svg'
 
 export default function Work() {
@@ -21,16 +20,25 @@ export default function Work() {
                     {/* END: PAGE TITLE */}
 
                     {/* START: WORK CONTAINER */}
-                    <div className="flex flex-row flex-wrap">
-                        {/*EMPLOYMENT COMPONENT*/}
-                        <Employment />
+                    <div className="flex flex-row flex-wrap justify-center">
                         {/* ACADEMIC COMPONENT*/}
-                        {/* EDUCATION COMPONENT */}
-                        
-                
+                        <div className="flex mx-8">
+                                <Academic />
+                        </div>
+                        {/* START: WORK SUB-CONTAINER */}
+                        <div className="flex flex-col">
+                            {/*EMPLOYMENT COMPONENT*/}
+                            <div className="flex mx-8">
+                                <Employment />
+                            </div>
+                            {/* EDUCATION COMPONENT */}   
+                            <div className="flex mx-8">
+                                <Education />
+                            </div>          
+                        </div>
+                        {/* END: WORK SUB-CONTAINER */}
                     </div>
                     {/* END: WORK CONTAINER */}
-                    
                 </section>
                 {/* END: WORK PAGE CONTAINER */}
             </Layout>
