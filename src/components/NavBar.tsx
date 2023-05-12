@@ -12,11 +12,11 @@ export default function Nav() {
       sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl
       '>
         {/* WEBSITE BRAND */}
-        <Link href='/#'>
+        {/* <Link href='/#'>
           <p className='flex-row font-bold align-middle mr-5'>
             nagaoka.dev
           </p>
-        </Link>
+        </Link> */}
         {/* NAV-ITEM: HOME */}
         <div className='xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5'>
           <Link href='/home'>
@@ -30,11 +30,11 @@ export default function Nav() {
           </Link>
         </div>
         {/* NAV-ITEM: PROJECTS*/}
-        <div className='xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5'>
+        {/* <div className='xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5'>
           <Link href='/projects'>
             <p>projects</p>
           </Link>
-        </div>
+        </div> */}
         {/* NAV-ITEM: CONTACT */}
         <div className='xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5'>
           <Link href='/contact'>

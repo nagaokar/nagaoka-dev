@@ -1,6 +1,6 @@
 import React from 'react';
 
-/// JOBS (EMPLOYMENT)
+/// START: JOBS (EMPLOYMENT)
 ///////////////////////////// 
 export interface Job {
     title: string;
@@ -44,11 +44,10 @@ export interface JobPostProps
     date: string;
     index: number;
 }
+// END: JOBS
   
 
-// GAMES
-/////////////////////////////
-
+// START: GAMES
 export interface Game 
 {
     title: string;
@@ -79,9 +78,9 @@ export interface GamePostProps
     date: string;
     index: number;
 }
+// END: GAMES
 
-// UPCOMING
-/////////////////////////////
+// START: EDUCATION
 export interface Education
 {
     title: string;
@@ -119,7 +118,10 @@ export interface EducationPostProps {
     index: number;
 }
 
-/// ACADEMIC
+// END: EDUCATION
+
+
+/// START: ACADEMIC
 /////////////////////////////
 
 export interface Academic 
@@ -168,7 +170,6 @@ export const academics: Academic[] = [
         link: 'https://infrasystems.complexurban.com/people'
     },
 ]
-
 export interface AcademicPostProps 
 {
     title: string;
@@ -177,5 +178,55 @@ export interface AcademicPostProps
     link: string;
     index: number;
 }
+// END: ACADEMIC
 
 
+// START: PROJECTS
+
+export interface Project 
+{
+    title: string;
+    type: string;
+    tech: string;
+    image: string;
+    desc: string;
+    date: string;
+}
+  
+export const projects: Project[] = [
+    {
+        title: 'projectName',
+        type: 'web dev',
+        tech: 'react, nextjs, tailwindcss',
+        image: '../images/TokyoSkyline.jpg',
+        desc: 'lorem ipsum',
+        date: 'wip',
+    },
+    {
+        title: 'projectName',
+        type: 'web dev',
+        tech: 'react, nextjs, tailwindcss',
+        image: '../images/TokyoSkyline.jpg',
+        desc: 'lorem ipsum',
+        date: 'wip',
+    },
+    {
+        title: 'projectName',
+        type: 'web dev',
+        tech: 'react, nextjs, tailwindcss',
+        image: '../images/TokyoSkyline.jpg',
+        desc: 'lorem ipsum',
+        date: 'wip',
+    },
+]
+export interface ProjectPostProps 
+{
+    title: string;
+    type: string;
+    tech: string;
+    image: string;
+    desc: string;
+    date: string;
+    index: number;
+}
+// END: PROJECTS

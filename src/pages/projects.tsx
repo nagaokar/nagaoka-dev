@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "@/components/layouts/layout";
-
+import Project from "../components/content/project";
 
 export default function Projects() {
     return(
@@ -17,7 +17,7 @@ export default function Projects() {
 
                     {/* START: PAGE CONTENT */}
                     <div>
-                        projects
+                        <Project />
                     </div>
                     {/* END: PAGE CONTENT */}
 
