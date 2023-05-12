@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Layout from '@/components/layout';
-import Nav from '@/components/NavBar';
 
 import ghost from '../icons/undraw/undraw_ghost.svg'
 import EmailIcon from '../icons/remix/mail-line.svg'
@@ -16,12 +15,10 @@ export default function Contact() {
   <main>
     <Layout>
       {/* START: MAIN CONTENT CONTAINER */}
-      <section className='flex flex-row h-screen justify-center overflow-y-hidden
-            xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 '>
+      <section className='flex flex-row h-screen justify-center overflow-y-hidden xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 '>
         {/* START: PAGE TITLE CONTAINER*/}
         <div className='flex flex-col justify-center text-end'>
-          <p className='font-bold origin-top-left -rotate-6
-          xs:text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl'>
+          <p className='font-bold origin-top-left -rotate-6 xs:text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl'>
             contact
           </p>  
           {/* START: GHOST IMAGE*/}
@@ -37,25 +34,26 @@ export default function Contact() {
         <div className='flex flex-row flex-wrap justify-center text-start'>
           {/* START: CONTACT TEXT*/}
           <div className='flex flex-col justify-center ml-3'>
-            <p className='mx-1 xs:text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl
-            '>
+            <p className='mx-1 xs:text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl mt-5'>
               if you&apos;d like to get in touch, you can do so via:   
             </p>
             {/* START: SOCIAL MEDIA LINKS CONTAINER */}
-            <div className='flex flex-row mt-4'>
+            <div className='flex flex-row mt-5 justify-center'>
               {/* START: EMAIL */}
               <div className='flex flex-col text-center align-middle justify-center mx-3'>
                 {/* SOCIAL MEDIA IMAGE: LINKEDIN */}
                 <div className='flex flex-row justify-center'>
-                  <Image src={EmailIcon} width={40} height={150}
-                  alt='A black and white outline of the Linked in logo.       '
-                  />
+                <a href='mailto:nagaoka.ra@gmail.com'>
+                    <Image src={EmailIcon} width={40} height={150}
+                    alt='A black and white outline of the Linked in logo.       '
+                    />
+                  </a>
                 </div>
                 {/* SOCIAL MEDIA TEXT: EMAIL */}
                 <div className='flex flex-col font-bold text-center align-middle justify-center'>
-                  <Link href='https://www.linkedin.com/in/reiji-n-5767b312a/'>
+                  <a href='mailto:nagaoka.ra@gmail.com'>
                     <p>email</p>
-                  </Link>
+                  </a>
                 </div>
               </div>
               {/* END: EMAIL */}
@@ -63,15 +61,17 @@ export default function Contact() {
               <div className='flex flex-col text-center align-middle justify-center mx-3'>
                 {/* SOCIAL MEDIA IMAGE: LINKEDIN */}
                 <div className='flex flex-row justify-center'>
-                  <Image src={linkedInIcon} width={40} height={150}
-                  alt='A black and white outline of the Linked in logo.       '
-                  />
+                <a href='https://www.linkedin.com/in/reiji-n-5767b312a/' target="_blank" rel="noopener noreferrer">
+                    <Image src={linkedInIcon} width={40} height={150}
+                    alt='A black and white outline of the Linked in logo.       '
+                    />
+                  </a>
                 </div>
                 {/* SOCIAL MEDIA TEXT: LINKEDIN */}
                 <div className='flex flex-col font-bold text-center align-middle justify-center'>
-                  <Link href='https://www.linkedin.com/in/reiji-n-5767b312a/'>
-                    <p>LinkedIn</p>
-                  </Link>
+                  <a href='https://www.linkedin.com/in/reiji-n-5767b312a/' target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                  </a>
                 </div>
               </div>
               {/* END: LINKEDIN */}
@@ -79,15 +79,16 @@ export default function Contact() {
               <div className='flex flex-col text-center align-middle justify-center mx-3'>
                 {/* SOCIAL MEDIA IMAGE: TWITTER */}
                 <div className='flex flex-row justify-center'>
-                  <Image src={TwitterIcon} width={40} height={150}
-                  alt='A black and white outline of the Linked in logo.       '
-                  />
+                <a href="https://twitter.com/nagaokadev" target="_blank" rel="noopener noreferrer">
+                    <Image src={TwitterIcon} width={40} height={150} alt='A black and white outline of the Linked in logo.       '
+                    />
+                </a>
                 </div>
                 {/* SOCIAL MEDIA TEXT: TWITTER */}
                 <div className='flex flex-col font-bold text-center align-middle justify-center'>
-                  <Link href='https://twitter.com/nagaokadev'>
-                    <p>twitter</p>
-                  </Link>
+                    <a href="https://twitter.com/nagaokadev" target="_blank" rel="noopener noreferrer">
+                      twitter
+                    </a>
                 </div>
               </div>
               {/* END: TWITTER */}
