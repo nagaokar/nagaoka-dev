@@ -8,17 +8,19 @@ import ghost from '../icons/undraw/undraw_ghost.svg'
 import EmailIcon from '../icons/remix/mail-line.svg'
 import linkedInIcon from '../icons/remix/linkedin-box-line.svg'
 import TwitterIcon from '../icons/remix/twitter-line.svg'
+import LayoutNoFooter from '@/components/layout-no_footer';
 
 export default function Contact() {
   return(
   //START: HOME PAGE CONTAINER
   <main>
-    <Layout>
+    <LayoutNoFooter>
       {/* START: MAIN CONTENT CONTAINER */}
-      <section className='flex flex-row h-screen justify-center overflow-y-hidden xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 '>
+      <section className='flex flex-row h-screen justify-center overflow-y-hidden px-4'>
         {/* START: PAGE TITLE CONTAINER*/}
         <div className='flex flex-col justify-center text-end'>
-          <p className='font-bold origin-top-left -rotate-6 xs:text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl'>
+          <p className='font-bold origin-top-left -rotate-6 
+          xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl xl:text-4xl'>
             contact
           </p>  
           {/* START: GHOST IMAGE*/}
@@ -100,7 +102,7 @@ export default function Contact() {
         {/* END: CONTACT TEXT CONTAINER*/}
       </section>
       {/* END: MAIN CONTENT CONTAINER */}
-    </Layout>
+    </LayoutNoFooter>
     {/* END: HOME SCREEN CONTENT */}
   </main>
   //END: HOME PAGE CONTAINER

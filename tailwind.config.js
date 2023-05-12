@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{ 
-        body: 'More Sugar', ...defaultTheme.fontFamily.body,
+        MoreSugar: ['More Sugar', 'sans-serif'],
+        TegakiZatsu: ['Tegaki Zatsu', 'sans-serif']
       },
     },
   },

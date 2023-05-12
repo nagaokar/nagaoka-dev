@@ -21,6 +21,10 @@ body {
     font-family: More Sugar, sans-serif;
 }
 
+h1 {
+  font-family: Tegaki Zatsu, sans-serif;
+}
+
 .bgWrap {
   position: fixed;
   height: 100vh;
@@ -43,6 +47,18 @@ body {
   src: url('./fonts/moresugar/MoreSugar-Regular.ttf');
 }
 
+@font-face {
+  font-family: Tegaki Zatsu;
+  font-display: swap;
+  font-weight: normal;
+  src: url('./fonts/tegaki_zatsu_normal.ttf');
+}
+
+.jp {
+  font-family: Tegaki;
+  font-variant: normal;
+  font-weight: 200;
+}
 .regular {
   font-family: More Sugar;
   font-variant: normal;

@@ -6,10 +6,12 @@ import Footer from "./Footer";
 export default function Layout({ children }: any) {
 
   return (
-    <main className='flex flex-col h-screen max-w-screen overflow-x-hidden 
+    <main className='flex flex-col max-w-screen overflow-x-hidden 
     bg-white font-regular lowercase text-black'>
       <Nav/>
-      {children}
+      <div className="mt-12">
+        {children}
+      </div>
       <Footer/>
     </main>
   )

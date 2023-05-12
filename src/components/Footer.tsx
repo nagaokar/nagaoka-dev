@@ -10,6 +10,7 @@ export default function Footer()
                 <Image src={ghost} width={20} height={20} alt="black and white line drawing of a ghost"/>
                 <div className="flex flex-row text-sm ml-2">
                     <p>nagaoka.dev <span className="text-xs">2023</span>.
+                    
                     </p>
                 </div>
             </div>

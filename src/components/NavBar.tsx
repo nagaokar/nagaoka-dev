@@ -4,7 +4,7 @@ export default function Nav() {
   return (
 
     // START: MAIN NAV CONTAINER
-    <nav className='flex flex-col z-40 h-12 justify-center align-middle bg-white mt-2
+    <nav className='flex flex-col z-40 h-12 justify-center align-top bg-white 
       sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl
     '>
       {/* START: NAV-ITEM CONTAINER */}
@@ -29,10 +29,10 @@ export default function Nav() {
             <p>about</p>
           </Link>
         </div>
-        {/* NAV-ITEM: WORK*/}
+        {/* NAV-ITEM: PROJECTS*/}
         <div className='xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5'>
-          <Link href='/work'>
-            <p>work</p>
+          <Link href='/projects'>
+            <p>projects</p>
           </Link>
         </div>
         {/* NAV-ITEM: CONTACT */}

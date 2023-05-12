@@ -23,7 +23,6 @@ export default function Home()
             {/* END: INTRO IMAGE*/}
             {/* START: INTRO TEXT CONTAINER*/}
             <div className='flex flex-row justify-center align-middle'>
-
               {/* START: INTRO TEXT*/}
               <div className='flex flex-col justify-center font-bold'>
                 <p className='origin-top-left -rotate-12 -translate-x-8
