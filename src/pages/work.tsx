@@ -6,6 +6,7 @@ import Employment from "./employment";
 import Academic from "./academic";
 import Education from "./education";
 import Underline from '../icons/undraw/undraw_underline.svg'
+import Games from "./games";
 
 export default function Work() {
     return(
@@ -18,14 +19,23 @@ export default function Work() {
                         work
                     </div>
                     {/* END: PAGE TITLE */}
-
-                    {/* START: WORK CONTAINER */}
+                    {/* START: MAIN WORK CONTAINER */}
                     <div className="flex flex-row flex-wrap justify-center">
-                        {/* ACADEMIC COMPONENT*/}
-                        <div className="flex mx-8">
+                        
+                        {/* START: WORK SUB-CONTAINER 1 */}
+                        <div className="flex flex-col">
+                            {/* ACADEMIC COMPONENT*/}
+                            <div className="flex mx-8">
                                 <Academic />
+                            </div>
+                            {/* GAMES COMPONENT*/}
+                            <div className="flex mx-8">
+                                <Games />
+                            </div>
                         </div>
-                        {/* START: WORK SUB-CONTAINER */}
+                        {/* END: WORK SUB-CONTAINER 1*/}
+
+                        {/* START: WORK SUB-CONTAINER 2*/}
                         <div className="flex flex-col">
                             {/*EMPLOYMENT COMPONENT*/}
                             <div className="flex mx-8">
@@ -36,9 +46,9 @@ export default function Work() {
                                 <Education />
                             </div>          
                         </div>
-                        {/* END: WORK SUB-CONTAINER */}
+                        {/* END: WORK SUB-CONTAINER 2*/}
                     </div>
-                    {/* END: WORK CONTAINER */}
+                    {/* END: MAIN WORK CONTAINER */}
                 </section>
                 {/* END: WORK PAGE CONTAINER */}
             </Layout>
