@@ -8,25 +8,30 @@ export interface Job {
 }
 
 export const jobs: Job[] = [
-
     {
-        title: 'Research Assistant',
-        desc: 'Managing the online presence of MGC. Assisting with general duties. ',
-        organisation: 'Manchester Game Centre',
-        date: '2022 - 2023',
+        title: 'Freelance Writer',
+        desc: 'Article written for an online gaming blog. Planetary Play: Games and the Environment. ',
+        organisation: 'Uppercut Crit',
+        date: '2023',
     },
     {
-        title: 'Digital Engineer',
-        desc: 'Design and development of computational tools for national infrastructure.', 
-        organisation: 'Costain',
-        date: '2021 - Present',
+        title: 'Research Assistant',
+        desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence.',
+        organisation: 'Manchester Game Centre',
+        date: '2022',
     },
     {
         title: 'MArch Y6 Tutor',
-        desc: 'Informal tutor of the Complexity, Planning, and Urbanism (CPU) taught MA.', 
+        desc: 'i am an informal tutor of the 6th year master’s atelier: ‘complexity, planning, and urbanism’ (cpu) at the manchester school of architecture. the atelier specialises in computational methods for architectural and urban design.', 
         organisation: 'Manchester School of Architecture',
-        date: '2022 - Present',
-    }
+        date: '2022',
+    },
+    {
+        title: 'Digital Engineer',
+        desc: 'i work in the automated design department of costain. my work involves the design and development of computational design tools for critical national infrastructure.', 
+        organisation: 'Costain',
+        date: '2021',
+    },
 ];
 
 export interface JobPostProps 

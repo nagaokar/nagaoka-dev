@@ -15,12 +15,12 @@ export default function About()
     <Layout>
       {/* START: ABOUT CONTAINER */}
       <section className="xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
-        {/* PAGE TITLE */}
-        <div className='font-bold text-5xl text-center translate-y-5'>
+        {/* START: PAGE TITLE */}
+        <div className='font-bold text-5xl text-center translate-y-5 -rotate-2'>
             about
         </div>
-
-      {/* START: TAGLINE CONTAINER */}
+        {/* END: PAGE TITLE */}
+        {/* START: TAGLINE CONTAINER */}
         <div className='flex flex-col origin-center p-8
         xs:full sm:full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3
         xs:w-full sm:full md:translate-x-1/4 lg:translate-x-1/4 xl:translate-x-1/4 2xl:translate-x-1/4
@@ -34,13 +34,11 @@ export default function About()
             </p>
           </div>
           {/* END: TAGLINE */}
-
           {/* START: PROFILES CONTAINER */}
           <div className='flex font-normal justify-center align-items-center text-start
             xs:flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap 2xl:flex-nowrap
             xs:text-md sm:text-md sm:w-full md:text-lg lg:text-lg xl:text-lg 2xl:text-lg 
             '>
-
             {/* START: ACADEMIC PROFILE CONTAINER */}  
             <div className="px-2 my-3 max-w-[400px]">
               <div className="flex flex-row justify-center align-top"> 
