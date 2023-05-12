@@ -12,7 +12,7 @@ export interface Job {
 export const jobs: Job[] = [
     {
         title: 'Freelance Writer',
-        desc: 'Article written for an online gaming blog. Planetary Play: Games and the Environment. ',
+        desc: "Article written for an online gaming blog titled: 'Planetary Play: Games and the Environment'.",
         organisation: 'Uppercut Crit',
         date: '2023',
     },

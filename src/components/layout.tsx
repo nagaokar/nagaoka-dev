@@ -10,7 +10,6 @@ export default function Layout({ children }: any) {
     bg-white font-regular lowercase text-black'>
       <Nav/>
       {children}
-      <Spacer/>
       <Footer/>
     </main>
   )

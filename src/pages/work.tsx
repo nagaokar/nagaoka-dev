@@ -14,7 +14,7 @@ export default function Work() {
                 {/* START: WORK PAGE CONTAINER */}
                 <section className="xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
                     {/* START: PAGE TITLE */}
-                    <div className='font-bold text-5xl mt-12 mb-24 text-center translate-y-5 -rotate-2'>
+                    <div className='font-bold text-5xl mt-2 mb-24 text-center translate-y-5 -rotate-2'>
                         work
                     </div>
                     {/* END: PAGE TITLE */}
