@@ -32,27 +32,26 @@ export default function Profile() {
         '>
 
           {/* START: CURRENT JOB ACCEPTANCE */}
-          <div className="flex flex-col m-3">
+          <div className="flex flex-col mb-3">
             {/* <div className="flex justify-center mb-2">
               <Image src={ExclaimMark} width={25} height={25} alt="line drawing of an exclaimation mark"/>
             </div> */}
-            {/* START: CURRENT JOB ACCEPTANCE TITLE */}
-            <div className="flex flex-col justify-center mt-3 text-center">
-                <p className="font-bold text-xl underline decoration-2">summer 2023</p>
+            {/* START: CURRENT JOB ACCEPTANCE CONTENT */}
+            <div className="flex flex-col justify-center text-center mt-5 mb-4 
+            xs:w-72 sm:w-72 md:w-full lg:w-full xl:w-full 2xl:w-full">
+                <p className="font-bold text-xl underline decoration-2 my-2">summer 2023</p>
                 <p>if you&apos;d like to hire me, i am currently able to take on:</p>
-            </div>
-            {/* END: CURRENT JOB ACCEPTANCE TITLE */}
-            {/* START: LIST OF PROJECTS */}
-              <div className="flex justify-center font-normal text-start">
-                <ul className="list-disc my-2">
-                  <li>writing videogame-related articles</li>
-                  <li>small web design projects (design/dev)</li>
+              {/* START: LIST OF PROJECTS */}
+              <div className="text-center mx-8 my-3">
+                <ul>
+                  <li className="my-1">videogame-related journalism</li>
+                  <li className="my-1">small web design projects (design/dev)</li>
                 </ul>
               </div>
-              {/* END: LIST OF PROJECTS */}
-              <div className="mt-6">
-                <StarSpacer />
-              </div>
+                {/* END: LIST OF PROJECTS */}
+            </div>
+            {/* END: CURRENT JOB ACCEPTANCE CONTENT */}
+            <StarSpacer />
             </div>
           {/* END: CURRENT JOB ACCEPTANCE */}
 

@@ -8,7 +8,6 @@ import ghost from '../icons/undraw/undraw_ghost.svg'
 import EmailIcon from '../icons/remix/mail-line.svg'
 import linkedInIcon from '../icons/remix/linkedin-box-line.svg'
 import TwitterIcon from '../icons/remix/twitter-line.svg'
-import LayoutNoFooter from '@/components/layouts/layout-no_footer';
 import Nav from '@/components/NavBar';
 
 export default function Contact() {
@@ -53,7 +52,7 @@ export default function Contact() {
                   </a>
                 </div>
                 {/* SOCIAL MEDIA TEXT: EMAIL */}
-                <div className='flex flex-col font-bold text-center align-middle justify-center mx-3'>
+                <div className='flex flex-col text-center align-middle justify-center mx-3'>
                   <a href='mailto:nagaoka.ra@gmail.com'>
                     <p>email</p>
                   </a>
@@ -71,7 +70,7 @@ export default function Contact() {
                   </a>
                 </div>
                 {/* SOCIAL MEDIA TEXT: LINKEDIN */}
-                <div className='flex flex-col font-bold text-center align-middle justify-center'>
+                <div className='flex flex-col text-center align-middle justify-center'>
                   <a href='https://www.linkedin.com/in/reiji-n-5767b312a/' target="_blank" rel="noopener noreferrer">
                   LinkedIn
                   </a>
@@ -88,7 +87,7 @@ export default function Contact() {
                 </a>
                 </div>
                 {/* SOCIAL MEDIA TEXT: TWITTER */}
-                <div className='flex flex-col font-bold text-center align-middle justify-center'>
+                <div className='flex flex-col text-center align-middle justify-center'>
                     <a href="https://twitter.com/nagaokadev" target="_blank" rel="noopener noreferrer">
                       twitter
                     </a>
