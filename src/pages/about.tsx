@@ -5,17 +5,16 @@ import Nav from "@/components/NavBar";
 
 import TreeIcon from '../icons/undraw/undraw_tree.svg'
 import CodeIcon from '../icons/undraw/undraw_code.svg'
+import Spacer from "@/components/Spacer";
+import Layout from "@/components/layout";
 
 export default function About() 
 {
   return (
     <main className="h-screen w-screen overflow-x-hidden overflow-y-hiddens"> 
-      {/* COMPONENT: NAV */}
-      <Nav/>
+    <Layout>
       {/* START: ABOUT CONTAINER */}
-      <section className="
-      xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16
-      ">
+      <section className="xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
         {/* PAGE TITLE */}
         <div className='font-bold text-5xl text-center translate-y-5'>
             about
@@ -36,20 +35,19 @@ export default function About()
           </div>
           {/* END: TAGLINE */}
 
-
           {/* START: PROFILES CONTAINER */}
           <div className='flex font-normal justify-center align-items-center text-start
             xs:flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap 2xl:flex-nowrap
             xs:text-md sm:text-md sm:w-full md:text-lg lg:text-lg xl:text-lg 2xl:text-lg 
-          '>
+            '>
 
             {/* START: ACADEMIC PROFILE CONTAINER */}  
             <div className="px-2 my-3 max-w-[400px]">
-              <div className="flex flex-row justify-center"> 
+              <div className="flex flex-row justify-center align-top"> 
               <Image
                 className="flex my-2"
                 src={TreeIcon}
-                width={50}
+                width={40}
                 height={50}
                 alt="line drawing of the outline of a tree"
                 />
@@ -67,9 +65,9 @@ export default function About()
             </div>
             {/* END: ACADEMIC PROFILE CONTAINER */}
 
-            {/* DEV PROFILE CONTAINER */}
+            {/* START: DEV PROFILE CONTAINER */}
             <div className="px-2 my-3 max-w-[400px]">
-              <div className="flex flex-row justify-center px-2 my-3"> 
+              <div className="flex flex-row justify-center align-top"> 
                 <Image
                   className="flex my-2"
                   src={CodeIcon}
@@ -90,19 +88,13 @@ export default function About()
               </p>
             </div>
             {/* END: DEV PROFILE CONTAINER */}
-          
-
-          
-          
           </div>
           {/* END: PROFILES CONTAINER */}
-            
         </div>
         {/* END: TAGLINE CONTAINER */}
-
       </section>
       {/* END: ABOUT CONTAINER */}
-    
+      </Layout>
     </main>
   )
 }
