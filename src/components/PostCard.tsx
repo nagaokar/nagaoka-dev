@@ -1,28 +1,28 @@
-import React from "react";
-import { useState } from "react";
-import Image from "next/image";
-import { Disclosure } from "@headlessui/react";
-import { Post } from "../lib/ContentDatabase";
+import React from 'react'
+import { useState } from 'react'
+import Image from 'next/image'
+import { Disclosure } from '@headlessui/react'
+import { Post } from '../lib/ContentDatabase'
 
-import CircledArrow from "../icons/undraw/undraw_circled-arrow.svg";
-import ExpandIcon from "../icons/undraw/undraw_circled-plus.svg";
+import CircledArrow from '../icons/undraw/undraw_circled-arrow.svg'
+import ExpandIcon from '../icons/undraw/undraw_circled-plus.svg'
 
 export interface PostProps {
-  post: Post;
-  index: number;
+  post: Post
+  index: number
 }
 
 export function PostCard({ post, index }: PostProps) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   const renderLinkSection = () => {
-    if (!post.link) return null;
+    if (!post.link) return null
     return (
       <>
         {/* START: MORE INFO LINK */}
         <div className="flex flex-row items-center justify-start">
           <p className="flex align-text-bottom text-sm ">more info.</p>
-          <div className="mx-3 mt-1 flex flex-row">
+          <div className="mx-3 mt-1 flex flex-row ">
             {/* START: IMAGE LINK */}
             <a href={post.link} target="_blank" rel="noopener noreferrer">
               <Image
@@ -38,11 +38,11 @@ export function PostCard({ post, index }: PostProps) {
         </div>
         {/* END: MORE INFO LINK */}
       </>
-    );
-  };
+    )
+  }
 
   const renderDescSection = () => {
-    if (!post.desc) return null;
+    if (!post.desc) return null
     return (
       <>
         {/* START: CARD DESCRIPTION */}
@@ -53,7 +53,7 @@ export function PostCard({ post, index }: PostProps) {
               <>
                 <div className="flex flex-row">
                   <Disclosure.Button>
-                    <div className={open ? "rotate-90 transform" : ""}>
+                    <div className={open ? 'rotate-90 transform' : ''}>
                       <Image
                         src={ExpandIcon}
                         width={25}
@@ -75,13 +75,13 @@ export function PostCard({ post, index }: PostProps) {
         </div>
         {/* END: CARD DESCRIPTION */}
       </>
-    );
-  };
+    )
+  }
 
   // Filter out empty fields in the post object
   const filteredPost = Object.fromEntries(
-    Object.entries(post).filter(([_, value]) => value !== "")
-  );
+    Object.entries(post).filter(([_, value]) => value !== '')
+  )
   return (
     <div
       id={filteredPost.tag}
@@ -108,5 +108,5 @@ export function PostCard({ post, index }: PostProps) {
       </div>
       {/* END: CARD TITLE CONTAINER*/}
     </div>
-  );
+  )
 }

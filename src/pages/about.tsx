@@ -17,7 +17,7 @@ export default function About() {
   return (
     <>
       <Layout>
-        <div className="flex flex-row flex-wrap">
+        <div className="flex flex-row flex-wrap w-screen">
           <div>
             <SubTitle title="education" underlineSrc={Underline} rotation="-rotate-2"/>
             {educationPosts.map((post, index) => (
