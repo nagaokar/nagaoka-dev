@@ -1,4 +1,5 @@
-{/* <div className="xs:full sm:full sm:full flex flex-col p-8 xs:w-full xs:text-xl sm:text-xl md:w-2/3 md:translate-x-1/4 md:text-xl lg:w-2/3 lg:translate-x-1/4 lg:text-lg xl:w-2/3 xl:translate-x-1/4 xl:text-xl 2xl:w-2/3 2xl:translate-x-1/4 2xl:text-xl">
+{
+  /* <div className="xs:full sm:full sm:full flex flex-col p-8 xs:w-full xs:text-xl sm:text-xl md:w-2/3 md:translate-x-1/4 md:text-xl lg:w-2/3 lg:translate-x-1/4 lg:text-lg xl:w-2/3 xl:translate-x-1/4 xl:text-xl 2xl:w-2/3 2xl:translate-x-1/4 2xl:text-xl">
 <div className="mb-3 flex flex-col">
   <div className="mb-4 mt-5 flex flex-col justify-center text-center xs:w-72 sm:w-72 md:w-full lg:w-full xl:w-full 2xl:w-full">
     <p className="my-2 text-xl font-bold underline decoration-2">
@@ -12,4 +13,5 @@
       </ul>
     </div>
   </div>
-</div> */}
+</div> */
+}

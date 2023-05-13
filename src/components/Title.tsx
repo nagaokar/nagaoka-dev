@@ -3,13 +3,19 @@ import Image from 'next/image'
 
 interface TitleProps {
   title: string
-  textSize: string;
+  textSize: string
   graphic: string
   rotation: string
-  alt: string;
+  alt: string
 }
 
-const TitleComponent: React.FC<TitleProps> = ({ title, graphic, rotation, alt, textSize }) => {
+const TitleComponent: React.FC<TitleProps> = ({
+  title,
+  graphic,
+  rotation,
+  alt,
+  textSize,
+}) => {
   return (
     <div className="mb-8 flex flex-col text-3xl font-bold">
       {/* TITLE TEXT */}
