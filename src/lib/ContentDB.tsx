@@ -19,6 +19,13 @@ export const jobs: Job[] = [
         date: '2023',
     },
     {
+        title: 'Presenter + Consultant',
+        desc: "Presented my phd research practice with a focus on methodology (primarily the MDA framework). this was to inform the design of a new 'part 4: design for life' ethical architectural practice course. ",
+        organisation: 'London School of Architecture',
+        link: 'https://www.the-lsa.org/',
+        date: '2023',
+    },
+    {
         title: 'Research Assistant',
         desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence.',
         organisation: 'Manchester Game Centre',
