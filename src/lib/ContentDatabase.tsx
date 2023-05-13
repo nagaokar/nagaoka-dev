@@ -1,11 +1,11 @@
 export interface Post {
-  id: number;
-  tag: string;
-  title: string;
-  organisation: string;
-  desc: string;
-  link: string;
-  date: string;
+  id: number
+  tag: string
+  title: string
+  organisation: string
+  desc: string
+  link: string
+  date: string
 }
 
 export const posts: Post[] = [
@@ -69,97 +69,102 @@ export const posts: Post[] = [
     title: 'Cityzen',
     organisation: 'Final Thesis, MA Architecture',
     desc: "An online multiplayer eco-planning game created using Kate Raworth's 'Doughbut Econnomics' as the theoretical framework. This turn-based multiplayer online game was constructed with Manchester City Council as the client to envision how a zero-carbon future for the Northern Gateway - a £1 billion urban development in Northern Manchester.",
-    link: "",
-    date: "2021",
+    link: '',
+    date: '2021',
   },
   {
     id: 8,
-    tag: "education",
-    title: "Ph.D. Architecture",
-    organisation: "Manchester Metropolitan University",
-    desc: "Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed",
-    link: "",
-    date: "2026",
+    tag: 'education',
+    title: 'Ph.D. Architecture',
+    organisation: 'Manchester Metropolitan University',
+    desc: 'Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed',
+    link: '',
+    date: '2026',
   },
   {
     id: 9,
-    tag: "education",
-    title: "MA Architecture",
-    organisation: "Manchester School of Architecture",
-    desc: "Specialised in computational design for architectural & urban design within the CPU.AI (Complexity, Planning & Urbanism. Architectural Intelligence).",
-    link: "",
-    date: "2021",
+    tag: 'education',
+    title: 'MA Architecture',
+    organisation: 'Manchester School of Architecture',
+    desc: 'Specialised in computational design for architectural & urban design within the CPU.AI (Complexity, Planning & Urbanism. Architectural Intelligence).',
+    link: '',
+    date: '2021',
   },
   {
     id: 10,
-    tag: "education",
-    title: "BA(hons) Architecture",
-    organisation: "Manchester School of Architecture",
-    desc: "Joined the Continuity In Architecture atelier during final year, which specialises in applying critical regionalism to sensitive placemaking",
-    link: "",
-    date: "2018",
+    tag: 'education',
+    title: 'BA(hons) Architecture',
+    organisation: 'Manchester School of Architecture',
+    desc: 'Joined the Continuity In Architecture atelier during final year, which specialises in applying critical regionalism to sensitive placemaking',
+    link: '',
+    date: '2018',
   },
   {
     id: 11,
-    tag: "academic",
-    title: "Collaborative Play in an Online Multiplayer Urban Planning Eco-Game",
-    organisation: "Research Paper",
-    desc: "forthcoming",
-    link: "",
-    date: "2023",
+    tag: 'academic',
+    title:
+      'Collaborative Play in an Online Multiplayer Urban Planning Eco-Game',
+    organisation: 'Research Paper',
+    desc: 'forthcoming',
+    link: '',
+    date: '2023',
   },
   {
     id: 12,
-    tag: "academic",
-    title: "Virtual Eco-Cities: An Eco-game Conceptual Framework for the Analysis of Virtual Cities",
-    organisation: "Research Paper",
-    desc: "forthcoming",
-    link: "",
-    date: "2023",
+    tag: 'academic',
+    title:
+      'Virtual Eco-Cities: An Eco-game Conceptual Framework for the Analysis of Virtual Cities',
+    organisation: 'Research Paper',
+    desc: 'forthcoming',
+    link: '',
+    date: '2023',
   },
   {
     id: 13,
-    tag: "academic",
-    title: "Multiplatform 3: Remake, Reuse, Replay!",
-    organisation: "Presenter",
-    desc: "",
-    link: "https://manchestergamecentre.org/events/2023/6/7/multiplatform-3-remake-reuse-replay",
-    date: "2023",
+    tag: 'academic',
+    title: 'Multiplatform 3: Remake, Reuse, Replay!',
+    organisation: 'Presenter',
+    desc: '',
+    link: 'https://manchestergamecentre.org/events/2023/6/7/multiplatform-3-remake-reuse-replay',
+    date: '2023',
   },
   {
     id: 14,
-    tag: "academic",
-    title: "New Work in Game Studies: Alex Brooke and Reiji Nagaoka",
-    organisation: "Presenter",
-    desc: "",
-    link: "https://manchestergamecentre.org/events/2023/2/22/alex-and-reiji-wip",
-    date: "2023",
+    tag: 'academic',
+    title: 'New Work in Game Studies: Alex Brooke and Reiji Nagaoka',
+    organisation: 'Presenter',
+    desc: '',
+    link: 'https://manchestergamecentre.org/events/2023/2/22/alex-and-reiji-wip',
+    date: '2023',
   },
   {
     id: 15,
-    tag: "academic",
-    title: "Complex [Cognitive] Cities: Sensing, planning and design in urban transformations",
-    organisation: "Presenter + Workshop Organiser",
-    desc: "",
-    link: "https://aesop-planning.eu/resources/news-archive/thematic-groups/planning-and-complexity/complex-cognitive-cities-sensing-planning-and-design-in-urban-transformations",
-    date: "2023",
+    tag: 'academic',
+    title:
+      'Complex [Cognitive] Cities: Sensing, planning and design in urban transformations',
+    organisation: 'Presenter + Workshop Organiser',
+    desc: '',
+    link: 'https://aesop-planning.eu/resources/news-archive/thematic-groups/planning-and-complexity/complex-cognitive-cities-sensing-planning-and-design-in-urban-transformations',
+    date: '2023',
   },
   {
     id: 16,
-    tag: "academic",
-    title: "Infrasystems Towards Healthy Brazil: Sustainable Urban Nexus (Water-Energy-Sanitation) in the Tiete River Basin",
-    organisation: "Presenter",
-    desc: "",
-    link: "https://infrasystems.complexurban.com/people",
-    date: "2021",
+    tag: 'academic',
+    title:
+      'Infrasystems Towards Healthy Brazil: Sustainable Urban Nexus (Water-Energy-Sanitation) in the Tiete River Basin',
+    organisation: 'Presenter',
+    desc: '',
+    link: 'https://infrasystems.complexurban.com/people',
+    date: '2021',
   },
   {
     id: 17,
-    tag: "academic",
-    title: "emergence of institutional investors the post-crisis housing market of manchester, uk",
-    organisation: "Research Paper",
-    desc: "",
-    link: "",
-    date: "2020",
+    tag: 'academic',
+    title:
+      'emergence of institutional investors the post-crisis housing market of manchester, uk',
+    organisation: 'Research Paper',
+    desc: '',
+    link: '',
+    date: '2020',
   },
 ]

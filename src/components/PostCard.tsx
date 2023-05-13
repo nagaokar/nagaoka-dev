@@ -85,22 +85,22 @@ export function PostCard({ post, index }: PostProps) {
   return (
     <div
       id={filteredPost.tag}
-      className="my-1 flex flex-row xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg"
+      className="2 my-1 flex flex-row xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg "
     >
       {/* START: CARD DATE */}
-      <div className="mr-2 flex w-12 flex-col font-bold text-red-500">
+      <div className="mr-2 flex w-12 flex-col text-red-500">
         <p>{filteredPost.date}</p>
       </div>
       {/* END: CARD DATE */}
       {/* START: CARD TITLE CONTAINER*/}
-      <div className="mb-1 flex w-72 flex-row border-b-2 border-black px-2 pb-2 xs:pr-12 sm:pr-10 md:pr-8 lg:pr-6 xl:pr-12">
+      <div className="mb-1 flex w-72 flex-row px-2 pb-2 xs:pr-12 sm:pr-10 md:pr-8 lg:pr-6 xl:pr-12">
         {/* START: CARD TITLE SUB-CONTAINER */}
         <div className="flex flex-col">
           {/* CARD TITLE */}
           <p className="font-bold">{filteredPost.title}</p>
           {/* CARD ORGANISATION */}
           <p>{filteredPost.organisation}</p>
-          <div className="flex flex-row">
+          <div className="flex w-64 border-b-2 border-black">
             <div className="flex flex-col">{renderDescSection()}</div>
           </div>
         </div>

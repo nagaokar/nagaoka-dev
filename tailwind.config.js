@@ -9,11 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily:{ 
+      fontFamily: {
         MoreSugar: ['More Sugar', 'sans-serif'],
-        TegakiZatsu: ['Tegaki Zatsu', 'sans-serif']
+        TegakiZatsu: ['Tegaki Zatsu', 'sans-serif'],
       },
     },
   },
-  plugins: [require("tw-elements/dist/plugin.cjs")],
+  plugins: [require('tw-elements/dist/plugin.cjs')],
 }
