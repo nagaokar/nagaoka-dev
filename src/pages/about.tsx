@@ -1,41 +1,49 @@
 import React from "react";
-import Image from "next/image";
+
+import { posts } from "../lib/ContentDatabase";
+import { PostCard } from "../components/PostCard";
+
+import SubTitle from "../components/SubTitle";
+import Underline from "../icons/undraw/undraw_underline.svg";
 
 import Layout from "@/components/layouts/layout";
-import Employment from "@/components/content/employment";
-import Academic from "@/components/content/academic";
-import Education from "@/components/content/education";
-import Underline from '../icons/undraw/undraw_underline.svg'
-import Games from "@/components/content/games";
-import Spacer from "@/components/Spacer";
-import Profile from "@/components/content/profile";
-import Work from "../components/content/work";
 
-import TreeIcon from '../../icons/undraw/undraw_tree.svg'
-import CodeIcon from '../../icons/undraw/undraw_code.svg'
+export default function About() {
+  const employmentPosts = posts.filter((post) => post.tag === "employment");
+  const academicPosts = posts.filter((post) => post.tag === "academic");
+  const educationPosts = posts.filter((post) => post.tag === "education");
+  const gamesPosts = posts.filter((post) => post.tag === "game");
 
-export default function About() 
-{
   return (
-    <main> 
+    <>
       <Layout>
-        <Profile/>
-        {/* START: SPACER */}
-        <div className="flex justify-center my-8">
-          <Spacer /> <Spacer />
+        <div className="flex flex-row flex-wrap">
+          <div>
+            <SubTitle title="education" underlineSrc={Underline} rotation="-rotate-2"/>
+            {educationPosts.map((post, index) => (
+              <PostCard key={index} post={post} index={index} />
+            ))}
+          </div>
+          <div>
+          <SubTitle title="employment" underlineSrc={Underline} rotation="rotate-3"/>
+            {employmentPosts.map((post, index) => (
+              <PostCard key={index} post={post} index={index} />
+            ))}
+          </div>
+          <div>
+          <SubTitle title="academic" underlineSrc={Underline} rotation="-rotate-3"/>
+            {academicPosts.map((post, index) => (
+              <PostCard key={index} post={post} index={index} />
+            ))}
+          </div>
+          <div>
+          <SubTitle title="games" underlineSrc={Underline} rotation="rotate-2"/>
+            {gamesPosts.map((post, index) => (
+              <PostCard key={index} post={post} index={index} />
+            ))}
+          </div>
         </div>
-        {/* END: SPACER */}
-        <div className="xs:mx-3 sm:mx-3 md:mx-3 lg:mx-4 xl:mx-5 2xl:mx-5 ">
-          <Work />
-        </div>
-        {/* START: SPACER */}
-        <div className="flex justify-center my-8">
-          <Spacer /> <Spacer />
-        </div>
-{/* END: SPACER */}
       </Layout>
-    </main>
-  )
+    </>
+  );
 }
-
-
