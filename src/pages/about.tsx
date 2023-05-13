@@ -37,6 +37,7 @@ export default function About() {
         <div id="pageTitle" className='mb-12'>
           <Title
             title="about"
+            textSize="text-5xl"
             graphic={CurvedUnderline}
             rotation='-rotate-4'
             alt={CurvedUnderlineAlt}
@@ -46,21 +47,24 @@ export default function About() {
 
 
         <Tagline />
-        
-        
+
         {/* START: PROFILES CONTAINER */}
         <div className='mt-3 mb-12'>
           <div className="flex flex-row justify-center align-top">
             <Image className="flex my-2" src={TreeIcon} width={40} height={50}
-              alt="line drawing of a tree"/>
+              alt="line drawing of a tree" />
           </div>
-          <Profile data={textData} fieldName='profile-academic' />
-          
+          <div>
+            <Profile data={textData} fieldName='profile-academic' />
+          </div>
+
           <div className="flex flex-row justify-center align-top">
-          <Image className="flex my-2" src={CodeIcon} width={50} height={50}
-            alt="line drawing of a html closing tag"/>
+            <Image className="flex my-2" src={CodeIcon} width={50} height={50}
+              alt="line drawing of a html closing tag" />
           </div>
-          <Profile data={textData} fieldName='profile-dev' />
+          <div>
+            <Profile data={textData} fieldName='profile-dev' />
+          </div>
         </div>
         {/* END: PROFILES CONTAINER */}
 
@@ -76,6 +80,7 @@ export default function About() {
             <div className="my-5 mt-3 flex max-w-[400px] flex-col">
               <Title
                 title="academic"
+                textSize="text-3xl"
                 graphic={Underline}
                 rotation="-rotate-3"
                 alt={UnderlineAlt}
@@ -89,6 +94,7 @@ export default function About() {
             <div className="my-3 mt-3 flex max-w-[400px]  flex-col">
               <Title
                 title="games"
+                textSize="text-3xl"
                 graphic={Underline}
                 rotation="rotate-2"
                 alt={UnderlineAlt}
@@ -107,6 +113,7 @@ export default function About() {
             <div className="my-3  mt-3 flex max-w-[400px] flex-col">
               <Title
                 title="employment"
+                textSize="text-3xl"
                 graphic={Underline}
                 rotation="rotate-3"
                 alt={UnderlineAlt}
@@ -120,6 +127,7 @@ export default function About() {
             <div className="my-3 mt-3 flex max-w-[400px] flex-col">
               <Title
                 title="education"
+                textSize="text-3xl"
                 graphic={Underline}
                 rotation="-rotate-2"
                 alt={UnderlineAlt}
