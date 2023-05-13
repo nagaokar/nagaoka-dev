@@ -88,7 +88,7 @@ export function PostCard({ post, index }: PostProps) {
       className="2 my-1 flex flex-row xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg "
     >
       {/* START: CARD DATE */}
-      <div className="mr-2 flex w-12 flex-col text-red-500">
+      <div className="flex w-12 flex-col text-red-500">
         <p>{filteredPost.date}</p>
       </div>
       {/* END: CARD DATE */}

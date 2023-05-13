@@ -5,21 +5,26 @@ interface TitleProps {
   title: string
   graphic: string
   rotation: string
+  alt: string;
 }
 
-const TitleComponent: React.FC<TitleProps> = ({ title, graphic, rotation }) => {
+const TitleComponent: React.FC<TitleProps> = ({ title, graphic, rotation, alt }) => {
   return (
-    <div className="mb-8 flex flex-col justify-center text-3xl font-bold">
+    <div className="mb-8 flex flex-col text-3xl font-bold">
       {/* TITLE TEXT */}
-      <p>{title}</p>
+      <div className="flex justify-center">
+        <p>{title}</p>
+      </div>
       {/* TITLE UNDERLINE */}
-      <Image
-        className={`${rotation} mt-1`}
-        src={graphic}
-        width={200}
-        height={500}
-        alt="A black underline of the title"
-      />
+      <div className="flex justify-center">
+        <Image
+          className={`${rotation} mt-1`}
+          src={graphic}
+          width={200}
+          height={500}
+          alt={alt}
+        />
+      </div>
     </div>
   )
 }

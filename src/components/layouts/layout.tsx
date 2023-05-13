@@ -11,7 +11,7 @@ export default function Layout({ children }: any) {
       </nav>
       <main
         className="max-w-screen font-regular flex flex-col 
-      overflow-x-hidden bg-white px-6 lowercase text-black"
+      overflow-x-hidden bg-white px-4 lowercase text-black"
       >
         <div className="mt-12">{children}</div>
       </main>
