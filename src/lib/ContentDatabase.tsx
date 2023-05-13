@@ -1,10 +1,12 @@
-import React from "react";
-import { useState } from "react";
-import Image from "next/image";
+import React from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
 
-import CircledArrow from "../../icons/undraw/undraw_circled-arrow.svg";
+import CircledArrow from '../../icons/undraw/undraw_circled-arrow.svg';
 
 export interface Post {
+  id: number;
+  type: string;
   title: string;
   organisation: string;
   desc: string;
@@ -12,63 +14,158 @@ export interface Post {
   date: string;
 }
 
-export interface PostProps {
-  post: Post;
-  index: number;
-}
-
-export function PostCard({ post, index }: PostProps) {
-  const [open, setOpen] = useState(false);
-
-  const renderLinkSection = () => {
-    if (!post.link) return null;
-
-    return (
-      <>
-        {/* START: MORE INFO LINK */}
-        <div className="mt-2 flex flex-row align-middle">
-          <div className="flex flex-row">
-            <a href={post.link} target="_blank" rel="noopener noreferrer">
-              more info.
-            </a>
-          </div>
-          <div className="mx-3 flex flex-row">
-            <a href={post.link} target="_blank" rel="noopener noreferrer">
-              <Image
-                className="-rotate-90"
-                src={CircledArrow}
-                width={25}
-                height={50}
-                alt="a line drawing of an arrow inside a circle"
-              />
-            </a>
-          </div>
-        </div>
-        {/* END: MORE INFO LINK */}
-      </>
-    );
-  };
-
-  return (
-    <div className="my-1 flex flex-row xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg">
-      {/* START: CARD DATE */}
-      <div className="mr-2 flex w-12 flex-col font-bold text-red-500">
-        <p>{post.date}</p>
-      </div>
-      {/* END: CARD DATE */}
-      {/* START: CARD TITLE CONTAINER*/}
-      <div className="mb-1 flex w-72 flex-row border-b-2 border-black px-2 pb-2 xs:pr-12 sm:pr-10 md:pr-8 lg:pr-6 xl:pr-12">
-        {/* START: CARD TITLE SUB-CONTAINER */}
-        <div className="flex flex-col">
-          {/* CARD TITLE */}
-          <p className="font-bold">{post.title}</p>
-          {/* CARD ORGANISATION */}
-          <p>{post.organisation}</p>
-          {renderLinkSection()}
-        </div>
-        {/* END: CARD TITLE SUB-CONTAINER */}
-      </div>
-      {/* END: CARD TITLE CONTAINER*/}
-    </div>
-  );
-}
+export const posts: Post[] = [
+  {
+    id: 1,
+    type: 'job',
+    title: 'Freelance Writer',
+    organisation: 'Uppercut Crit',
+    desc: "Article written for an online gaming blog titled: 'Planetary Play: Games and the Environment'.",
+    link: 'https://uppercutcrit.com/planetary-play-games-and-the-environment',
+    date: '2023',
+  },
+  {
+    id: 2,
+    type: 'job',
+    title: 'Presenter + Consultant',
+    organisation: 'London School of Architecture',
+    desc: "Presented my phd research practice with a focus on methodology (primarily the MDA framework). this was to inform the design of a new 'part 4: design for life' ethical architectural practice course. ",
+    link: 'https://www.the-lsa.org/',
+    date: '2023',
+  },
+  {
+    id: 3,
+    type: 'job',
+    title: 'Research Assistant',
+    organisation: 'Manchester Game Centre',
+    desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence.',
+    link: 'https://manchestergamecentre.org/',
+    date: '2022',
+  },
+  {
+    id: 4,
+    type: 'job',
+    title: 'MArch Y6 Tutor',
+    organisation: 'Manchester School of Architecture',
+    desc: 'i am an informal tutor of the 6th year master’s atelier: ‘complexity, planning, and urbanism’ (cpu) at the manchester school of architecture. the atelier specialises in computational methods for architectural and urban design.',
+    link: 'https://twitter.com/CPU_Ai_atelier',
+    date: '2022',
+  },
+  {
+    id: 5,
+    type: 'job',
+    title: 'Digital Engineer',
+    organisation: 'Costain',
+    desc: 'i work in the automated design department of costain. my work involves the design and development of computational design tools for critical national infrastructure.',
+    link: 'https://www.costain.com/',
+    date: '2021',
+  },
+  {
+    id: 6,
+    type: 'game',
+    title: 'Ecoville',
+    organisation: 'Conference Workshop',
+    desc: 'An online multiplayer eco-planning game created for the AESOP 2023 Planning and Complexity conference. This online multiplayer game gave players individual roles in which they had to balance individual and collective goals to build a sustainable urban neighbourhood',
+    link: '',
+    date: '2023',
+  },
+  {
+    id: 7,
+    type: 'game',
+    title: 'Cityzen',
+    organisation: 'Final Thesis, MA Architecture',
+    desc: "An online multiplayer eco-planning game created using Kate Raworth's 'Doughbut Econnomics' as the theoretical framework. This turn-based multiplayer online game was constructed with Manchester City Council as the client to envision how a zero-carbon future for the Northern Gateway - a £1 billion urban development in Northern Manchester.",
+    link: "",
+    date: "2021",
+  },
+  {
+    id: 8,
+    type: "education",
+    title: "Ph.D. Architecture",
+    organisation: "Manchester Metropolitan University",
+    desc: "Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed",
+    link: "",
+    date: "2026",
+  },
+  {
+    id: 9,
+    type: "education",
+    title: "MA Architecture",
+    organisation: "Manchester School of Architecture",
+    desc: "Specialised in computational design for architectural & urban design within the CPU.AI (Complexity, Planning & Urbanism. Architectural Intelligence).",
+    link: "",
+    date: "2021",
+  },
+  {
+    id: 10,
+    type: "education",
+    title: "BA(hons) Architecture",
+    organisation: "Manchester School of Architecture",
+    desc: "Joined the Continuity In Architecture atelier during final year, which specialises in applying critical regionalism to sensitive placemaking",
+    link: "",
+    date: "2018",
+  },
+  {
+    id: 11,
+    type: "academic",
+    title: "Collaborative Play in an Online Multiplayer Urban Planning Eco-Game",
+    organisation: "Research Paper",
+    desc: "forthcoming",
+    link: "",
+    date: "2023",
+  },
+  {
+    id: 12,
+    type: "academic",
+    title: "Virtual Eco-Cities: An Eco-game Conceptual Framework for the Analysis of Virtual Cities",
+    organisation: "Research Paper",
+    desc: "forthcoming",
+    link: "",
+    date: "2023",
+  },
+  {
+    id: 13,
+    type: "academic",
+    title: "Multiplatform 3: Remake, Reuse, Replay!",
+    organisation: "Presenter",
+    desc: "",
+    link: "https://manchestergamecentre.org/events/2023/6/7/multiplatform-3-remake-reuse-replay",
+    date: "2023",
+  },
+  {
+    id: 14,
+    type: "academic",
+    title: "New Work in Game Studies: Alex Brooke and Reiji Nagaoka",
+    organisation: "Presenter",
+    desc: "",
+    link: "https://manchestergamecentre.org/events/2023/2/22/alex-and-reiji-wip",
+    date: "2023",
+  },
+  {
+    id: 15,
+    type: "academic",
+    title: "Complex [Cognitive] Cities: Sensing, planning and design in urban transformations",
+    organisation: "Presenter + Workshop Organiser",
+    desc: "",
+    link: "https://aesop-planning.eu/resources/news-archive/thematic-groups/planning-and-complexity/complex-cognitive-cities-sensing-planning-and-design-in-urban-transformations",
+    date: "2023",
+  },
+  {
+    id: 16,
+    type: "academic",
+    title: "Infrasystems Towards Healthy Brazil: Sustainable Urban Nexus (Water-Energy-Sanitation) in the Tiete River Basin",
+    organisation: "Presenter",
+    desc: "",
+    link: "https://infrasystems.complexurban.com/people",
+    date: "2021",
+  },
+  {
+    id: 17,
+    type: "academic",
+    title: "emergence of institutional investors the post-crisis housing market of manchester, uk",
+    organisation: "Research Paper",
+    desc: "",
+    link: "",
+    date: "2020",
+  },
+]
