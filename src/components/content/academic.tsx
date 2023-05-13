@@ -26,8 +26,9 @@ export default function Academic() {
       <div>
         {academics.map((props: Academic, index:number) => (
           <AcademicCard
-          key={index}
+          key={props.id}
           index={index}
+          id={props.id}
           title={props.title}
           organisation={props.organisation}
           date={props.date}

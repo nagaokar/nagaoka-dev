@@ -139,6 +139,7 @@ export interface EducationPostProps {
 
 export interface Academic 
 {
+    id: number;
     title: string;
     organisation: string;
     date: string;
@@ -147,44 +148,58 @@ export interface Academic
   
 export const academics: Academic[] = [
     {
+        id: 1,
         title: 'Collaborative Play in an Online Multiplayer Urban Planning Eco-Game',
         organisation: 'Research Paper',
         date: 'wip',
         link: ''
     },
     {
+        id: 2,
         title: 'Virtual Eco-Cities: An Eco-game Conceptual Framework for the Analysis of Virtual Cities',
         organisation: 'Research Paper',
         date: 'wip',
         link: ''
     },
     {
+        id: 3,
         title: 'Multiplatform 3: Remake, Reuse, Replay!',
         organisation: 'Presenter',
         date: '2023',
-        link: ''
+        link: 'https://manchestergamecentre.org/events/2023/6/7/multiplatform-3-remake-reuse-replay'
     },
     {
+        id: 4,
         title: 'New Work in Game Studies: Alex Brooke and Reiji Nagaoka',
         organisation: 'Presenter',
         date: '2023',
         link: 'https://manchestergamecentre.org/events/2023/2/22/alex-and-reiji-wip'
     },
     {
+        id: 5,
         title: 'Complex [Cognitive] Cities: Sensing, planning and design in urban transformations',
         organisation: 'Presenter + Workshop Organiser',
         date: '2023',
         link: 'https://aesop-planning.eu/resources/news-archive/thematic-groups/planning-and-complexity/complex-cognitive-cities-sensing-planning-and-design-in-urban-transformations'
     },
     {
+        id: 6,
         title: 'Infrasystems Towards Healthy Brazil:Sustainable Urban Nexus (Water-Energy-Sanitation) in the Tiete River Basin',
         organisation: 'Presenter',
         date: '2021',
         link: 'https://infrasystems.complexurban.com/people'
     },
+    {
+        id: 7,
+        title: 'Emergence of Institutional Investors the Post-Crisis Housing Market of Manchester, UK',
+        organisation: 'ma dissertation',
+        date: '2020',
+        link: ''
+    },
 ]
 export interface AcademicPostProps 
 {
+    id: number;
     title: string;
     organisation: string;
     date: string;

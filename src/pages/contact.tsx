@@ -46,6 +46,7 @@ export default function Contact() {
                 {/* SOCIAL MEDIA IMAGE: LINKEDIN */}
                 <div className='flex flex-row justify-center'>
                 <a href='mailto:nagaoka.ra@gmail.com'>
+																	
                     <Image src={EmailIcon} width={40} height={150}
                     alt='A black and white outline of the Linked in logo.       '
                     />
