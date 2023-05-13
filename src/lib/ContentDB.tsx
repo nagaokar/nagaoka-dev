@@ -214,37 +214,19 @@ export interface AcademicPostProps
 export interface Project 
 {
     title: string;
-    type: string;
-    tech: string;
-    image: string;
+    organisation: string;
     desc: string;
+    link: string;
     date: string;
 }
   
 export const projects: Project[] = [
     {
-        title: 'projectName',
-        type: 'web dev',
-        tech: 'react, nextjs, tailwindcss',
-        image: '../images/TokyoSkyline.jpg',
-        desc: 'lorem ipsum',
-        date: 'wip',
-    },
-    {
-        title: 'projectName',
-        type: 'web dev',
-        tech: 'react, nextjs, tailwindcss',
-        image: '../images/TokyoSkyline.jpg',
-        desc: 'lorem ipsum',
-        date: 'wip',
-    },
-    {
-        title: 'projectName',
-        type: 'web dev',
-        tech: 'react, nextjs, tailwindcss',
-        image: '../images/TokyoSkyline.jpg',
-        desc: 'lorem ipsum',
-        date: 'wip',
+        title: "name",
+        organisation: "organisation",
+        desc: "desc",
+        link: "link",
+        date: "date"
     },
 ]
 export interface ProjectPostProps 

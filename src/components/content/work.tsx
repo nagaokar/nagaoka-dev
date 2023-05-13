@@ -27,7 +27,7 @@ export default function Work() {
         </div>
         {/* END: PAGE TITLE */}
         {/* START: WORK CONTENT CONTAINER */}
-        <div className="flex flex-col flex-wrap justify-center">
+        <div className="flex flex-row flex-wrap justify-center">
           {/* START: WORK SUB-CONTAINER 1 */}
           <div className="flex flex-col">
             {/* ACADEMIC COMPONENT*/}

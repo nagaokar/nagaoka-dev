@@ -8,18 +8,17 @@ import CircledArrow from "../../icons/undraw/undraw_circled-arrow.svg";
 export function AcademicCard(props: AcademicPostProps) {
   return (
     <div
-      className="my-1 flex flex-row
+      className="flex flex-row my-1
 					xs:text-md sm:text-md md:text-lg lg:text-lg xl:text-lg 2xl:text-lg">
       {/* START: CARD DATE */}
-      <div className="flex flex-col w-10 text-red-500 px-2 mr-3">
+      <div className="flex flex-row justify-end text-start w-10 px-2 ml-3 mr-1 text-red-500 text-base">
         <p>{props.date}</p>
       </div>
       {/* END: CARD DATE */}
       {/* START: CARD TITLE CONTAINER*/}
-      <div
-        className="flex w-72">
+      <div className="flex w-72 mr-1 border-b-2 border-black">
         {/* START: CARD TITLE SUB-CONTAINER */}
-        <div className="flex flex-col mx-4 border-b-2 border-black">
+        <div className="flex flex-col pr-3">
           {/* CARD TITLE */}
           <p className="font-bold">{props.title}</p>
           {/* CARD ORGANISATION */}
