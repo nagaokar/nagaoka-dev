@@ -25,7 +25,9 @@ export default function About()
           <Spacer /> <Spacer />
         </div>
         {/* END: SPACER */}
-        <Work />
+        <div className="xs:mx-3 sm:mx-3 md:mx-3 lg:mx-4 xl:mx-5 2xl:mx-5 ">
+          <Work />
+        </div>
         {/* START: SPACER */}
         <div className="flex justify-center my-8">
           <Spacer /> <Spacer />
