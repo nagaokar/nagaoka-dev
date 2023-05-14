@@ -26,7 +26,7 @@ export default function PostCard({ post, index }: PostProps) {
             <a href={post.link} target="_blank" rel="noopener noreferrer">
               <Image
                 className="-rotate-90"
-                src={CircledArrow}
+                src={CircledArrow} 
                 width={25}
                 height={25}
                 alt="A sketched line drawing of circle with an arrow pointing down inside."
