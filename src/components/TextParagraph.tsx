@@ -3,10 +3,12 @@ import { Text } from '@/lib/TextDatabase';
 
 export interface TextParagraphProps {
   jsonData: Text; // JSON data input prop
+  className?: string;
 }
 
 const TextParagraph: React.FC<TextParagraphProps> = ({
   jsonData,
+  className
 }) => {
   const sentences = jsonData.sentences || []; // Access sentences from jsonData
 
@@ -14,8 +16,9 @@ const TextParagraph: React.FC<TextParagraphProps> = ({
     <div id="sentenceContainer">
       {sentences.map((sentence, index) => (
         <React.Fragment key={index}>
-          {sentence}
-          <br />
+          <p className={className}>
+            {sentence}
+          </p>
         </React.Fragment>
       ))}
     </div>

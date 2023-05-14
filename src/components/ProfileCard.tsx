@@ -12,26 +12,15 @@ export interface ProfileCardProps {
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ titleProps, profile, index }) => {
-  const {
-    title,
-    titleType,
-    titleCssProps,
-    imageSrc,
-    imageCssProps,
-    width,
-    height,
-    alt,
-  } = titleProps;
-
   return (
-    <div id="profileContainer" className="flex flex-row mt-3 mb-5" key={index}>
-      <div id={`${profile.title}profileContainer`} className="flex flex-col justify-between h-full">
+    <div id="profileContainer" className="flex flex-row m-4 px-2 mt-3 mb-7 max-w-[500px]" key={index}>
+      <div id={`${profile.title}profileContainer`}>
         <Title
           title={profile.title}
           titleType="imageAbove"
           titleCssProps="text-2xl mb-4 mt-2"
           imageSrc={profile.title === 'Academic Profile' ? TreeIcon : CodeIcon}
-          imageCssProps="flex align-top"
+          imageCssProps="flex align-top max-h-12"
           width={50}
           height={150}
           alt={`a line drawing of ${profile.title === 'Academic Profile' ? 'a tree' : 'a computer'}`}
