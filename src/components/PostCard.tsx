@@ -5,8 +5,8 @@ import { Post } from '../lib/ContentDatabase'
 import Button from './Button'
 
 export interface PostProps {
-  post: Post
-  index: number
+  post: Post;
+  index: number;
 }
 
 export default function PostCard({ post, index }: PostProps) {

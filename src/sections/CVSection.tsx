@@ -14,21 +14,13 @@ import StarIcon from '../icons/undraw/undraw_star.svg'
 
 
 export default function CVSection() {
-  const CurvedUnderlineAlt = 'a black hand-drawn curved underline'
-  const UnderlineAlt = 'a black hand-drawn straight underline'
+  const CurvedUnderlineAlt = 'a black hand-drawn curved underline';
+  const UnderlineAlt = 'a black hand-drawn straight underline';
 
-
-  const employmentPosts = posts.filter((post) => post.tag === 'employment')
-  if (!employmentPosts) { return null }
-
-  const academicPosts = posts.filter((post) => post.tag === 'academic')
-  if (!academicPosts) { return null }
-
-  const educationPosts = posts.filter((post) => post.tag === 'education')
-  if (!educationPosts) { return null }
-
-  const gamesPosts = posts.filter((post) => post.tag === 'game')
-  if (!gamesPosts) { return null }
+  const employmentPosts = posts.filter((post) => post.tag === 'employment');
+  const academicPosts = posts.filter((post) => post.tag === 'academic');
+  const educationPosts = posts.filter((post) => post.tag === 'education');
+  const gamesPosts = posts.filter((post) => post.tag === 'game');
 
   return (
     <>

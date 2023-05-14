@@ -22,7 +22,7 @@ export const textData: Text[] = [
       "it is situated in the domains of urban planning, game studies, and climate change communication.",
       "the thesis is currently titled: 'reviving alternative future cities: cognitive climate behaviour in an online multiplayer urban eco-game'",
     ],
-    tag: "academic",
+    tag: "profile",
   },
   {
     id: 3,
@@ -32,6 +32,6 @@ export const textData: Text[] = [
       "computational design is typically done using python, rhino3d, and grasshopper.",
       "game development projects use unity in c# with unity netcode for gameobjects as the architecture for multiplayer games.",
     ],
-    tag: "developer",
+    tag: "profile",
   },
 ]

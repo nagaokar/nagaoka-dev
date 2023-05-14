@@ -12,7 +12,6 @@ import TaglineSection from '@/sections/TaglineSection'
 import ProfileSection from '@/sections/ProfileSection'
 import CVSection from '@/sections/CVSection'
 
-
 import Title from '@/components/Title'
 
 export default function About() {
@@ -30,7 +29,7 @@ export default function About() {
           imageCssProps: "-rotate-6",
           alt: "a black curved underline"
         }}>
-        <TaglineSection />
+        <TaglineSection />  
         <ProfileSection />
         <CVSection />
       </Layout>

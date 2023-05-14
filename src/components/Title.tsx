@@ -36,7 +36,7 @@ const Title: React.FC<TitleProps> = ({
       return (
         <div className='flex flex-col '>
           <div className="absolute">
-            <Image src={imageSrc} width={width} height={height} alt={`${alt}`} />
+            <Image className={imageCssProps} src={imageSrc} width={width} height={height} alt={`${alt}`} />
             <p className={`absolute inset-0 flex justify-center items-center ${titleCssProps}`}>
               {title}
             </p>
@@ -47,8 +47,8 @@ const Title: React.FC<TitleProps> = ({
     } else if (titleType === 'imageAbove') {
       return (
         <div className="flex flex-col items-center align-top">
-          <Image src={imageSrc} width={width} height={height} alt={`${alt}`} />
-          <p className={`${titleCssProps} text-center mb-5`}>{title}</p>
+          <Image className={imageCssProps} src={imageSrc} width={width} height={height} alt={`${alt}`} />
+          <p className={`${titleCssProps}`}>{title}</p>
         </div>
       );
     } else {
