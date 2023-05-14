@@ -1,72 +1,70 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
 export interface TitleProps {
-  title: string
-  titleType: 'imageUnder' | 'centered' | 'imageAbove'
-  titleCssProps: string
-  imageSrc?: string
-  imageCssProps?: string
-  width?: number
-  height?: number
-  alt?: string
+  title: string;
+  titleType: 'imageUnder' | 'centered' | 'imageAbove' | 'none';
+  titleCssProps: string;
+  imageSrc?: string; // Make it optional
+  imageCssProps?: string;
+  width?: number;
+  height?: number;
+  alt?: string;
 }
+
 
 const Title: React.FC<TitleProps> = ({
   title,
   titleCssProps,
-  imageSrc,
+  imageSrc = '',
   imageCssProps,
   width,
   height,
   alt,
   titleType,
 }) => {
-  return (
-    <div
-      id={`${title}TitleContainer`}
-      className="flex flex-col text-3xl font-bold"
-    >
-      {/* TITLE TEXT */}
-      {titleType === 'imageUnder' && (
+  const renderTitle = () => {
+    if (titleType === 'imageUnder') {
+      return (
         <div className="flex justify-center">
           <p id={`${title}Text`} className={`${titleCssProps}`}>
             {title}
           </p>
         </div>
-      )}
-      {/* TITLE GRAPHIC */}
-      {imageSrc && (
-        <div
-          id={`${title}Image`}
-          className={`${imageCssProps} mb-5 mt-1 flex justify-center`}
-        >
-          {titleType === 'centered' && (
-            <p className={`${titleCssProps}`}>{title}</p>
-          )}
-          {titleType === 'centered' && (
-            <>
-              <Image
-                src={imageSrc}
-                width={width}
-                height={height}
-                alt={`${alt}`}
-              />
-              <p className={`${titleCssProps}`}>{title}</p>
-            </>
-          )}
-          {titleType !== 'imageAbove' && titleType !== 'centered' && (
-            <Image
-              src={imageSrc}
-              width={width}
-              height={height}
-              alt={`${alt}`}
-            />
-          )}
+      );
+    } else if (titleType === 'centered') {
+      return (
+        <div className='flex flex-col '>
+          <div className="absolute">
+            <Image src={imageSrc} width={width} height={height} alt={`${alt}`} />
+            <p className={`absolute inset-0 flex justify-center items-center ${titleCssProps}`}>
+              {title}
+            </p>
+          </div>
         </div>
-      )}
-    </div>
-  )
-}
 
-export default Title
+      );
+    } else if (titleType === 'imageAbove') {
+      return (
+        <div className="flex flex-col items-center">
+          <Image src={imageSrc} width={width} height={height} alt={`${alt}`} />
+          <p className={`${titleCssProps} text-center`}>{title}</p>
+        </div>
+      );
+    } else {
+      return (
+        <>
+          <p className={`${titleCssProps}`}>{title}</p>
+        </>
+      );
+    }
+  };
+
+  return (
+    <div id={`${title}TitleContainer`} className="font-bold">
+      {renderTitle()}
+    </div>
+  );
+};
+
+export default Title;

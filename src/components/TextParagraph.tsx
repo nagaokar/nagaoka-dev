@@ -1,27 +1,15 @@
-import React from 'react'
-import { Text } from '@/lib/TextDatabase'
-import Title, { TitleProps } from './Title'
+import React from 'react';
+import { Text } from '@/lib/TextDatabase';
 
 interface TextParagraphProps {
-  titleProps: TitleProps
-  jsonData: Text // JSON data input prop
+  jsonData: Text; // JSON data input prop
 }
 
-const TextParagraph: React.FC<TextParagraphProps> = ({
-  titleProps,
-  jsonData,
-}) => {
-  const {
-    title,
-  } = titleProps
-
-  const sentences = jsonData.sentences || [] // Access sentences from jsonData
+const TextParagraph: React.FC<TextParagraphProps> = ({ jsonData }) => {
+  const sentences = jsonData.sentences || []; // Access sentences from jsonData
 
   return (
     <>
-      <div id={`${title}Container`} className="mb-12">
-      <Title {...titleProps} />
-      </div>
       <div id="sentenceContainer">
         {sentences.map((sentence, index) => (
           <React.Fragment key={index}>
@@ -31,7 +19,7 @@ const TextParagraph: React.FC<TextParagraphProps> = ({
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default TextParagraph
+export default TextParagraph;
