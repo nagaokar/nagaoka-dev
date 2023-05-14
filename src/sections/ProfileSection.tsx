@@ -22,39 +22,40 @@ export default function ProfileSection() {
     <section id="profile" className="flex flex-row flex-wrap justify-center">
       {/* START: ACADEMIC PROFILE */}
       <ProfileLayout>
-        <div className="max-w-[400px]">
-        <Title
-          title="Academic Profile"
-          titleType="imageAbove"
-          titleCssProps="text-2xl my-3"
-          imageSrc={TreeIcon}
-          imageCssProps=""
-          width={50}
-          height={150}
-          alt="a line drawing of a tree"
-        />
-        <TextParagraph jsonData={academicProfile}/>
+        <div className="flex flex-col justify-center max-w-[400px]">
+          <div className="flex justify-center">
+            <Image 
+              className="flex justify-center"
+              src={TreeIcon} width={50} height={150}
+              alt="a line drawing of a tree"
+              />
+            </div>
+            <Title title="Developer Profile" titleType="none"
+              titleCssProps="flex text-2xl justify-center h-12"
+            />
+            <TextParagraph jsonData={academicProfile} />
         </div>
       </ProfileLayout>
       {/* END: ACADEMIC PROFILE */}
 
-      {/* START: DEV PROFILE */}
+      {/* START: DEVELOPER PROFILE */}
       <ProfileLayout>
-        <div className="max-w-[400px]">
-        <Title
-          title="Developer Profile"
-          titleType="imageAbove"
-          titleCssProps="text-2xl text-center"
-          imageSrc={CodeIcon}
-          imageCssProps="m-2"
-          width={50}
-          height={150}
-          alt="a line drawing of a tree"
-        />
-          <TextParagraph jsonData={developerProfile}/>
+        <div className="flex flex-col justify-center max-w-[400px]">
+          <div className="flex justify-center">
+            <Image 
+              className="flex justify-center"
+              src={CodeIcon} width={50} height={150}
+              alt="a line drawing of a tree"
+              />
+            </div>
+            <Title title="Developer Profile" titleType="none"
+              titleCssProps="flex text-2xl justify-center h-12"
+            />
+            <TextParagraph jsonData={developerProfile} />
         </div>
-        {/* END: DEV PROFILE */}
       </ProfileLayout>
+      {/* END: DEVELOPER PROFILE */}
+
     </section >
   )
 }
