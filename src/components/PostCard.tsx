@@ -1,12 +1,14 @@
 import React from 'react'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Post } from '../lib/ContentDatabase'
-import Button from './Button'
+import ExpandIcon from '../icons/undraw/undraw_circled-plus.svg'
+import CircledArrow from '../icons/undraw/undraw_circled-arrow.svg'
 
 export interface PostProps {
-  post: Post;
-  index: number;
+  post: Post
+  index: number
 }
 
 export default function PostCard({ post, index }: PostProps) {
@@ -21,8 +23,15 @@ export default function PostCard({ post, index }: PostProps) {
           <p className="flex align-text-bottom text-sm ">more info.</p>
           <div className="mx-3 mt-1 flex flex-row ">
             {/* START: IMAGE LINK */}
-            <Button href={post.link}
-              type="circleArrow" width={25} height={40} />
+            <a href={post.link} target="_blank" rel="noopener noreferrer">
+              <Image
+                className="-rotate-90"
+                src={CircledArrow}
+                width={25}
+                height={25}
+                alt="A sketched line drawing of circle with an arrow pointing down inside."
+              />
+            </a>
           </div>
           {/* END: IMAGE LINK */}
         </div>
@@ -44,7 +53,12 @@ export default function PostCard({ post, index }: PostProps) {
                 <div className="flex flex-row">
                   <Disclosure.Button>
                     <div className={open ? 'rotate-90 transform' : ''}>
-                      <Button type="circlePlus" width={25} height={40} />
+                      <Image
+                        src={ExpandIcon}
+                        width={25}
+                        height={25}
+                        alt="A sketched line drawing of circle with an arrow pointing down inside."
+                      />
                     </div>
                   </Disclosure.Button>
                 </div>

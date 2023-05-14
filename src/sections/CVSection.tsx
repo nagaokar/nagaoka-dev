@@ -8,8 +8,6 @@ import PostCard from '../components/PostCard'
 import PostList from '../components/PostList'
 import Title from '../components/Title'
 import Underline from '../icons/undraw/undraw_underline.svg'
-import CurvedUnderline from '../icons/undraw/undraw_curved-underline.svg'
-
 import StarIcon from '../icons/undraw/undraw_star.svg'
 
 
@@ -25,7 +23,7 @@ export default function CVSection() {
   return (
     <>
       {/* START: CV TITLE SECTION */}
-      <section id="cv-title" className="flex justify-center mt-8 mb-6">
+      <section id="cv-title" className="flex justify-center">
         {/* START: CV TITLE */}
         <Title
           title="CV"
@@ -41,7 +39,7 @@ export default function CVSection() {
       </section>
       {/* END: CV TITLE SECTION */}
 
-      <main id="cv" className="flex flex-col">
+      <section id="cv" className="flex flex-col">
         {/* START: CV BODY */}
         <section id="cv-content" className="flex flex-wrap justify-center mb-12">
           {/* START: COLUMN 1 */}
@@ -110,12 +108,11 @@ export default function CVSection() {
               posts={educationPosts}
             />
             {/* END: EDUCATION */}
-
           </div>
           {/* END: COLUMN 2 */}
         </section>
         {/* END: CV BODY*/}
-      </main>
+      </section>
     </>
   )
 }

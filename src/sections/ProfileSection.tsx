@@ -14,12 +14,12 @@ export default function ProfileSection() {
     return null;
   }
   return (
-    <>
+    <section className="flex flex-col flex-wrap justify-center">
         <ProfileList
           titleProps={{
             title: "Academic Profile",
             titleType: 'imageUnder',
-            titleCssProps: "text-3xl flex justify-center",
+            titleCssProps: "text-3xl justify-center",
             imageSrc: "",
             width: 200,
             height: 500,
@@ -28,7 +28,7 @@ export default function ProfileSection() {
           }}
           profiles={profiles}
         />
-    </>
+    </section>
   );
 }
 

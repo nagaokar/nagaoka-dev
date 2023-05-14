@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PostListLayout({ children }: any) {
   return (
-    <main className="my-5 mt-3 flex max-w-[400px] flex-col">
+    <main className="flex max-w-[400px] flex-col mx-5 mb-8">
       <div className='flex flex-col justify-center align-top'>
         {children}
       </div>

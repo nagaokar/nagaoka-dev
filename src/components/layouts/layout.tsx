@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '../NavBar'
 import Footer from '../Footer'
-import CurvedUnderline from '../../icons/undraw/undraw_curved-underline.svg'
 import Title, { TitleProps } from '../Title'
 
 interface LayoutProps {
@@ -15,10 +14,7 @@ export default function Layout({ children, titleProps }: LayoutProps) {
       <nav className="overflow-x-hidden">
         <Nav />
       </nav>
-      <main
-        className="mt-12 max-w-screen font-regular flex flex-col 
-        overflow-x-hidden bg-white px-4 lowercase text-black"
-      >
+      <main className="mt-12 max-w-screen font-regular flex flex-col overflow-x-hidden bg-white px-4 lowercase text-black">
         {/* START: PAGE TITLE */}
         <div id="pageTitle" className="mb-12">
           <Title {...titleProps} />

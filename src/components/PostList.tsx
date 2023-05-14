@@ -23,16 +23,18 @@ const PostList: React.FC<PostListProps> = ({ titleProps, posts }) => {
   return (
     <div id={`${title}PostList`}>
       <PostListLayout>
-        <Title
-          title={title}
-          titleType={titleType}
-          titleCssProps={titleCssProps}
-          imageSrc={imageSrc}
-          imageCssProps={imageCssProps}
-          width={width}
-          height={height}
-          alt={alt}
-        />
+        <div id="postListTitle" className="mb-6">
+          <Title
+            title={title}
+            titleType={titleType}
+            titleCssProps={titleCssProps}
+            imageSrc={imageSrc}
+            imageCssProps={imageCssProps}
+            width={width}
+            height={height}
+            alt={alt}
+          />
+        </div>
         <div id={`${title}ListContainer`}>
           {posts.map((post, index) => (
             <PostCard key={index} post={post} index={index} />

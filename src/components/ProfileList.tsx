@@ -43,8 +43,8 @@ const ProfileList: React.FC<ProfileListProps> = ({ titleProps, profiles }) => {
           ))}
         </ProfileListLayout>
       </div>
-    </div >
+    </div>
   )
 }
 
-export default ProfileList;
+export default ProfileList
