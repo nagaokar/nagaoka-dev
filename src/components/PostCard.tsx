@@ -85,15 +85,19 @@ export function PostCard({ post, index }: PostProps) {
   return (
     <div
       id={filteredPost.tag}
-      className="2 my-1 flex flex-row xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg "
+      className="my-1 flex flex-row xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg "
     >
       {/* START: CARD DATE */}
-      <div className="flex w-12 flex-col text-red-500">
+      <div className="mt-1 flex w-12 flex-col text-end text-sm text-red-500">
         <p>{filteredPost.date}</p>
       </div>
       {/* END: CARD DATE */}
       {/* START: CARD TITLE CONTAINER*/}
-      <div className="mb-1 flex w-72 flex-row px-2 pb-2 xs:pr-12 sm:pr-10 md:pr-8 lg:pr-6 xl:pr-12">
+      <div
+        id="cardTitle"
+        className="mb-1 flex w-72 flex-row px-2 pb-2 
+      xs:pr-12 sm:pr-10 md:pr-8 lg:pr-6 xl:pr-12"
+      >
         {/* START: CARD TITLE SUB-CONTAINER */}
         <div className="flex flex-col">
           {/* CARD TITLE */}

@@ -10,10 +10,10 @@ export default function Layout({ children }: any) {
         <Nav />
       </nav>
       <main
-        className="max-w-screen font-regular flex flex-col 
-      overflow-x-hidden bg-white px-4 lowercase text-black"
+        className="mt-12 max-w-screen font-regular flex flex-col 
+        overflow-x-hidden bg-white px-4 lowercase text-black"
       >
-        <div className="mt-12">{children}</div>
+        {children}
       </main>
       <footer className="overflow-x-hidden">
         <Footer />

@@ -167,4 +167,22 @@ export const posts: Post[] = [
     link: '',
     date: '2020',
   },
+  {
+    id: 18,
+    tag: 'hobby',
+    title:'drummer',
+    organisation: 'ur ex-bf',
+    desc: '',
+    link: 'https://www.instagram.com/urexbfband/',
+    date: '2023',
+  },
+  {
+    id: 19,
+    tag: 'hobby',
+    title:'artist',
+    organisation: 'MASSLAND',
+    desc: '',
+    link: 'https://soundcloud.com/massland',
+    date: '2020',
+  },
 ]
