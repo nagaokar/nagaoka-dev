@@ -12,7 +12,7 @@ export interface PostProps {
   index: number
 }
 
-export function PostCard({ post, index }: PostProps) {
+export default function PostCard({ post, index }: PostProps) {
   const [open, setOpen] = useState(false)
 
   const renderLinkSection = () => {

@@ -1,39 +1,72 @@
 import React from 'react'
 import Image from 'next/image'
 
-interface TitleProps {
+export interface TitleProps {
   title: string
-  textSize: string
-  graphic: string
-  rotation: string
-  alt: string
+  titleType: 'imageUnder' | 'centered' | 'imageAbove'
+  titleCssProps: string
+  imageSrc?: string
+  imageCssProps?: string
+  width?: number
+  height?: number
+  alt?: string
 }
 
-const TitleComponent: React.FC<TitleProps> = ({
+const Title: React.FC<TitleProps> = ({
   title,
-  graphic,
-  rotation,
+  titleCssProps,
+  imageSrc,
+  imageCssProps,
+  width,
+  height,
   alt,
-  textSize,
+  titleType,
 }) => {
   return (
-    <div className="mb-8 flex flex-col text-3xl font-bold">
+    <div
+      id={`${title}TitleContainer`}
+      className="flex flex-col text-3xl font-bold"
+    >
       {/* TITLE TEXT */}
-      <div className="flex justify-center">
-        <p className={`${textSize}`}>{title}</p>
-      </div>
-      {/* TITLE UNDERLINE */}
-      <div className="flex justify-center">
-        <Image
-          className={`${rotation} mt-1`}
-          src={graphic}
-          width={200}
-          height={500}
-          alt={alt}
-        />
-      </div>
+      {titleType === 'imageUnder' && (
+        <div className="flex justify-center">
+          <p id={`${title}Text`} className={`${titleCssProps}`}>
+            {title}
+          </p>
+        </div>
+      )}
+      {/* TITLE GRAPHIC */}
+      {imageSrc && (
+        <div
+          id={`${title}Image`}
+          className={`${imageCssProps} mb-5 mt-1 flex justify-center`}
+        >
+          {titleType === 'centered' && (
+            <p className={`${titleCssProps}`}>{title}</p>
+          )}
+          {titleType === 'centered' && (
+            <>
+              <Image
+                src={imageSrc}
+                width={width}
+                height={height}
+                alt={`${alt}`}
+              />
+              <p className={`${titleCssProps}`}>{title}</p>
+            </>
+          )}
+          {titleType !== 'imageAbove' && titleType !== 'centered' && (
+            <Image
+              src={imageSrc}
+              width={width}
+              height={height}
+              alt={`${alt}`}
+            />
+          )}
+        </div>
+      )}
     </div>
   )
 }
 
-export default TitleComponent
+export default Title

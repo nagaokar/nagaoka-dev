@@ -1,9 +1,15 @@
 import React from 'react'
 import Nav from '../NavBar'
-import Spacer from '../Spacer'
 import Footer from '../Footer'
+import CurvedUnderline from '../../icons/undraw/undraw_curved-underline.svg'
+import Title, { TitleProps } from '../Title'
 
-export default function Layout({ children }: any) {
+interface LayoutProps {
+  children: React.ReactNode;
+  titleProps: TitleProps;
+}
+
+export default function Layout({ children, titleProps }: LayoutProps) {
   return (
     <>
       <nav className="overflow-x-hidden">
@@ -13,6 +19,11 @@ export default function Layout({ children }: any) {
         className="mt-12 max-w-screen font-regular flex flex-col 
         overflow-x-hidden bg-white px-4 lowercase text-black"
       >
+        {/* START: PAGE TITLE */}
+        <div id="pageTitle" className="mb-12">
+          <Title {...titleProps} />
+        </div>
+        {/* END: PAGE TITLE */}
         {children}
       </main>
       <footer className="overflow-x-hidden">
