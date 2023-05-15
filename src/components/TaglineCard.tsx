@@ -7,8 +7,7 @@ export default function TaglineSection({ text }: any) {
     <section id="taglineCard" className="flex justify-center">
       <div className="m-3">
         <p className="max-w-[800px] text-xl font-bold">{text}</p>
-        <div className="mt-8 flex justify-center">
-        </div>
+        <div className="mt-8 flex justify-center"></div>
       </div>
     </section>
   )

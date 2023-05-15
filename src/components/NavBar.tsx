@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import Image, { ImageProps } from 'next/image';
-import Link from 'next/link';
+import React, { useState } from 'react'
+import { useRouter } from 'next/router'
+import Image, { ImageProps } from 'next/image'
+import Link from 'next/link'
 
-import CircledPlus from '../icons/undraw/undraw_circled-plus.svg';
-import DoubleUnderline from '../icons/undraw/undraw_double-underline.svg';
+import CircledPlus from '../icons/undraw/undraw_circled-plus.svg'
+import DoubleUnderline from '../icons/undraw/undraw_double-underline.svg'
 
 interface NavItemProps {
-  href: string;
-  children: React.ReactNode;
-  imageProps?: ImageProps;
+  href: string
+  children: React.ReactNode
+  imageProps?: ImageProps
 }
 
 const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
-  const { asPath } = useRouter();
-  const isCurrent = asPath === href;
+  const { asPath } = useRouter()
+  const isCurrent = asPath === href
 
   return (
     <div className="xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
@@ -24,35 +24,54 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
       <div>
         {isCurrent && (
           <div className="flex justify-center align-top">
-            <Image src={DoubleUnderline} width={25} height={50} alt="" {...imageProps} />
+            <Image
+              src={DoubleUnderline}
+              width={25}
+              height={50}
+              alt=""
+              {...imageProps}
+            />
           </div>
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default function Nav() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
   const toggleCollapse = () => {
-    setIsCollapsed((prevCollapsed) => !prevCollapsed);
-  };
+    setIsCollapsed((prevCollapsed) => !prevCollapsed)
+  }
 
   return (
-    <nav className={`z-40 flex flex-col justify-center items-center py-3 bg-white border-b-2 border-black ${isCollapsed ? 'collapsed' : ''}`}>
+    <nav
+      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${
+        isCollapsed ? 'collapsed' : ''
+      }`}
+    >
       <div className="flex flex-col justify-center text-center align-middle font-thin">
-        <div className="md:hidden flex justify-center text-center">
-          <button className="flex px-3 mb-2 items-center text-center bg-white" onClick={toggleCollapse}>
+        <div className="flex justify-center text-center md:hidden">
+          <button
+            className="mb-2 flex items-center bg-white px-3 text-center"
+            onClick={toggleCollapse}
+          >
             {isCollapsed ? (
               <Image src={CircledPlus} width={25} height={25} alt="" />
             ) : (
-              <Image className="rotate-90" src={CircledPlus} width={25} height={25} alt="" />
+              <Image
+                className="rotate-90"
+                src={CircledPlus}
+                width={25}
+                height={25}
+                alt=""
+              />
             )}
           </button>
         </div>
         {!isCollapsed && (
-          <div className="md:flex flex-col md:flex-row justify-center items-center bg-white">
+          <div className="flex-col items-center justify-center bg-white md:flex md:flex-row">
             <NavItem href="/home">home</NavItem>
             <NavItem href="/about">about</NavItem>
             <NavItem href="/projects">projects</NavItem>
@@ -61,5 +80,5 @@ export default function Nav() {
         )}
       </div>
     </nav>
-  );
+  )
 }

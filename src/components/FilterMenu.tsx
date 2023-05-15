@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 interface FilterMenuProps {
-  categories: string[];
-  selectedCategory: string | null;
-  onCategorySelect: (category: string) => void;
+  categories: string[]
+  selectedCategory: string | null
+  onCategorySelect: (category: string) => void
 }
 
 const FilterMenu: React.FC<FilterMenuProps> = ({
@@ -12,7 +12,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
   onCategorySelect,
 }) => {
   return (
-    <div className="lowercase mx-2">
+    <div className="mx-2 lowercase">
       <ul className="flex flex-wrap">
         {categories.map((category) => (
           <li
@@ -33,7 +33,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default FilterMenu;
+export default FilterMenu
