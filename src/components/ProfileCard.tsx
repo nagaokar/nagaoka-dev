@@ -17,25 +17,11 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   index,
 }) => {
   return (
-    <div
-      id="profileContainer"
-      className=" mb-7 mt-3 flex max-w-[800px] px-2"
-      key={index}
+    <div id="profileContainer" key={index}
+      className=" mb-7 mt-3 flex max-w-[800px]"
     >
       <div id={`${profile.title}profileContainer`}>
-        <Title
-          title={profile.title}
-          titleType="imageAbove"
-          titleCssProps="text-2xl mb-4 mt-2"
-          imageSrc={profile.title === 'Academic Profile' ? TreeIcon : CodeIcon}
-          imageCssProps="flex align-top max-h-12"
-          width={50}
-          height={150}
-          alt={`a line drawing of ${
-            profile.title === 'Academic Profile' ? 'a tree' : 'a computer'
-          }`}
-        />
-        <TextParagraph jsonData={profile} />
+        <TextParagraph className='text-lg' jsonData={profile} />
       </div>
     </div>
   )

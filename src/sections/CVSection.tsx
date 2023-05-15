@@ -21,98 +21,21 @@ export default function CVSection() {
   const gamesPosts = posts.filter((post) => post.tag === 'game');
 
   return (
-    <>
-      {/* START: CV TITLE SECTION */}
-      <section id="cv-title" className="flex justify-center">
-        {/* START: CV TITLE */}
-        <Title
-          title="CV"
-          titleType='centered'
-          titleCssProps="text-5xl"
-          imageSrc={StarIcon}
-          width={150}
-          height={200}
-          imageCssProps="-rotate-6"
-          alt="a black outline line drawing of a star"
-        />
-        {/* END: CV TITLE */}
+    <section id="cv">
+      <section id="cvTitle">
+        <Title title="CV" type="star" />
       </section>
-      {/* END: CV TITLE SECTION */}
-
-      <section id="cv" className="flex flex-col">
-        {/* START: CV BODY */}
-        <section id="cv-content" className="flex flex-wrap justify-center mb-12">
-          {/* START: COLUMN 1 */}
-          <div id="postListColumn1">
-            {/* START: ACADEMIC */}
-            <PostList
-              titleProps={{
-                title: "Academic",
-                titleType: 'imageUnder',
-                titleCssProps: "text-3xl flex justify-center",
-                imageSrc: Underline,
-                width: 200,
-                height: 500,
-                imageCssProps: "-rotate-3",
-                alt: UnderlineAlt,
-              }}
-              posts={academicPosts}
-            />
-            {/* END: ACADEMIC */}
-            {/* START: GAMES */}
-            <PostList
-              titleProps={{
-                title: "Games",
-                titleType: 'imageUnder',
-                titleCssProps: "text-3xl",
-                imageSrc: Underline,
-                width: 200,
-                height: 500,
-                imageCssProps: "rotate-6",
-                alt: UnderlineAlt,
-              }}
-              posts={gamesPosts}
-            />
-            {/* END: GAMES */}
-          </div>
-          {/* END: COLUMN 1 */}
-          {/* START: COLUMN 2 */}
-          <div id="postListColumn2">
-            {/* START: EMPLOYMENT */}
-            <PostList
-              titleProps={{
-                title: "Employment",
-                titleType: 'imageUnder',
-                titleCssProps: "text-3xl",
-                imageSrc: Underline,
-                width: 200,
-                height: 500,
-                imageCssProps: "rotate-3",
-                alt: UnderlineAlt,
-              }}
-              posts={employmentPosts}
-            />
-            {/* END: EMPLOYMENT */}
-            {/* START: EDUCATION */}
-            <PostList
-              titleProps={{
-                title: "Education",
-                titleType: 'imageUnder',
-                titleCssProps: "text-3xl",
-                imageSrc: Underline,
-                width: 200,
-                height: 500,
-                imageCssProps: "-rotate-3",
-                alt: UnderlineAlt,
-              }}
-              posts={educationPosts}
-            />
-            {/* END: EDUCATION */}
-          </div>
-          {/* END: COLUMN 2 */}
-        </section>
-        {/* END: CV BODY*/}
+      <section id="cvContent"
+        className="flex flex-row-reverse flex-wrap justify-center">
+        <div id="cv-column" className="flex flex-col">
+          <PostList title="Academic" posts={academicPosts} />
+          <PostList title="Games" posts={gamesPosts} />
+        </div>
+        <div id="cv-column" className="flex flex-col">
+          <PostList title="Employment" posts={employmentPosts} />
+          <PostList title="Education" posts={educationPosts} />
+        </div>
       </section>
-    </>
+    </section>
   )
 }

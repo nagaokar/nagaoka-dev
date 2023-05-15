@@ -10,14 +10,9 @@ export default function About() {
     <>
       <Layout
         titleProps={{
-          title: 'about',
-          titleType: 'imageUnder',
-          titleCssProps: 'text-5xl',
-          imageSrc: CurvedUnderline,
-          width: 200,
-          height: 200,
-          imageCssProps: '-rotate-6',
-          alt: 'a black curved underline',
+          title: "About",
+          type: "curvedUnderline",
+          titleProps: "flex justify-center rotate-3 text-5xl"
         }}
       >
         <TaglineSection />

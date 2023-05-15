@@ -7,6 +7,9 @@ import TreeIcon from '../icons/undraw/undraw_tree.svg'
 import CodeIcon from '../icons/undraw/undraw_code.svg'
 import ProfileListLayout from "@/components/layouts/ProfileListLayout";
 import ProfileList from "@/components/ProfileList";
+import Underline from '../icons/undraw/undraw_underline.svg'
+import StarIcon from '../icons/undraw/undraw_star.svg'
+
 
 export default function ProfileSection() {
   const profiles = textData.filter((item) => item.tag === 'profile');
@@ -17,14 +20,9 @@ export default function ProfileSection() {
     <section className="flex flex-col flex-wrap justify-center">
         <ProfileList
           titleProps={{
-            title: "Academic Profile",
-            titleType: 'imageUnder',
-            titleCssProps: "text-3xl justify-center",
-            imageSrc: "",
-            width: 200,
-            height: 500,
-            imageCssProps: "-rotate-3",
-            alt: "",
+            title: "",
+            type: 'none',
+            titleProps: "text-3xl justify-center"
           }}
           profiles={profiles}
         />

@@ -13,10 +13,10 @@ export default function Layout({ children, titleProps }: LayoutProps) {
     <>
       <nav className="overflow-x-hidden">
         <Nav />
-      </nav>
-      <main className="mt-12 max-w-screen font-regular flex flex-col overflow-x-hidden bg-white px-4 lowercase text-black">
+      </nav>``
+      <main className="mt-12 max-w-screen font-regular flex flex-col overflow-x-hidden bg-white px-8 lowercase text-black">
         {/* START: PAGE TITLE */}
-        <div id="pageTitle" className="mb-12">
+        <div id="pageTitle" className="mb-12 flex justify-center">
           <Title {...titleProps} />
         </div>
         {/* END: PAGE TITLE */}
