@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
   };
 
   const handleProjectClick = () => {
-    router.push(`/project/${post.slug}`);
+    router.push(`/projects/${post.slug}`);
   };
 
   return (
