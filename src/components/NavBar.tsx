@@ -40,7 +40,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className={`z-40 flex flex-col justify-center items-center pt-3 bg-white ${isCollapsed ? 'collapsed' : ''}`}>
+    <nav className={`z-40 flex flex-col justify-center items-center py-3 bg-white border-b-2 border-black ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="flex flex-col justify-center text-center align-middle font-thin">
         <div className="md:hidden flex justify-center text-center">
           <button className="flex px-3 mb-2 items-center text-center bg-white" onClick={toggleCollapse}>

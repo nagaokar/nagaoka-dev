@@ -31,7 +31,7 @@ export const posts: Post[] = [
     title: 'Presenter + Consultant',
     subtag: 'academic',
     organisation: 'London School of Architecture',
-    desc: "Presented my phd research practice with a focus on methodology (primarily the MDA framework). this was to inform the design of a new 'part 4: design for life' ethical architectural practice course. ",
+    desc: "presentation of my phd research practice with a focus on methodology (primarily the MDA framework). this was to inform the design of a new 'part 4: design for life' ethical architectural practice course. ",
     link: 'https://www.the-lsa.org/',
     date: '2023',
 
@@ -45,7 +45,6 @@ export const posts: Post[] = [
     desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence.',
     link: 'https://manchestergamecentre.org/',
     date: '2022',
-
   },
   {
     id: 4,
@@ -74,7 +73,7 @@ export const posts: Post[] = [
     tag: 'game',
     subtag: 'game',
     title: 'Ecoville',
-    organisation: 'Conference Workshop',
+    organisation: 'phd',
     desc: 'An online multiplayer eco-planning game created for the AESOP 2023 Planning and Complexity conference. This online multiplayer game gave players individual roles in which they had to balance individual and collective goals to build a sustainable urban neighbourhood',
     link: '',
     date: '2023',
@@ -87,7 +86,7 @@ export const posts: Post[] = [
     title: 'Cityzen',
     organisation: 'MA Architecture',
     desc: "An online multiplayer eco-planning game created using Kate Raworth's 'Doughbut Econnomics' as the theoretical framework. This turn-based multiplayer online game was constructed with Manchester City Council as the client to envision how a zero-carbon future for the Northern Gateway - a £1 billion urban development in Northern Manchester.",
-    link: '',
+    link: 'https://issuu.com/nagaokastudio/docs/studio_three_25_05_21',
     date: '2021',
 
   },
@@ -97,7 +96,7 @@ export const posts: Post[] = [
     subtag: 'academic',
     title: 'Ph.D. Architecture',
     organisation: 'Manchester Metropolitan University',
-    desc: 'Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed',
+    desc: "Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed. I work across the MMU Postgraduate School of Arts and Humanities and the Manchester School of Architecture (MSA). My supervisors are Ulysess Sengupta (CPU Lab, MSA), Paul Wake (Dept. of English, MMU), and Bodhi Chattopadhyay (CoFutures Lab, University of Oslo)",
     link: '',
     date: '2026',
 
@@ -111,8 +110,6 @@ export const posts: Post[] = [
     desc: 'Specialised in computational design for architectural & urban design within the CPU.AI (Complexity, Planning & Urbanism. Architectural Intelligence).',
     link: '',
     date: '2021',
-
-
   },
   {
     id: 10,
@@ -121,7 +118,7 @@ export const posts: Post[] = [
     title: 'BA(hons) Architecture',
     organisation: 'Manchester School of Architecture',
     desc: 'Joined the Continuity In Architecture atelier during final year, which specialises in applying critical regionalism to sensitive placemaking',
-    link: '',
+    link: 'https://www.msa.ac.uk/study/ateliers/cia/',
     date: '2018',
 
   },
@@ -132,10 +129,9 @@ export const posts: Post[] = [
     title:
       'Collaborative Play in an Eco-MMO Research Paper (WIP)',
     organisation: 'Phd',
-    desc: 'Collaborative Play in an Online Multiplayer Urban Planning Eco-Game',
+    desc: "This forthcoming research paper, titled 'Collaborative Play in an Online Multiplayer Urban Planning Eco-Game' is a output from the ecoville game created for the AESOP conference in april 2023.",
     link: '',
     date: '2023',
-
   },
   {
     id: 12,
@@ -144,10 +140,9 @@ export const posts: Post[] = [
     title:
       'A eco-game conceptual framework. (WIP)',
     organisation: 'Phd',
-    desc: 'Virtual Eco-Cities: An Eco-game Conceptual Framework for the Analysis of Virtual Cities',
+    desc: "This forthcoming research paper, titled 'Virtual Eco-Cities: An Eco-game Conceptual Framework for the Analysis of Virtual Cities' is a conceptual article arising from my phd project literature review.",
     link: '',
     date: '2023',
-
   },
   {
     id: 13,
@@ -155,10 +150,9 @@ export const posts: Post[] = [
     subtag: 'talk',
     title: 'Multiplatform 3: Remake, Reuse, Replay!',
     organisation: 'Manchester Game Centre',
-    desc: '',
+    desc: "Multiplatform: Remake, Reuse, Replay is a two-day event that explores sustainability and gaming, including a live game jam.",
     link: 'https://manchestergamecentre.org/events/2023/6/7/multiplatform-3-remake-reuse-replay',
     date: '2023',
-
   },
   {
     id: 14,
@@ -166,10 +160,9 @@ export const posts: Post[] = [
     subtag: 'talk',
     title: 'New Work in Game Studies: Alex Brooke and Reiji Nagaoka',
     organisation: 'Manchester Game Centre',
-    desc: '',
+    desc: 'This work-in-progress seminar i presented my work arising from my research projects alongside Alex Brooke, another student within the Manchester Game Centre.',
     link: 'https://manchestergamecentre.org/events/2023/2/22/alex-and-reiji-wip',
     date: '2023',
-
   },
   {
     id: 15,
@@ -181,7 +174,6 @@ export const posts: Post[] = [
     desc: 'the game online mutiplayer game ecoville was created especially for this conference, which took place in Manchester. The Planning & Complexity thematic is part of the European-wide AESOP institution',
     link: 'https://aesop-planning.eu/resources/news-archive/thematic-groups/planning-and-complexity/complex-cognitive-cities-sensing-planning-and-design-in-urban-transformations',
     date: '2023',
-
   },
   {
     id: 16,
@@ -193,7 +185,6 @@ export const posts: Post[] = [
     desc: 'Infrasystems Towards Healthy Brazil: Sustainable Urban Nexus (Water-Energy-Sanitation) in the Tiete River Basin',
     link: 'https://infrasystems.complexurban.com/people',
     date: '2021',
-
   },
   {
     id: 17,
@@ -201,10 +192,9 @@ export const posts: Post[] = [
     subtag: 'publication',
     title: 'dissertation',
     organisation: 'ma',
-    desc: 'emergence of institutional investors the post-crisis housing market of manchester, uk',
-    link: '',
+    desc: "my ma dissertation, titled: 'emergence of institutional investors the post-crisis housing market of manchester, uk' argues that the emergence of institutional investors in post-2008 housing markets has generated a novel architectural typology re-defining the geographies of extraction. These architectural materialisations disguise a vast network of financialised service infrastructures as a sociotechnical object which, through deployment of neo-marxist theories of urbanisation and political ecology, are uncovered as mechanisms for renewed cycles of capital accumulation via case study methodology. These architectural materialisations capitalise on housing dispossession through reinvigoration of the Private Rented Sector, which has grown continuously since the neo-liberal Thatcher era. (Rolnik, 2019) These novel asset classes in the Private Rented Sector signal an acceleration of financialised urban (re)production by further disintegrating housing as a public good and commodifies communities for the maximisation of profit.",
+    link: 'https://issuu.com/nagaokastudio/docs/ma5_financialisation_of_housing_dissertation.docx',
     date: '2020',
-
   },
   {
     id: 18,
@@ -212,20 +202,38 @@ export const posts: Post[] = [
     subtag:'music',
     title: 'drummer',
     organisation: 'ur ex-bf',
-    desc: '',
+    desc: "I am the drummer for the post-punk / indie rock band 'Ur EX-BF' formed in Manchester, with two singles arriving soon.",
     link: 'https://www.instagram.com/urexbfband/',
     date: '2023',
-
   },
   {
     id: 19,
     tag: 'hobby',
     subtag:'music',
-    title: 'artist',
+    title: 'producer',
     organisation: 'MASSLAND',
-    desc: '',
+    desc: 'My platform for my very sparse music experiments - from tracks perhaps recognisable as music to experiments with algorhythms.',
     link: 'https://soundcloud.com/massland',
     date: '2020',
-
+  },  
+  {
+    id: 20,
+    tag: 'hobby',
+    subtag: 'web development',
+    title: 'Web Developer',
+    organisation: 'Nagaoka.dev',
+    desc: "this site was written in html, css, and typescript - using react, next.js, and tailwindcss as the frameworks. This is still a work in progress and there are a lot more bits that are going to be added in future. so, come back soon. :) ",
+    link: 'nagaoka.dev',
+    date: '2023',
   },
+  {
+    id: 21,
+    tag: 'education',
+    subtag: 'computational design',
+    title: 'developer',
+    organisation: 'Ma architecture',
+    desc: "My first project at the Manchester School of Architecture's CPU atelier. THe aim of this project was to create a tool capable of generating an apartment block of social housing at runtime - using Design for Manufacture (DFMA) as the structural system. The user is able to input their preferences (cost, quality, time). This was accomplished through the construction of neural network (in grasshopper).",
+    link: 'https://issuu.com/nagaokastudio/docs/group_portfolio_final',
+    date: '2019',
+  },  
 ]

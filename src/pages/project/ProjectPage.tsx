@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Post, getAllPosts } from "@/lib/ContentDatabase";
+import Spacer from "@/components/Spacer";
 
 interface ProjectPageProps {
   project: Post;
@@ -8,17 +9,30 @@ interface ProjectPageProps {
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
   return (
     <>
-      <div className="lowercase">
-        <p>{project.title}</p>
-        <p>{project.organisation}</p>
-        <p>{project.date}</p>
-        <p>{project.desc}</p>
-        <a
-        className="hover:underline" 
-        href={project.link} target="_blank" rel="noopener noreferrer">
-        {project.link}
-        </a>
-        <p></p>
+    <div className="flex flex-col h-content">
+        <div className="flex text-5xl -rotate-2 m-3">
+          <p >{project.title}</p>
+        </div>
+    </div>
+        <div className="flex text-3xl h-content">
+          <p>{project.organisation}</p>
+        </div>
+      <div className="flex flex-col h-full justify-center">
+        <div className="text-xl text-red-500 text-center my-3">
+          <p>{project.date}</p>
+        </div>
+        <Spacer />
+        <div className="flex text-xl my-2">
+          <p>{project.desc}</p>
+        </div>
+        <Spacer />
+        <div className="flex">
+          <a
+            className="hover:underline"
+            href={project.link} target="_blank" rel="noopener noreferrer">
+            {project.link}
+          </a>
+        </div>
       </div>
     </>
   );

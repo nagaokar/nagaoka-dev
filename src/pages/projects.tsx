@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <>
       <Layout>
-        <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
+        {/* <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
           <p className="-rotate-2">Projects</p>
           <Image
             className="justify-center"
@@ -25,7 +25,7 @@ export default function Projects() {
             height={100}
             alt=""
           />
-          </div>
+          </div> */}
 
         <section id="projectListContainer" className="flex flex-col justify-start ">
         <section id="galleryFilterMenu">
