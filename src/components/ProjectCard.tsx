@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Post } from "@/lib/ContentDatabase";
 import Popup from "@/components/Popup";
-import Project from "@/pages/projects/[slug]";
+import Project, { ProjectProps } from '@/pages/projects/[slug]';
 import PostImage from "@/components/PostImage";
 
 interface ProjectCardProps {

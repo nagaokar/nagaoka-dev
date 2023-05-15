@@ -1,7 +1,7 @@
 import { getAllPostSlugs, getPostBySlug, Post } from "@/lib/ContentDatabase";
 import Spacer from "@/components/Spacer";
 
-interface ProjectProps {
+export interface ProjectProps {
   post: Post;
 }
 
