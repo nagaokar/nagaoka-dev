@@ -50,12 +50,12 @@ const Title: React.FC<TitleProps> = ({
     else if (type === 'star') {
       return (
         <div className="flex w-screen flex-row justify-center">
-          <div className="mb-24 -rotate-2 text-center text-5xl font-bold">
+          <div className="mb-20 text-center text-5xl font-bold">
             <p className="translate-y-24 text-5xl">
               {title}
             </p>
             <Image
-              className='rotate-6'
+              className='-rotate-6'
               src={StarIcon}
               width={150}
               height={200}

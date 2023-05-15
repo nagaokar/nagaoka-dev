@@ -12,9 +12,6 @@ import StarIcon from '../icons/undraw/undraw_star.svg'
 
 
 export default function CVSection() {
-  const CurvedUnderlineAlt = 'a black hand-drawn curved underline';
-  const UnderlineAlt = 'a black hand-drawn straight underline';
-
   const employmentPosts = posts.filter((post) => post.tag === 'employment');
   const academicPosts = posts.filter((post) => post.tag === 'academic');
   const educationPosts = posts.filter((post) => post.tag === 'education');
@@ -22,7 +19,7 @@ export default function CVSection() {
 
   return (
     <section id="cv">
-      <section id="cvTitle">
+      <section id="cvTitle" className="flex justify-center">
         <Title title="CV" type="star" />
       </section>
       <section id="cvContent"
