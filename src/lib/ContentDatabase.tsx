@@ -8,6 +8,10 @@ export interface Post {
   date: string
 }
 
+export const getAllPosts = (): Post[] => {
+  return posts;
+};
+
 export const posts: Post[] = [
   {
     id: 1,

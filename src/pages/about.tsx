@@ -13,7 +13,7 @@ export default function About() {
         titleProps={{
           title: 'About',
           type: 'curvedUnderline',
-          titleProps: 'flex justify-center rotate-3 text-5xl',
+          titleProps: 'flex justify-center',
         }}
       >
         <TaglineSection />
