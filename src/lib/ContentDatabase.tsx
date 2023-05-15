@@ -1,18 +1,28 @@
 export interface Post {
-  id: number
-  tag: string
+  id: number;
+  tag: string;
   subtag: string;
-  title: string
-  organisation: string
-  desc: string
-  link: string
-  date: string
+  title: string;
+  organisation: string;
+  desc: string;
+  link: string;
+  date: string;
   slug: string;
 }
 
 export const getAllPosts = (): Post[] => {
   return posts;
 };
+
+export const getAllPostSlugs = (): string[] => {
+  return posts.map((post) => post.slug);
+};
+
+export const getPostBySlug = (slug: string): Post | undefined => {
+  return posts.find((post) => post.slug === slug);
+};
+
+
 
 export const posts: Post[] = [
   {

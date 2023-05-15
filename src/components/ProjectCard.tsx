@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Post } from "@/lib/ContentDatabase";
 import Popup from "@/components/Popup";
-import ProjectPage from "@/pages/[projects]/ProjectPage";
+import Project from "@/pages/projects/[slug]";
 import PostImage from "@/components/PostImage";
 
 interface ProjectCardProps {
@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
   };
 
   const handleProjectClick = () => {
-    router.push(`/${post.slug}`);
+    router.push(`/project/${post.slug}`);
   };
 
   return (
@@ -57,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
 
       {isPopupOpen && (
         <Popup onClick={closePopup}>
-          <ProjectPage post={post} />
+          <Project postData={post} />
         </Popup>
       )}
     </section>
