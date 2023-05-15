@@ -57,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
 
       {isPopupOpen && (
         <Popup onClick={closePopup}>
-          <Project postData={post} />
+          <Project post={post} />
         </Popup>
       )}
     </section>

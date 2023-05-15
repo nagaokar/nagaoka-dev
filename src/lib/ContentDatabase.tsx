@@ -22,8 +22,6 @@ export const getPostBySlug = (slug: string): Post | undefined => {
   return posts.find((post) => post.slug === slug);
 };
 
-
-
 export const posts: Post[] = [
   {
     id: 1,
