@@ -4,7 +4,6 @@ import { Post, posts } from '../lib/ContentDatabase';
 import Layout from "@/components/layouts/layout";
 import Gallery from "@/components/Gallery";
 import FilterMenu from "@/components/FilterMenu";
-
 import curvedUnderline from '../icons/undraw/undraw_curved-underline.svg'
 
 export default function Projects() {

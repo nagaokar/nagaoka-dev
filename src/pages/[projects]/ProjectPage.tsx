@@ -1,36 +1,40 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Post, getAllPosts } from "@/lib/ContentDatabase";
 import Spacer from "@/components/Spacer";
+import { useRouter } from "next/router";
+
 
 interface ProjectPageProps {
-  project: Post;
+  post: Post;
 }
 
-const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
+const ProjectPage: React.FC<ProjectPageProps> = ({ post }) => {
+  const router = useRouter();
+  const { post } = router.query;
   return (
     <>
     <div className="flex flex-col h-content">
         <div className="flex text-5xl -rotate-2 m-3">
-          <p >{project.title}</p>
+          <p >{post.title}</p>
         </div>
     </div>
         <div className="flex text-3xl h-content">
-          <p>{project.organisation}</p>
+          <p>{post.organisation}</p>
         </div>
       <div className="flex flex-col h-full justify-center">
         <div className="text-xl text-red-500 text-center my-3">
-          <p>{project.date}</p>
+          <p>{post.date}</p>
         </div>
         <Spacer />
         <div className="flex text-xl my-2">
-          <p>{project.desc}</p>
+          <p>{post.desc}</p>
         </div>
         <Spacer />
         <div className="flex">
           <a
             className="hover:underline"
-            href={project.link} target="_blank" rel="noopener noreferrer">
-            {project.link}
+            href={post.link} target="_blank" rel="noopener noreferrer">
+            {post.link}
           </a>
         </div>
       </div>
@@ -52,9 +56,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<ProjectPageProps> = async ({ params }) => {
   const id = Number(params?.id);
   const posts = getAllPosts(); // Fetch all the project data
-  const project = posts.find((post) => post.id === id);
+  const post = posts.find((post) => post.id === id);
 
-  if (!project) {
+  if (!post) {
     return {
       notFound: true,
     };
@@ -62,7 +66,7 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async ({ params 
 
   return {
     props: {
-      project,
+      post,
     },
   };
 };

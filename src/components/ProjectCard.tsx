@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import { Post } from "@/lib/ContentDatabase";
-import Popup from "./Popup";
-import ProjectPage from "@/pages/project/ProjectPage";
-import PostImage from "./PostImage";
+import Popup from "@/components/Popup";
+import ProjectPage from "@/pages/[projects]/ProjectPage";
+import PostImage from "@/components/PostImage";
 
 interface ProjectCardProps {
-  project: Post;
+  post: Post;
   index: number;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const router = useRouter();
 
   const openPopup = () => {
     setIsPopupOpen(true);
@@ -20,35 +22,42 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     setIsPopupOpen(false);
   };
 
+  const handleProjectClick = () => {
+    router.push(`/${post.slug}`);
+  };
+
   return (
-    <section id="projectCardContainer" className="flex flex-col md:flex-row flex-wrap justify-center">
+    <section
+      id="projectCardContainer"
+      className="flex flex-col md:flex-row flex-wrap justify-center"
+    >
       <button
         className="p-2 border-2 border-black m-3"
-        onClick={openPopup}
+        onClick={handleProjectClick}
       >
         <div
-          id={`project${project.id}Card`}
+          id={`project${post.id}Card`}
           className="w-52 md:w-64 h-64 flex flex-col m-5 p-5 lowercase justify-center"
         >
           <div className="flex flex-col">
-            <PostImage key={project.id} post={project} />
+            <PostImage key={post.id} post={post} />
           </div>
 
           <div className="flex flex-col justify-center text-center">
-            <p className="font-bold text-lg">{project.organisation}</p>
+            <p className="font-bold text-lg">{post.organisation}</p>
           </div>
           <div className="flex flex-col justify-start text-center text-lg">
-            <p>{project.title}</p>
+            <p>{post.title}</p>
           </div>
           <div className="flex flex-col justify-center text-center">
-            <p className="text-sm opacity-30 mt-2">{project.date}</p>
+            <p className="text-sm opacity-30 mt-2">{post.date}</p>
           </div>
         </div>
       </button>
 
       {isPopupOpen && (
         <Popup onClick={closePopup}>
-          <ProjectPage project={project} />
+          <ProjectPage post={post} />
         </Popup>
       )}
     </section>

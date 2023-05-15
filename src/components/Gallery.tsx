@@ -19,7 +19,7 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory }) => {
       <div className='flex justify-start flex-wrap lowercase h-content w-100'>
         {sortedPosts.map((post) => (
           <div key={post.id}>
-            <ProjectCard key={post.id} project={post} index={post.id}/>
+            <ProjectCard key={post.id} post={post} index={post.id}/>
           </div>
         ))}
       </div>
