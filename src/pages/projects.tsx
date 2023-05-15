@@ -4,8 +4,8 @@ import { Post, posts } from '../lib/ContentDatabase';
 import Layout from "@/components/layouts/layout";
 import Gallery from "@/components/Gallery";
 import FilterMenu from "@/components/FilterMenu";
-import Footer from "@/components/Footer";
-import Nav from "@/components/NavBar";
+
+import curvedUnderline from '../icons/undraw/undraw_curved-underline.svg'
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -15,13 +15,19 @@ export default function Projects() {
 
   return (
     <>
-      <Layout
-        titleProps={{
-          title: 'Projects',
-          type: 'none',
-          titleProps: 'flex justify-center -rotate-3',
-        }}
-      >
+      <Layout>
+        <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
+          <p className="-rotate-2">Projects</p>
+          <Image
+            className="justify-center"
+            src={curvedUnderline}
+            width={200}
+            height={100}
+            alt=""
+          />
+          </div>
+
+        <section id="projectListContainer" className="flex flex-col justify-start ">
         <section id="galleryFilterMenu">
           <FilterMenu
             categories={[
@@ -38,7 +44,6 @@ export default function Projects() {
             onCategorySelect={handleCategorySelect}
           />
         </section>
-        <section id="projectListContainer" className="flex justify-start">
           <Gallery selectedCategory={selectedCategory} />
         </section>
       </Layout>

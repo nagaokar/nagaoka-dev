@@ -17,7 +17,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
   const isCurrent = asPath === href;
 
   return (
-    <div className="h-12 xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
+    <div className="xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
       <Link href={href} className="flex hover:font-bold">
         {children}
       </Link>
@@ -40,13 +40,10 @@ export default function Nav() {
   };
 
   return (
-    <nav className={`z-40 flex flex-col justify-center items-center mt-2 bg-white align-top ${isCollapsed ? 'collapsed' : ''} lowercase`}>
+    <nav className={`z-40 flex flex-col justify-center items-center pt-3 bg-white ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="flex flex-col justify-center text-center align-middle font-thin">
         <div className="md:hidden flex justify-center text-center">
-          <button
-            className="block px-3"
-            onClick={toggleCollapse}
-          >
+          <button className="flex px-3 mb-2 items-center text-center bg-white" onClick={toggleCollapse}>
             {isCollapsed ? (
               <Image src={CircledPlus} width={25} height={25} alt="" />
             ) : (
@@ -55,7 +52,7 @@ export default function Nav() {
           </button>
         </div>
         {!isCollapsed && (
-          <div className="md:flex flex-col md:flex-row justify-center items-center">
+          <div className="md:flex flex-col md:flex-row justify-center items-center bg-white">
             <NavItem href="/home">home</NavItem>
             <NavItem href="/about">about</NavItem>
             <NavItem href="/projects">projects</NavItem>

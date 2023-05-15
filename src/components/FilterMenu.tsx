@@ -12,15 +12,19 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
   onCategorySelect,
 }) => {
   return (
-    <div className='lowercase'>
-      <ul className="flex">
+    <div className="lowercase mx-2">
+      <ul className="flex flex-wrap">
         {categories.map((category) => (
-          <li 
-            className={`m-2 cursor-pointer hover:underline
-              ${selectedCategory === 'all' ?
-                (category === 'all' ? 'font-bold' : '') :
-                (selectedCategory === category ? 'font-bold' : '')}
-              `}
+          <li
+            className={`m-2 cursor-pointer hover:underline ${
+              selectedCategory === 'all'
+                ? category === 'all'
+                  ? 'font-bold'
+                  : ''
+                : selectedCategory === category
+                ? 'font-bold'
+                : ''
+            }`}
             key={category}
             onClick={() => onCategorySelect(category)}
           >

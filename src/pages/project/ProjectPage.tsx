@@ -13,7 +13,12 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
         <p>{project.organisation}</p>
         <p>{project.date}</p>
         <p>{project.desc}</p>
-        <p>{project.link}</p>
+        <a
+        className="hover:underline" 
+        href={project.link} target="_blank" rel="noopener noreferrer">
+        {project.link}
+        </a>
+        <p></p>
       </div>
     </>
   );
