@@ -12,16 +12,11 @@ export default function Tagline() {
   if (!taglineText) { return null }
 
   return (
-<section id="tagline">
-  {/* START: TAGLINE */}
-  <TaglineCard
-    titleProps={{
-      title: "Test",
-      type: "none"
-    }}
-  />
-  {/* END: TAGLINE */}
-</section>
+    <section id="tagline">
+      {/* START: TAGLINE */}
+      <TaglineCard text={taglineText.sentences} />
+      {/* END: TAGLINE */}
+    </section>
 
   )
 }

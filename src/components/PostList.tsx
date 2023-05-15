@@ -5,12 +5,12 @@ import Title from './Title'
 
 interface PostListProps {
   posts: any[] // Update the type to match the actual type of posts
-  title: string;
+  title: string
 }
 
 const PostList: React.FC<PostListProps> = ({ posts, title }) => {
   return (
-    <div id={`${title}List`} className='flex flex-col'>
+    <div id={`${title}List`} className="flex flex-col">
       <Title title={title} type="underlined" titleProps="text-3xl" />
       <PostListLayout>
         <div id={`${title}ListContainer`}>
