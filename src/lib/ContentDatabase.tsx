@@ -6,6 +6,7 @@ export interface Post {
   desc: string
   link: string
   date: string
+  image: string;
 }
 
 export const getAllPosts = (): Post[] => {
@@ -21,6 +22,7 @@ export const posts: Post[] = [
     desc: "Article written for an online gaming blog titled: 'Planetary Play: Games and the Environment'.",
     link: 'https://uppercutcrit.com/planetary-play-games-and-the-environment',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ export const posts: Post[] = [
     desc: "Presented my phd research practice with a focus on methodology (primarily the MDA framework). this was to inform the design of a new 'part 4: design for life' ethical architectural practice course. ",
     link: 'https://www.the-lsa.org/',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 3,
@@ -39,6 +42,7 @@ export const posts: Post[] = [
     desc: 'my role revolves around developing the profile of the  manchester game centre (mgc), both internally (at manchester metropolitan university) and externally. primarily, this involves strategic planning and management of the mgc’s online presence.',
     link: 'https://manchestergamecentre.org/',
     date: '2022',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 4,
@@ -48,6 +52,7 @@ export const posts: Post[] = [
     desc: 'i am an informal tutor of the 6th year master’s atelier: ‘complexity, planning, and urbanism’ (cpu) at the manchester school of architecture. the atelier specialises in computational methods for architectural and urban design.',
     link: 'https://twitter.com/CPU_Ai_atelier',
     date: '2022',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 5,
@@ -57,6 +62,7 @@ export const posts: Post[] = [
     desc: 'i work in the automated design department of costain. my work involves the design and development of computational design tools for critical national infrastructure.',
     link: 'https://www.costain.com/',
     date: '2021',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 6,
@@ -66,6 +72,7 @@ export const posts: Post[] = [
     desc: 'An online multiplayer eco-planning game created for the AESOP 2023 Planning and Complexity conference. This online multiplayer game gave players individual roles in which they had to balance individual and collective goals to build a sustainable urban neighbourhood',
     link: '',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 7,
@@ -75,6 +82,7 @@ export const posts: Post[] = [
     desc: "An online multiplayer eco-planning game created using Kate Raworth's 'Doughbut Econnomics' as the theoretical framework. This turn-based multiplayer online game was constructed with Manchester City Council as the client to envision how a zero-carbon future for the Northern Gateway - a £1 billion urban development in Northern Manchester.",
     link: '',
     date: '2021',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 8,
@@ -84,6 +92,7 @@ export const posts: Post[] = [
     desc: 'Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed',
     link: '',
     date: '2026',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 9,
@@ -93,6 +102,8 @@ export const posts: Post[] = [
     desc: 'Specialised in computational design for architectural & urban design within the CPU.AI (Complexity, Planning & Urbanism. Architectural Intelligence).',
     link: '',
     date: '2021',
+    image: '/path/to/image1.jpg'
+    
   },
   {
     id: 10,
@@ -102,6 +113,7 @@ export const posts: Post[] = [
     desc: 'Joined the Continuity In Architecture atelier during final year, which specialises in applying critical regionalism to sensitive placemaking',
     link: '',
     date: '2018',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 11,
@@ -112,6 +124,7 @@ export const posts: Post[] = [
     desc: 'forthcoming',
     link: '',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 12,
@@ -122,6 +135,7 @@ export const posts: Post[] = [
     desc: 'forthcoming',
     link: '',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 13,
@@ -131,6 +145,7 @@ export const posts: Post[] = [
     desc: '',
     link: 'https://manchestergamecentre.org/events/2023/6/7/multiplatform-3-remake-reuse-replay',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 14,
@@ -140,6 +155,7 @@ export const posts: Post[] = [
     desc: '',
     link: 'https://manchestergamecentre.org/events/2023/2/22/alex-and-reiji-wip',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 15,
@@ -150,6 +166,7 @@ export const posts: Post[] = [
     desc: '',
     link: 'https://aesop-planning.eu/resources/news-archive/thematic-groups/planning-and-complexity/complex-cognitive-cities-sensing-planning-and-design-in-urban-transformations',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 16,
@@ -160,6 +177,7 @@ export const posts: Post[] = [
     desc: '',
     link: 'https://infrasystems.complexurban.com/people',
     date: '2021',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 17,
@@ -170,6 +188,7 @@ export const posts: Post[] = [
     desc: '',
     link: '',
     date: '2020',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 18,
@@ -179,6 +198,7 @@ export const posts: Post[] = [
     desc: '',
     link: 'https://www.instagram.com/urexbfband/',
     date: '2023',
+    image: '/path/to/image1.jpg'
   },
   {
     id: 19,
@@ -188,5 +208,6 @@ export const posts: Post[] = [
     desc: '',
     link: 'https://soundcloud.com/massland',
     date: '2020',
+    image: '/path/to/image1.jpg'
   },
 ]
