@@ -17,9 +17,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   index,
 }) => {
   return (
-    <div id="profileContainer" key={index}
-      className=" mb-7 mt-3 flex max-w-[800px]"
-    >
+    <div id="profileContainer" key={index} className="mb-7 mt-3 flex max-w-[800px]">
       <div id={`${profile.title}profileContainer`}>
         <TextParagraph className='text-lg' jsonData={profile} />
       </div>

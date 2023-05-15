@@ -4,6 +4,7 @@ import CurvedUnderline from '../icons/undraw/undraw_curved-underline.svg'
 import TaglineSection from '@/sections/TaglineSection'
 import ProfileSection from '@/sections/ProfileSection'
 import CVSection from '@/sections/CVSection'
+import ProfileListLayout from '@/components/layouts/ProfileListLayout'
 
 export default function About() {
   return (

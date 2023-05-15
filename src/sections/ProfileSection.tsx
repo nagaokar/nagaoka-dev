@@ -9,6 +9,7 @@ import ProfileListLayout from "@/components/layouts/ProfileListLayout";
 import ProfileList from "@/components/ProfileList";
 import Underline from '../icons/undraw/undraw_underline.svg'
 import StarIcon from '../icons/undraw/undraw_star.svg'
+import Tagline from "./TaglineSection";
 
 
 export default function ProfileSection() {

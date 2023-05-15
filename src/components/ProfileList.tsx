@@ -2,6 +2,7 @@ import React from 'react'
 import ProfileCard from './ProfileCard'
 import Title, { TitleProps } from './Title'
 import ProfileListLayout from './layouts/ProfileListLayout'
+import Tagline from '@/sections/TaglineSection'
 
 interface ProfileListProps {
   titleProps: TitleProps
