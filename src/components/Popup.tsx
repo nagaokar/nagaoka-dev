@@ -18,7 +18,7 @@ const Popup: React.FC<PopupProps> = ({ children, onClick }) => {
   return (
     <>
       <div className="fixed inset-0 flex items-center justify-center z-10">
-        <div className="flex flex-col bg-white p-4 rounded shadow-lg">
+        <div className="flex flex-col bg-white p-4 rounded shadow-lg w-11/12">
           <button className="flex justify-end" onClick={togglePopup}>
             Close
           </button>

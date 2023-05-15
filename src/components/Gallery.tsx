@@ -11,10 +11,13 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory }) => {
     ? posts.filter((post) => post.tag === selectedCategory || selectedCategory === 'all')
     : posts;
 
+  // Sort the filteredPosts array by date
+  const sortedPosts = [...filteredPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   return (
     <div>
-      <div className='flex flex-wrap lowercase'>
-        {filteredPosts.map((post) => (
+      <div className='flex flex-wrap lowercase h-content'>
+        {sortedPosts.map((post) => (
           <div key={post.id}>
             <ProjectCard key={post.id} project={post} />
           </div>

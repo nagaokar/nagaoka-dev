@@ -23,14 +23,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <>
       <div
-        id={`${project.title}Card`}
-        className="m-4 w-48 flex flex-col justify-start lowercase"
+        id={`project${project.id}Card`}
+        className="m-4 w-48 flex flex-col justify-start "
       >
         <button onClick={openPopup}>
           <Image src={placeholder} width={200} height={200} alt="" />
-          <div className="flex flex-col text-start mt-2 mb-">
-            <p>{project.title}</p>
+          <div className="flex flex-col text-start my-2 lowercase">
             <p className="text-sm">{project.date}</p>
+            <p>{project.title}</p>
           </div>
         </button>
       </div>

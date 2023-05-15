@@ -8,7 +8,7 @@ interface ProjectPageProps {
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
   return (
-    <div className="lowercase;">
+    <div className="lowercase">
       <p>{project.title}</p>
       <p>{project.organisation}</p>
       <p>{project.date}</p>
