@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { Post } from "@/lib/ContentDatabase";
-import placeholder from '../icons/undraw/undraw_coffee.svg'
 import Popup from "./Popup";
 import ProjectPage from "@/pages/project/ProjectPage";
+import PostImage from "./PostImage";
 
 interface ProjectCardProps {
   project: Post;
+  index: number;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -21,26 +21,37 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   };
 
   return (
-    <>
-      <div
-        id={`project${project.id}Card`}
-        className="m-4 w-48 flex flex-col justify-start "
+    <section id="projectCardContainer" className="flex flex-row flex-wrap justify-center">
+      <button
+        className="p-2 border-2 border-black m-3"
+        onClick={openPopup}
       >
-        <button onClick={openPopup}>
-          <Image src={placeholder} width={200} height={200} alt="" />
-          <div className="flex flex-col text-start my-2 lowercase">
-            <p className="text-sm">{project.date}</p>
+        <div
+          id={`project${project.id}Card`}
+          className="w-64 h-72 flex flex-col m-5 p-5 lowercase justify-center"
+        >
+          <div className="flex flex-col">
+            <PostImage key={project.id} post={project} />
+          </div>
+
+          <div className="flex flex-col justify-center text-center">
+            <p className="font-bold text-lg">{project.organisation}</p>
+          </div>
+          <div className="flex flex-col justify-start text-center text-lg">
             <p>{project.title}</p>
           </div>
-        </button>
-      </div>
+          <div className="flex flex-col justify-center text-center">
+            <p className="text-sm opacity-30 mt-2">{project.date}</p>
+          </div>
+        </div>
+      </button>
 
       {isPopupOpen && (
         <Popup onClick={closePopup}>
           <ProjectPage project={project} />
         </Popup>
       )}
-    </>
+    </section>
   );
 };
 

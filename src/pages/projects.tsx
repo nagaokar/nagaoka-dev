@@ -24,7 +24,16 @@ export default function Projects() {
       >
         <section id="galleryFilterMenu">
           <FilterMenu
-            categories={['all', 'employment', 'game', 'education', 'academic', 'hobby']}
+            categories={[
+              'all', 
+              'academic', 
+              'computational design', 
+              'publication',
+              'talk', 
+              'web development', 
+              'game', 
+              'music',
+          ]}
             selectedCategory={selectedCategory}
             onCategorySelect={handleCategorySelect}
           />

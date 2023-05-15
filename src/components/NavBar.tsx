@@ -18,7 +18,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
 
   return (
     <div className="h-12 xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
-      <Link href={href} className="flex">
+      <Link href={href} className="flex hover:font-bold">
         {children}
       </Link>
       <div>

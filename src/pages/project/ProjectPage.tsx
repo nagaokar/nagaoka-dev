@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Post, getAllPosts } from "@/lib/ContentDatabase";
+import Image from "next/image";
+import PostSVG from "@/components/postSVG";
 
 interface ProjectPageProps {
   project: Post;
