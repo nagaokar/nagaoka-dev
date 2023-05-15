@@ -21,14 +21,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   };
 
   return (
-    <section id="projectCardContainer" className="flex flex-row flex-wrap justify-center">
+    <section id="projectCardContainer" className="flex flex-col md:flex-row flex-wrap justify-center">
       <button
         className="p-2 border-2 border-black m-3"
         onClick={openPopup}
       >
         <div
           id={`project${project.id}Card`}
-          className="w-64 h-72 flex flex-col m-5 p-5 lowercase justify-center"
+          className="w-52 md:w-64 h-64 flex flex-col m-5 p-5 lowercase justify-center"
         >
           <div className="flex flex-col">
             <PostImage key={project.id} post={project} />

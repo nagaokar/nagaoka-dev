@@ -48,13 +48,15 @@ const PostImage: React.FC<PostImageProps> = ({ post }) => {
   return (
     <div id="postImageContainer" className="flex justify-center">
       {icon && (
-        <Image
-            className="w-24 h-16 mb-5 justify-start align-top"
+        <div className="w-24 h-16 mb-5 justify-start align-top">
+          <Image
+            className="w-full h-full"
             src={icon}
             width={70}
             height={70}
             alt=""
           />
+        </div>
       )}
     </div>
   );

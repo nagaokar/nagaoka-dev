@@ -1,8 +1,5 @@
-import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Post, getAllPosts } from "@/lib/ContentDatabase";
-import Image from "next/image";
-import PostSVG from "@/components/postSVG";
 
 interface ProjectPageProps {
   project: Post;
@@ -10,13 +7,15 @@ interface ProjectPageProps {
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
   return (
-    <div className="lowercase">
-      <p>{project.title}</p>
-      <p>{project.organisation}</p>
-      <p>{project.date}</p>
-      <p>{project.desc}</p>
-      <p>{project.link}</p>
-    </div>
+    <>
+      <div className="lowercase">
+        <p>{project.title}</p>
+        <p>{project.organisation}</p>
+        <p>{project.date}</p>
+        <p>{project.desc}</p>
+        <p>{project.link}</p>
+      </div>
+    </>
   );
 };
 

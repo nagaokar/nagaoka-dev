@@ -16,7 +16,7 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory }) => {
 
   return (
     <div>
-      <div className='flex flex-wrap lowercase h-content'>
+      <div className='flex justify-center flex-wrap lowercase h-content w-100'>
         {sortedPosts.map((post) => (
           <div key={post.id}>
             <ProjectCard key={post.id} project={post} index={post.id}/>
