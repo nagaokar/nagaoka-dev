@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
       document.body.style.overflow = 'auto';
     }
     return () => {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'auto';
     };
   }, [isPopupOpen]);
 
