@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Popup from './Popup';
-import commitIcon from '../icons/undraw/undraw_x-mark.svg'
+
 import GitBranchCard from './GitBranchCard';
 
 export interface Commit {
@@ -11,6 +11,7 @@ export interface Commit {
   author: string;
   tag: string;
   date: number;
+  index: number;
 }
 
 const GitgraphViewer: React.FC = () => {
@@ -28,13 +29,22 @@ const GitgraphViewer: React.FC = () => {
 
   return (
     <>
-      <div className="h-content w-100 flex flex-col flex-no-wrap justify-start lowercase">
+      <div className='flex flex-col w-1/5'>
         {commits.map((commit, index) => (
-          <GitBranchCard key={commit.date} commit={commit} index={commit.date} />
-        ))};
+          <GitBranchCard
+            key={index}
+            commit={commit}
+            index={index}
+            nodeCount={commits.length}
+          />
+        ))}
       </div>
     </>
   );
 };
 
 export default GitgraphViewer;
+
+
+//commit div
+// className="h-content w-100 flex flex-col flex-no-wrap justify-start lowercase"
