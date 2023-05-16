@@ -10,37 +10,39 @@ interface Commit {
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse): Promise<void> {
   const repoPath = path.resolve(process.cwd(), '..\\nagaoka-dev'); // Corrected path with escaped backslashes
-  
+
   const branches = [
-    "main",
-    "develop/layout", 
-    "develop/work", 
-    "feature/gitgraph", 
-    "feature/spa",
-  ] 
+    'main',
+    'develop/layout',
+    'develop/work',
+    'feature/gitgraph',
+    'feature/spa',
+  ];
+
+  const formattedCommits: Commit[] = [];
   
-  const options = {
+  for (const branch of branches) {
+    const commitHistory = await getCommitHistory(repoPath, branch);
+    formattedCommits.push(...commitHistory);
+  }
+
+  res.status(200).json(formattedCommits);
+}
+
+async function getCommitHistory(repoPath: string, branch: string): Promise<Commit[]> {
+  const options: GitlogOptions = {
     repo: repoPath,
     number: 10,
-    branch: "main",
-    fields: [
-      "subject", 
-      "authorName", 
-      "authorDate",
-      "abbrevHash",
-      "tag",
-    ] as const, 
+    branch,
+    fields: ['subject', 'authorName', 'authorDate', 'abbrevHash'] as const,
   };
 
   const commitHistory = gitlog(options);
-  const formattedCommits: GitlogOptions[] = commitHistory.map((commit) => ({
-    repo: repoPath,
+  return commitHistory.map((commit) => ({
     sha: commit.abbrevHash,
     message: commit.subject,
+    branch,
     author: commit.authorName,
-    date: commit.authorDate,
-    tag: commit.tag,
+    date: commit.authorDate
   }));
-
-  res.status(200).json(formattedCommits);
 }

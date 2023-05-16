@@ -26,12 +26,11 @@ const GitgraphViewer: React.FC = () => {
       <ul className=''>
         {commits.map((commit) => (
           <li key={commit.sha} className='my-2'>
+            <p>{commit.date}</p> 
+            <p id="branchName" className='font-bold'>{commit.branch}</p>
             <p>{commit.sha}</p>
             <p className='text-red-500'>{commit.author}</p>
-            <p>{commit.date}</p> 
             <p>{commit.message}</p>
-            <p>{commit.date}</p>
-            <p id="branchName" className='font-bold'>{commit.branch}</p>
             </li>
         ))}
       </ul>
