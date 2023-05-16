@@ -14,7 +14,6 @@ const ProfileList: React.FC<ProfileListProps> = ({ titleProps, profiles }) => {
     <div id={`${titleProps.title}ProfileContainer`}>
       <p className={titleProps.titleProps}>{titleProps.title}</p>
       <div id={`${titleProps.title}ListContainer`}>
-        <ProfileListLayout>
           {profiles.map((profile, index) => (
             <ProfileCard
               titleProps={{
@@ -26,7 +25,6 @@ const ProfileList: React.FC<ProfileListProps> = ({ titleProps, profiles }) => {
               index={index}
             />
           ))}
-        </ProfileListLayout>
       </div>
     </div>
   )

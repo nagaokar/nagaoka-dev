@@ -19,14 +19,18 @@ export default function ProfileSection() {
   }
   return (
     <section className="flex flex-col flex-wrap justify-center">
-        <ProfileList
-          titleProps={{
-            title: "",
-            type: 'none',
-            titleProps: "text-3xl justify-center"
-          }}
-          profiles={profiles}
-        />
+      <div
+        id="profileContainer"
+        key={index}
+        className="mb-7 mt-3 flex max-w-[800px]"
+      >
+        {profiles.map((profile, index) => (
+          <div id={`${profile.title}profileContainer`}>
+            <TextParagraph className="text-lg" jsonData={profile} key={index}/>
+          </div>
+        ))}
+
+      </div>
     </section>
   );
 }

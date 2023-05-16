@@ -15,17 +15,9 @@ export default function Projects() {
   return (
     <>
       <Layout>
-        {/* <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
-          <p className="-rotate-2">Projects</p>
-          <Image
-            className="justify-center"
-            src={curvedUnderline}
-            width={200}
-            height={100}
-            alt=""
-          />
-          </div> */}
-
+      <div className='flex justify-center text-6xl mt-3 mb-12 -rotate-3'>
+          <p>projects</p>
+        </div>
         <section
           id="projectListContainer"
           className="flex flex-col justify-start "
