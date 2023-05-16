@@ -8,21 +8,15 @@ import CVSection from '@/sections/CVSection'
 import ProfileListLayout from '@/components/layouts/ProfileListLayout'
 import Spacer from '@/components/Spacer'
 import StarSpacer from '@/components/StarSpacer'
+import GitgraphViewer from '@/components/GitgraphViewer'
 
 export default function About() {
   return (
     <>
       <Layout>
-        {/* <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
-          <p className="-rotate-2">About</p>
-          <Image
-            className="justify-center"
-            src={curvedUnderline}
-            width={200}
-            height={100}
-            alt=""
-          />
-        </div> */}
+
+        <GitgraphViewer />
+
         <TaglineSection />
         <div className="flex justify-center">
           <div className="w-144 sm:text-md my-6 flex flex-col justify-center border-2 border-black p-6 text-center text-2xl font-bold">

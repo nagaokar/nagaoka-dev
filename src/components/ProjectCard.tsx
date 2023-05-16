@@ -4,8 +4,6 @@ import { Post, posts } from '@/lib/ContentDatabase'
 import Popup from '@/components/Popup'
 import PostImage from '@/components/PostImage'
 import Spacer from './Spacer'
-import { Gitgraph, templateExtend, TemplateName } from "@gitgraph/react";
-
 import circledArrow from '../icons/undraw/undraw_circled-arrow.svg'
 
 
@@ -56,6 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
       id="projectCardContainer"
       className="flex flex-col flex-wrap justify-center md:flex-row"
     >
+
       {/* START REFACTOR? PROJECTCARD */}
       <button
         className="m-3 border-2 border-black p-2"
@@ -107,6 +106,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                 <p>{post.desc}</p>
               </div>
               <Spacer />
+
               {/* START: IMAGE LINK */}
               <div className='mb-12'>
                 <a
@@ -132,42 +132,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
 }
 
 export default ProjectCard
-
-interface BasicScenarioProps {
-  options: any;
-  templateName?: TemplateName;
-}
-
-export function BasicScenario({ options, templateName }: BasicScenarioProps) {
-  return (
-    <Gitgraph
-      options={{
-        ...options,
-        template: templateExtend(templateName || TemplateName.Metro, {
-          commit: {
-            message: { displayHash: false, displayAuthor: false },
-          },
-        }),
-      }}
-    >
-      {(gitgraph) => {
-        const master = gitgraph
-          .branch('master')
-          .commit('Init the project')
-          .commit('Add README')
-          .commit('Add tests');
-
-        master.tag('v1.0');
-
-        const newFeature = gitgraph.branch('new-feature');
-        newFeature.commit('Implement an awesome feature');
-
-        master.commit('Hotfix a bug');
-        newFeature.commit('Fix tests');
-
-        // Merge `newFeature` into `master`
-        master.merge(newFeature).tag('v2.0');
-      }}
-    </Gitgraph>
-  );
-}
