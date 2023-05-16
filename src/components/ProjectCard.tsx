@@ -107,13 +107,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
               <Spacer />
               {isNagaokaDev && (
                 <>
-                <div className='flex flex-col my-5'>
-                  <p className='text-4xl text-center mb-3 rotate-2'>Git Graph</p>
-                  <p className='text-xl mb-3'>This is a git grapher viewer for this project, showing most recent development.</p>
-                  <p className='mb-1 underline'>click on an entry to see the gitlog.</p>
-                  <GitgraphViewer />
-                </div>
-                <Spacer />
+                  <div className='flex flex-col my-5 text-center justify-center'>
+                    <div className='flex flex-col flex-wrap justify-center text-center'>
+                      <p className='text-4xl text-center mb-3 rotate-2'>Development History</p>
+                      <p className='text-xl mb-3 text-center'>This is a git info. viewer for this project, showing most recent developments.</p>
+                      <p className='mb-1 underline text-center'>click on an entry to see the gitlog.</p>
+                    </div>
+                    <div className='flex justify-center m-2'>
+                      <GitgraphViewer />
+                    </div>
+                  </div>
+                  <Spacer />
                 </>
               )}
               {/* START: IMAGE LINK */}

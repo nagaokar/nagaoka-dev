@@ -29,7 +29,7 @@ const GitgraphViewer: React.FC = () => {
 
   return (
     <>
-      <div className='flex flex-col w-1/5'>
+      <div className='flex flex-col'>
         {commits.map((commit, index) => (
           <GitBranchCard
             key={index}
