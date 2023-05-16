@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
@@ -17,7 +17,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
   const isCurrent = asPath === href
 
   return (
-    <div className="xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
+    <div className="xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5 flex flex-col items-center">
       <Link href={href} className="flex hover:font-bold">
         {children}
       </Link>
@@ -39,11 +39,24 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
 }
 
 export default function Nav() {
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   const toggleCollapse = () => {
     setIsCollapsed((prevCollapsed) => !prevCollapsed)
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsCollapsed(window.innerWidth < 640); // Set isCollapsed to true for sm and xs breakpoints
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call handleResize initially to set the initial state based on the window width
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <nav
@@ -53,20 +66,11 @@ export default function Nav() {
     >
       <div className="flex flex-col justify-center text-center align-middle font-thin">
         <div className="flex justify-center text-center md:hidden">
-          <button
-            className="mb-2 flex items-center bg-white px-3 text-center"
-            onClick={toggleCollapse}
-          >
+          <button className="mb-2 flex items-center bg-white px-3 text-center" onClick={toggleCollapse}>
             {isCollapsed ? (
               <Image src={CircledPlus} width={25} height={25} alt="" />
             ) : (
-              <Image
-                className="rotate-90"
-                src={CircledPlus}
-                width={25}
-                height={25}
-                alt=""
-              />
+              <Image className="rotate-90" src={CircledPlus} width={25} height={25} alt="" />
             )}
           </button>
         </div>
@@ -80,5 +84,5 @@ export default function Nav() {
         )}
       </div>
     </nav>
-  )
+  );
 }
