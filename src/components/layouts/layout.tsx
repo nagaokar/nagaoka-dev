@@ -2,14 +2,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Nav from '../NavBar';
 import Footer from '../Footer';
-import Title, { TitleProps } from '../Title';
 
 interface LayoutProps {
-  children: React.ReactNode;
-  titleProps?: TitleProps; // Replace with the appropriate type for titleProps
+  children: React.ReactNode
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, titleProps }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

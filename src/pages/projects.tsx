@@ -15,9 +15,11 @@ export default function Projects() {
   return (
     <>
       <Layout>
-      <div className='flex justify-center text-6xl mt-3 mb-12 -rotate-3'>
+        {/* START: TITLE */}
+        <div className='flex justify-center text-6xl mt-3 mb-12 -rotate-3'>
           <p>projects</p>
         </div>
+        {/* END: TITLE */}
         <section
           id="projectListContainer"
           className="flex flex-col justify-start "
