@@ -5,6 +5,7 @@ import Popup from '@/components/Popup'
 import PostImage from '@/components/PostImage'
 import Spacer from './Spacer'
 import circledArrow from '../icons/undraw/undraw_circled-arrow.svg'
+import GitgraphViewer from './GitgraphViewer'
 
 
 interface ProjectCardProps {
@@ -51,9 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
 
   return (
     <section
-      id="projectCardContainer"
-      className="flex flex-col flex-wrap justify-center md:flex-row"
-    >
+      id="projectCardContainer" className="flex flex-col flex-wrap justify-center md:flex-row">
 
       {/* START REFACTOR? PROJECTCARD */}
       <button
@@ -106,7 +105,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                 <p>{post.desc}</p>
               </div>
               <Spacer />
-
+              {isNagaokaDev && (
+                <>
+                <div className='flex flex-col my-5'>
+                  <p className='text-4xl text-center mb-3 rotate-2'>Git Graph</p>
+                  <p className='text-xl mb-3'>This is a git grapher viewer for this project, showing most recent development.</p>
+                  <p className='mb-1 underline'>click on an entry to see the gitlog.</p>
+                  <GitgraphViewer />
+                </div>
+                <Spacer />
+                </>
+              )}
               {/* START: IMAGE LINK */}
               <div className='mb-12'>
                 <a

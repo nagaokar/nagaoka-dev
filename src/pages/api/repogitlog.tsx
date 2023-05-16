@@ -32,7 +32,7 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse): 
 async function getCommitHistory(repoPath: string, branch: string): Promise<Commit[]> {
   const options: GitlogOptions = {
     repo: repoPath,
-    number: 10,
+    number: 3,
     branch,
     fields: ['subject', 'authorName', 'authorDate', 'abbrevHash'] as const,
   };
