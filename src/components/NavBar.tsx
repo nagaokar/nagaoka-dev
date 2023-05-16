@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
@@ -39,17 +39,30 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
 }
 
 export default function Nav() {
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   const toggleCollapse = () => {
     setIsCollapsed((prevCollapsed) => !prevCollapsed)
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsCollapsed(window.innerWidth < 640);
+    };
+
+    handleResize(); // Set initial collapsed state based on screen width
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
     <nav
-      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${
-        isCollapsed ? 'collapsed' : ''
-      }`}
+      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${isCollapsed ? 'collapsed' : ''
+        }`}
     >
       <div className="flex flex-col justify-center text-center align-middle font-thin">
         <div className="flex justify-center text-center md:hidden">

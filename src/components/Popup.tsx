@@ -35,7 +35,6 @@ const Popup: React.FC<PopupProps> = ({ children, onClick }) => {
             />
           </button>
           {/* END REFACTOR?: BUTTONS  */}
-
           <div className="flex flex-col items-center justify-center">
             {children}
           </div>

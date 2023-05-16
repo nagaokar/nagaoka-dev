@@ -4,7 +4,7 @@ import { Post, posts } from '@/lib/ContentDatabase'
 import Popup from '@/components/Popup'
 import PostImage from '@/components/PostImage'
 import Spacer from './Spacer'
-import { Gitgraph } from '@gitgraph/react'
+import { Gitgraph, templateExtend, TemplateName } from "@gitgraph/react";
 
 import circledArrow from '../icons/undraw/undraw_circled-arrow.svg'
 
@@ -48,12 +48,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
     };
   }, [isPopupOpen]);
 
+
+  const isNagaokaDev = post.organisation === 'Nagaoka.dev';
+
   return (
     <section
       id="projectCardContainer"
       className="flex flex-col flex-wrap justify-center md:flex-row"
     >
-      {/* START: REFACTOR? */}
+      {/* START REFACTOR? PROJECTCARD */}
       <button
         className="m-3 border-2 border-black p-2"
         onClick={openPopup}
@@ -67,13 +70,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
           </div>
 
           <div className="flex flex-col justify-center text-center">
-            <p className="text-lg font-bold text-center">{post.organisation}</p>
+            <p className="text-lg font-bold text-center">
+              {post.organisation}
+            </p>
           </div>
           <div className="flex flex-col justify-start text-center text-lg">
             <p>{post.title}</p>
           </div>
           <div className="flex flex-col justify-center text-center">
-            <p className="mt-2 text-sm opacity-30">{post.date}</p>
+            <p className="mt-2 text-sm opacity-30">
+              {post.date}
+            </p>
           </div>
         </div>
       </button>
@@ -81,6 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
 
       {isPopupOpen && (
         <Popup onClick={closePopup}>
+          {/* START REFACTOR? PROJECTPOPUP */}
           <>
             <div className="flex flex-col h-content">
               <div className="flex text-5xl m-3 justify-center text-center">
@@ -99,15 +107,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                 <p>{post.desc}</p>
               </div>
               <Spacer />
-
-              {post.organisation === 'Nagaoka.dev' && (
-                <>
-                <div id="gitgraph"></div>
-                  <Spacer />
-                </>
-              )}
-
-
               {/* START: IMAGE LINK */}
               <div className='mb-12'>
                 <a
@@ -128,8 +127,47 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
         </Popup>
       )
       }
-    </section >
+    </section>
   )
 }
 
 export default ProjectCard
+
+interface BasicScenarioProps {
+  options: any;
+  templateName?: TemplateName;
+}
+
+export function BasicScenario({ options, templateName }: BasicScenarioProps) {
+  return (
+    <Gitgraph
+      options={{
+        ...options,
+        template: templateExtend(templateName || TemplateName.Metro, {
+          commit: {
+            message: { displayHash: false, displayAuthor: false },
+          },
+        }),
+      }}
+    >
+      {(gitgraph) => {
+        const master = gitgraph
+          .branch('master')
+          .commit('Init the project')
+          .commit('Add README')
+          .commit('Add tests');
+
+        master.tag('v1.0');
+
+        const newFeature = gitgraph.branch('new-feature');
+        newFeature.commit('Implement an awesome feature');
+
+        master.commit('Hotfix a bug');
+        newFeature.commit('Fix tests');
+
+        // Merge `newFeature` into `master`
+        master.merge(newFeature).tag('v2.0');
+      }}
+    </Gitgraph>
+  );
+}
