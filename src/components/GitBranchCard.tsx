@@ -57,7 +57,7 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
   };
 
 
-  
+
   const branchWidthMap: { [branch: string]: string } = {
     'main': "w-4",
     'develop/layout': "w-10",
@@ -66,11 +66,11 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
     'feature/spa': "w-24",
   };
 
-  
+
   const branchMargin = branchMarginMap[commit.branch];
   const branchWidth = branchWidthMap[commit.branch];
-  
-  
+
+
   const branchLineHeight = 48;
   const branchLineTopOffset = branchLineHeight / 2;
   const connectingLinesHeight = branchLineHeight * (nodeCount - 1);
@@ -80,18 +80,16 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
   return (
     <>
       {/* START: GRAPHCONTAINER */}
-      <section
-        id="graphContainer"
-        className='hover:font-bold'>
+      <section id="graphContainer">
 
         {/* START: GRAPH */}
-        <div className="flex flex-row w-content">
+        <div className="flex flex-row w-content justify-start hover:font-bold">
           <div className='flex flex-col mr-2 w-20 justify-center text-xs'>
             <p className='flex justify-end align-middle'>{commit.sha}</p>
           </div>
-          
-          <div className='w-[3px] bg-black'></div>
-          <div className={`${branchWidth} h-[3px] border-b-2 mt-3 border-black flex align-middle`}>
+
+          <div className='w-[5px] bg-black'></div>
+          <div className={`${branchWidth} h-[5px] border-b-2 mt-3 border-black flex align-middle`}>
 
           </div>
           {/* START: COMMITCARD */}
@@ -105,7 +103,7 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
               className='flex'>
             </div>
             {/* END: GRAPHNODE */}
-              <div className='flex flex-row w-content ml-2'>
+            <div className='flex flex-row w-content'>
               <p className="text-lg">{commit.branch}</p>
               {/* <p className="ml-2 flex flex-col text-xs justify-center opacity-30">{commit.date}</p> */}
             </div>
@@ -113,32 +111,36 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
           {/* END: COMMITCARD */}
         </div>
         {/* END: GRAPH */}
+
+
         {/* START: POPUP */}
         {isPopupOpen && (
-          <div className='flex flex-col h-content justify-center items-center'>
+          <div className='flex flex-col h-content justify-center items-center max-w-screen min-w-72'>
             <Popup onClick={closePopup}>
               {/* START REFACTOR? PROJECTPOPUP */}
               <>
                 <div className="flex flex-col h-content">
-                  <div className="flex text-5xl m-3 mt-6 justify-center text-center">
+                  <div className="flex flex-col text-4xl m-3 mb-6 mt-6 justify-center text-center">
+                    <p className='font-bold underline'>{commit.branch}</p>
+                    <p className='text-sm'>branch</p>
+                  </div>
+                  <div className="flex text-center text-xl justify-center h-content">
                     <p>{commit.sha}</p>
                   </div>
-                </div>
-                <div className="flex text-center text-3xl h-content">
-                  <p>{commit.branch}</p>
-                </div>
-                <div className="flex text-center text-2xl h-content">
-                  <p>{commit.author}</p>
-                </div>
-                <div className="flex flex-col h-full justify-center">
-                  <div className="text-sm text-center my-3">
-                    <p>{commit.date}</p>
+                  <div className="flex flex-col h-full justify-center">
+                    <div className="text-center my-3 opacity-50">
+                      <p>{commit.date}</p>
+                    </div>
+                    <Spacer />
+                    <p className='text-md underline'>message:</p>
+                    <div className="flex flex-col text-start text-xl my-2 min-w-[300px]">
+                      <p>{commit.message}</p>
+                    </div>
+                    <Spacer />
+                    <div className="flex text-start text-2xl h-content mb-3">
+                      <p>- {commit.author}</p>
+                    </div>
                   </div>
-                  <Spacer />
-                  <div className="flex text-center text-xl my-2">
-                    <p>{commit.message}</p>
-                  </div>
-                  <Spacer />
                 </div>
               </>
             </Popup>
