@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Popup from './Popup';
+import commitIcon from '../icons/undraw/undraw_x-mark.svg'
+import GitBranchCard from './GitBranchCard';
 
 export interface Commit {
   sha: string;
@@ -6,7 +10,7 @@ export interface Commit {
   branch: string;
   author: string;
   tag: string;
-  date: string;
+  date: number;
 }
 
 const GitgraphViewer: React.FC = () => {
@@ -14,29 +18,23 @@ const GitgraphViewer: React.FC = () => {
 
   React.useEffect(() => {
     async function fetchCommits() {
-      const response = await fetch('/api/repogitlog'); // Replace with the actual server-side route path
-      const commitHistory: Commit[] = await response.json();
-      setCommits(commitHistory);
+      const response = await fetch('/api/repogitlog');
+      const formattedCommits: Commit[] = await response.json();
+      const sortedCommits = formattedCommits.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      setCommits(sortedCommits);
     }
     fetchCommits();
   }, []);
 
   return (
-    <div id="gitrepoViewer" className='w-content mx-4'>
-      <ul className=''>
-        {commits.map((commit) => (
-          <li key={commit.sha} className='my-2'>
-            <p>{commit.date}</p> 
-            <p id="branchName" className='font-bold'>{commit.branch}</p>
-            <p>{commit.sha}</p>
-            <p className='text-red-500'>{commit.author}</p>
-            <p>{commit.message}</p>
-            </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className="h-content w-100 flex flex-col flex-no-wrap justify-start lowercase">
+        {commits.map((commit, index) => (
+          <GitBranchCard key={commit.date} commit={commit} index={commit.date} />
+        ))};
+      </div>
+    </>
   );
 };
 
 export default GitgraphViewer;
-
