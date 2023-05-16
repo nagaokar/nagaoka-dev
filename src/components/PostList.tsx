@@ -1,40 +1,18 @@
 import React from 'react'
 import PostCard from './PostCard'
-import Title, { TitleProps } from './Title'
 import PostListLayout from './layouts/PostListLayout'
+import Title from './Title'
 
 interface PostListProps {
-  titleProps: TitleProps
   posts: any[] // Update the type to match the actual type of posts
+  title: string
 }
 
-const PostList: React.FC<PostListProps> = ({ titleProps, posts }) => {
-  const {
-    title,
-    titleType,
-    titleCssProps,
-    imageSrc,
-    imageCssProps,
-    width,
-    height,
-    alt,
-  } = titleProps
-
+const PostList: React.FC<PostListProps> = ({ posts, title }) => {
   return (
-    <div id={`${title}PostList`}>
+    <div id={`${title}List`} className="flex flex-col">
+      <Title title={title} type="underlined" titleProps="text-3xl" />
       <PostListLayout>
-        <div id="postListTitle" className="mb-6">
-          <Title
-            title={title}
-            titleType={titleType}
-            titleCssProps={titleCssProps}
-            imageSrc={imageSrc}
-            imageCssProps={imageCssProps}
-            width={width}
-            height={height}
-            alt={alt}
-          />
-        </div>
         <div id={`${title}ListContainer`}>
           {posts.map((post, index) => (
             <PostCard key={index} post={post} index={index} />

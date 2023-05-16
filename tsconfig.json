@@ -24,6 +24,6 @@
     "**/*.tsx",
     "src/pages/employment.tsx",
     "src/pages/about.tsx"
-  ],
+, "src/components/GitgraphViewer.tsx"  ],
   "exclude": ["node_modules"]
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import ProfileCard from './ProfileCard'
 import Title, { TitleProps } from './Title'
 import ProfileListLayout from './layouts/ProfileListLayout'
+import Tagline from '@/sections/TaglineSection'
 
 interface ProfileListProps {
   titleProps: TitleProps
@@ -9,32 +10,16 @@ interface ProfileListProps {
 }
 
 const ProfileList: React.FC<ProfileListProps> = ({ titleProps, profiles }) => {
-  const {
-    title,
-    titleType,
-    titleCssProps,
-    imageSrc,
-    imageCssProps,
-    width,
-    height,
-    alt,
-  } = titleProps
-
   return (
-    <div id={`${title}ProfileContainer`}>
-      <div id={`${title}ListContainer`}>
+    <div id={`${titleProps.title}ProfileContainer`}>
+      <p className={titleProps.titleProps}>{titleProps.title}</p>
+      <div id={`${titleProps.title}ListContainer`}>
         <ProfileListLayout>
           {profiles.map((profile, index) => (
             <ProfileCard
               titleProps={{
                 title: profile.title,
-                titleType: titleType,
-                titleCssProps: titleCssProps,
-                imageSrc: imageSrc,
-                imageCssProps: imageCssProps,
-                width: width,
-                height: height,
-                alt: alt,
+                type: titleProps.type,
               }}
               key={index}
               profile={profile}

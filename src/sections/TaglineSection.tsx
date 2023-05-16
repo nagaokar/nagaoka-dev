@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-
-import TaglineLayout from "@/components/layouts/TaglineLayout";
 import TextParagraph from "@/components/TextParagraph";
-import { textData } from "@/lib/TextDatabase";
+import { Text, textData } from "@/lib/TextDatabase";
 
 import TreeIcon from '../icons/undraw/undraw_tree.svg'
 import CodeIcon from '../icons/undraw/undraw_code.svg'
+import TaglineCard from "@/components/TaglineCard";
 
 export default function Tagline() {
   const taglineText = textData.find((item) => item.tag === 'tagline')
@@ -15,10 +14,9 @@ export default function Tagline() {
   return (
     <section id="tagline">
       {/* START: TAGLINE */}
-      <TaglineLayout>
-        <TextParagraph jsonData={taglineText}/>
-      </TaglineLayout>
+      <TaglineCard text={taglineText.sentences} />
       {/* END: TAGLINE */}
     </section>
+
   )
 }

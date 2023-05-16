@@ -1,82 +1,71 @@
 import React from 'react'
 import Image from 'next/image'
+import Underline from '../icons/undraw/undraw_underline.svg'
+import curvedUnderline from '../icons/undraw/undraw_curved-underline.svg'
+import StarIcon from '../icons/undraw/undraw_star.svg'
 
 export interface TitleProps {
   title: string
-  titleType: 'imageUnder' | 'centered' | 'imageAbove' | 'none'
-  titleCssProps: string
-  imageSrc?: string // Make it optional
-  imageCssProps?: string
-  width?: number
-  height?: number
-  alt?: string
+  type: 'underlined' | 'star' | 'curvedUnderline' | 'none'
+  titleProps?: string
 }
 
-const Title: React.FC<TitleProps> = ({
-  title,
-  titleCssProps,
-  imageSrc = '',
-  imageCssProps,
-  width,
-  height,
-  alt,
-  titleType,
-}) => {
+const Title: React.FC<TitleProps> = ({ title, type, titleProps }) => {
   const renderTitle = () => {
-    if (titleType === 'imageUnder') {
+    if (type === 'underlined') {
       return (
-        <div className="flex flex-col items-center">
-          <p id={`${title}Text`} className={`${titleCssProps}`}>
+        <div className="my-3 ml-12 flex flex-col">
+          <p id={`${title}Text`} className={titleProps}>
             {title}
           </p>
-          <div className="flex justify-center">
-            <Image
-              src={imageSrc}
-              className={`${imageCssProps}`}
-              width={width}
-              height={height}
-              alt={`${alt}`}
-            />
-          </div>
+          <Image
+            className="rotate-3"
+            src={Underline}
+            width={200}
+            height={100}
+            alt=""
+          />
         </div>
       )
-    } else if (titleType === 'centered') {
+    }
+    if (type === 'curvedUnderline') {
+      return (
+        <div className="my-3 flex flex-col">
+          <p id={`${title}Text`} className={titleProps}>
+            {title}
+          </p>
+          <Image
+            className="rotate-3 justify-center"
+            src={curvedUnderline}
+            width={200}
+            height={100}
+            alt=""
+          />
+        </div>
+      )
+    } else if (type === 'star') {
       return (
         <div className="flex w-screen flex-row justify-center">
-          <div className="mb-24 -rotate-2 text-center text-5xl font-bold">
-            <p className={`${titleCssProps} translate-y-24`}>{title}</p>
+          <div className="mb-20 text-center text-5xl font-bold">
+            <p className="translate-y-24 text-5xl">{title}</p>
             <Image
-              className={imageCssProps}
-              src={imageSrc}
-              width={width}
-              height={height}
-              alt={`${alt}`}
+              className="-rotate-6"
+              src={StarIcon}
+              width={150}
+              height={200}
+              alt=""
             />
           </div>
-        </div>
-      )
-    } else if (titleType === 'imageAbove') {
-      return (
-        <div className="flex flex-col items-center align-top">
-          <Image
-            className={imageCssProps}
-            src={imageSrc}
-            width={width}
-            height={height}
-            alt={`${alt}`}
-          />
-          <p className={`${titleCssProps}`}>{title}</p>
         </div>
       )
     } else {
       return (
-        <>
-          <p className={`${titleCssProps}`}>{title}</p>
-        </>
+        <div className={titleProps}>
+          <p>{title}</p>
+        </div>
       )
     }
   }
-
   return (
     <div id={`${title}TitleContainer`} className="font-bold">
       {renderTitle()}
