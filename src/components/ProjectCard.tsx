@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
         <Popup onClick={closePopup}>
           <>
             <div className="flex flex-col h-content">
-              <div className="flex text-5xl m-3">
+              <div className="flex text-5xl m-3 justify-center text-center">
                 <p>{post.title}</p>
               </div>
             </div>

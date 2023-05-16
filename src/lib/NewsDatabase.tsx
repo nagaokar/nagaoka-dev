@@ -3,7 +3,7 @@ export interface NewsPost {
   title: string
   tag: string
   subtitle: string
-  body: string[]
+  sentences: string[]
   link: string
   month: number
   year: number
@@ -17,8 +17,11 @@ export const newsPosts: NewsPost[] = [
     title: 'Work',
     tag: 'advert',
     subtitle: "if you'd like to hire me. I am currently able to take on",
-    body: ['videogame-related journalism', 'small web design projects'],
-    link: 'string',
+    sentences: [
+      'videogame-related journalism', 
+      'small web design projects'
+    ],
+    link: '',
     month: 6,
     year: 2023,
   },
