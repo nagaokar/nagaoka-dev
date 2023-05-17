@@ -273,7 +273,7 @@ export const posts: Post[] = [
     title: 'designer + developer',
     organisation: 'ur exbf',
     desc: "design and development (currently ongoing) of a website for the band: ur ex-bf.",
-    link: '#',
+    link: '',
     date: '2023',
     slug: 'urexbfbandwebsite'
   },

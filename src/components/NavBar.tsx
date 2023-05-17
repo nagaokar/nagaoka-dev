@@ -39,11 +39,27 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
 }
 
 export default function Nav() {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
   const toggleCollapse = () => {
     setIsCollapsed((prevCollapsed) => !prevCollapsed)
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) { // 768 is the width for md breakpoint
+        setIsCollapsed(true)
+      } else {
+        setIsCollapsed(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <nav
