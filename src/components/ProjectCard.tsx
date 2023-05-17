@@ -105,7 +105,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                 <p>{post.desc}</p>
               </div>
               <Spacer />
-              {isNagaokaDev && (
+              {/* {isNagaokaDev && (
                 <>
                   <div className='flex flex-col my-5 text-center justify-center'>
                     <div className='flex flex-col flex-wrap justify-center text-center'>
@@ -119,7 +119,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                   </div>
                   <Spacer />
                 </>
-              )}
+              )} */}
               {/* START: IMAGE LINK */}
               <div className='mb-12'>
                 <a
