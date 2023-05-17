@@ -1,4 +1,3 @@
-import LayoutNoFooter from '@/components/layouts/layout-no_footer'
 import Image from 'next/image'
 import ghost from '../icons/undraw/undraw_ghost.svg'
 import Nav from '@/components/NavBar'
@@ -7,7 +6,6 @@ export default function Home() {
   return (
     //START: HOME PAGE CONTAINER
     <main className="h-screen w-screen overflow-y-hidden">
-      <Nav />
       {/* START: MAIN CONTENT CONTAINER */}
       <section
         id="intro"
@@ -40,8 +38,7 @@ export default function Home() {
             </p>
             <p
               className="xs:text-md font-thin xs:w-48 sm:w-64 sm:text-lg md:w-64 md:text-lg lg:w-72 lg:text-xl xl:w-72 xl:text-2xl
-                "
-            >
+                ">
               scholar, game maker, web developer, writer.
             </p>
           </div>

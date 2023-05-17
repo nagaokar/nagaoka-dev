@@ -13,12 +13,11 @@ import Nav from '@/components/NavBar'
 export default function Contact() {
   return (
     //START: CONTACT PAGE CONTAINER
-    <main className="h-screen w-screen overflow-y-hidden">
-      <Nav />
+    <>
       {/* START: MAIN CONTENT CONTAINER */}
-      <section className="flex h-screen flex-row justify-center overflow-y-hidden px-4">
+      <section className="flex h-screen flex-row justify-center overflow-y-hidden px-4" >
         {/* START: PAGE TITLE CONTAINER*/}
-        <div className="flex flex-col justify-center text-end">
+        < div className="flex flex-col justify-center text-end" >
           <p
             className="origin-top-left -rotate-6 font-bold 
           xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl xl:text-4xl"
@@ -36,7 +35,7 @@ export default function Contact() {
             />
           </div>
           {/* END: GHOST IMAGE*/}
-        </div>
+        </div >
         {/* END: PAGE TITLE CONTAINER */}
         {/* START: CONTACT TEXT CONTAINER*/}
         <div className="flex flex-row flex-wrap justify-center text-start">
@@ -132,9 +131,9 @@ export default function Contact() {
           {/* END: CONTACT TEXT*/}
         </div>
         {/* END: CONTACT TEXT CONTAINER*/}
-      </section>
+      </section >
       {/* END: MAIN CONTENT CONTAINER */}
-    </main>
+    </>
     //END: CONTACT PAGE CONTAINER
   )
 }

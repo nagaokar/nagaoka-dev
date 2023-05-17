@@ -14,7 +14,6 @@ export default function Projects() {
 
   return (
     <>
-      <Layout>
         {/* START: TITLE */}
         <div className='flex justify-center text-6xl mt-3 mb-12 -rotate-3'>
           <p>projects</p>
@@ -42,7 +41,6 @@ export default function Projects() {
           </section>
           <Gallery selectedCategory={selectedCategory} />
         </section>
-      </Layout>
     </>
   )
 }

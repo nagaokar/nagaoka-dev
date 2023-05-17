@@ -2,6 +2,7 @@ import React from 'react'
 import Spacer from '@/components/Spacer'
 import Layout from '@/components/layouts/layout'
 import { textData } from '@/lib/TextDatabase'
+import Title from '@/components/Title'
 
 export default function About() {
   const taglineText = textData.find((item) => item.tag === 'tagline')
@@ -12,7 +13,6 @@ export default function About() {
   if (!developerProfileText) { return null }
   return (
     <>
-      <Layout>
         {/* <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
           <p className="-rotate-2">About</p>
           <Image
@@ -23,11 +23,7 @@ export default function About() {
             alt=""
           />
         </div> */}
-        {/* START: TITLE */}
-        <div className='flex justify-center text-6xl mt-3 mb-12 -rotate-3'>
-          <p>projects</p>
-        </div>
-        {/* END: TITLE */}
+        <Title text='About' />
         
         {/* START: NOTE */}
         <div className="flex justify-center">
@@ -76,8 +72,6 @@ export default function About() {
           </div>
         </section>
         {/* END: ABOUT */}
-
-      </Layout>
     </>
   )
 }
