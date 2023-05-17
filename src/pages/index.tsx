@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState. useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Projects from './projects'
@@ -13,6 +13,7 @@ import ghost from '../icons/undraw/undraw_ghost.svg'
 import EmailIcon from '../icons/remix/mail-line.svg'
 import linkedInIcon from '../icons/remix/linkedin-box-line.svg'
 import TwitterIcon from '../icons/remix/twitter-line.svg'
+import Footer from '@/components/Footer'
 
 export default function Index() {
 	const taglineText = textData.find((item) => item.tag === 'tagline')
@@ -27,9 +28,29 @@ export default function Index() {
 			setSelectedCategory(category)
 	}
 
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	useEffect(() => {
+			const handleScroll = () => {
+					const scrollTop = window.pageYOffset;
+					setIsScrolled(scrollTop > 0);
+			};
+
+			window.addEventListener('scroll', handleScroll);
+			return () => {
+					window.removeEventListener('scroll', handleScroll);
+			};
+	}, []);
+
 	return (
-		<Layout>
-			<main>
+		<>
+		<div className="flex flex-col min-h-screen">
+				<nav className={`overflow-x-hidden z-99 ${isScrolled ? 'sticky top-0' : ''}`}>
+						<Nav />
+				</nav>
+		<main className="mt-12 max-w-screen font-regular flex flex-col overflow-x-hidden bg-white px-8 lowercase text-black">
+
+
 				<section id="home">
 					<main className="h-screen w-screen overflow-y-hidden">
 						{/* START: MAIN CONTENT CONTAINER */}
@@ -160,6 +181,8 @@ export default function Index() {
 							<Gallery selectedCategory={selectedCategory} />
 						</section>
 				</section>
+
+
 				<section id="contact">
 					{/* START: MAIN CONTENT CONTAINER */}
 					<section className="flex h-screen flex-row justify-center overflow-y-hidden px-4" >
@@ -281,7 +304,12 @@ export default function Index() {
 					</section >
 					{/* END: MAIN CONTENT CONTAINER */}
 				</section>
-			</main>
-		</Layout>
+
+				</main>
+      <footer className="overflow-x-hidden">
+        <Footer />
+      </footer>
+      </div>
+    </>
 	)
 }
