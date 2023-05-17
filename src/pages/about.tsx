@@ -25,7 +25,7 @@ export default function About() {
         </div> */}
         {/* START: TITLE */}
         <div className='flex justify-center text-6xl mt-3 mb-12 -rotate-3'>
-          <p>projects</p>
+          <p>About</p>
         </div>
         {/* END: TITLE */}
         
