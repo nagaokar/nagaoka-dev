@@ -121,20 +121,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                 </>
               )} */}
               {/* START: IMAGE LINK */}
-              <div className='mb-12'>
-                <a
-                  className='flex justify-center mt-5'
-                  href={post.link} target="_blank" rel="noopener noreferrer">
-                  <Image
-                    className="absolute -rotate-90 hover:w-[45px]"
-                    src={circledArrow}
-                    width={40}
-                    height={25}
-                    alt="A sketched line drawing of circle with an arrow pointing down inside."
-                  />
-                </a>
+              {post.link && post.link !== "" && (
+                <div className='mb-12'>
+                  <a
+                    className='flex justify-center mt-5'
+                    href={post.link} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      className="absolute -rotate-90 hover:w-[45px]"
+                      src={circledArrow}
+                      width={40}
+                      height={25}
+                      alt="A sketched line drawing of circle with an arrow pointing down inside."
+                    />
+                  </a>
+                </div>
+              )}
                 {/* END: IMAGE LINK */}
-              </div>
             </div>
           </>
         </Popup>
