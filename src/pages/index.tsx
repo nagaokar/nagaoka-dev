@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Projects from './projects'
-import Contact from './contact'
-import Layout from '@/components/layouts/layout'
 import { textData } from '@/lib/TextDatabase'
 import Title from '@/components/Title'
 import Spacer from '@/components/Spacer'
@@ -17,18 +14,26 @@ import CircledPlus from '../icons/undraw/undraw_circled-plus.svg'
 import DoubleUnderline from '../icons/undraw/undraw_double-underline.svg'
 import { NavItem } from '@/components/NavBar'
 
-
 export default function Index() {
 	const taglineText = textData.find((item) => item.tag === 'tagline')
-	const academicProfileText = textData.find((item) => item.tag === 'academicProfile')
-	const developerProfileText = textData.find((item) => item.tag === 'developerProfile')
-	if (!taglineText) { return null }
-	if (!academicProfileText) { return null }
-	if (!developerProfileText) { return null }
+	const academicProfileText = textData.find(
+		(item) => item.tag === 'academicProfile'
+	)
+	const developerProfileText = textData.find(
+		(item) => item.tag === 'developerProfile'
+	)
+	if (!taglineText) {
+		return null
+	}
+	if (!academicProfileText) {
+		return null
+	}
+	if (!developerProfileText) {
+		return null
+	}
 
 	const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-	const [isScrolled, setIsScrolled] = useState(false);
-
+	const [isScrolled, setIsScrolled] = useState(false)
 
 	const handleCategorySelect = (category: string) => {
 		setSelectedCategory(category)
@@ -36,15 +41,15 @@ export default function Index() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const scrollTop = window.pageYOffset;
-			setIsScrolled(scrollTop > 0);
-		};
+			const scrollTop = window.pageYOffset
+			setIsScrolled(scrollTop > 0)
+		}
 
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll)
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
 
 	const [isCollapsed, setIsCollapsed] = useState(false)
 
@@ -54,7 +59,8 @@ export default function Index() {
 
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.innerWidth < 768) { // 768 is the width for md breakpoint
+			if (window.innerWidth < 768) {
+				// 768 is the width for md breakpoint
 				setIsCollapsed(true)
 			} else {
 				setIsCollapsed(false)
@@ -70,36 +76,49 @@ export default function Index() {
 
 	return (
 		<>
-			<div className="flex flex-col min-h-screen">
-				<nav className={`overflow-x-hidden z-99 ${isScrolled ? 'sticky top-0' : ''}`}>
+			<div className="flex min-h-screen flex-col">
+
+				<nav
+					className={`z-99 overflow-x-hidden ${isScrolled ? 'sticky top-0' : ''
+						}`}
+				>
 					<nav
-						className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${isCollapsed ? 'collapsed' : ''
-							}`}
+						className={`
+							z-99 z-40 flex flex-col items-center justify-center overflow-x-hidden border-b-2 border-black bg-white py-3 
+							${isScrolled ? 'sticky top-0' : ''}
+							${isCollapsed ? 'collapsed' : ''}
+						`}
 					>
 						<div className="flex flex-col justify-center text-center align-middle font-thin">
 							<div className="flex justify-center text-center md:hidden">
-								<button className="mb-2 flex items-center bg-white px-3 text-center" onClick={toggleCollapse}>
-									{isCollapsed ? (
-										<Image src={CircledPlus} width={25} height={25} alt="" />
-									) : (
-										<Image className="rotate-90" src={CircledPlus} width={25} height={25} alt="" />
-									)}
+								<button
+									className="mb-2 flex items-center bg-white px-3 text-center"
+									onClick={toggleCollapse}
+								>
+									<Image
+										src={CircledPlus}
+										width={25}
+										height={25}
+										alt=""
+										className={isCollapsed ? '' : 'rotate-90'}
+									/>
 								</button>
 							</div>
 							{!isCollapsed && (
 								<div className="flex-col items-center justify-center bg-white md:flex md:flex-row">
-									<NavItem href="/home">home</NavItem>
-									<NavItem href="/about">about</NavItem>
-									<NavItem href="/projects">projects</NavItem>
-									<NavItem href="/contact">contact</NavItem>
+									<div className="flex flex-col items-center xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
+										<div>
+											{/* TODO: JUMP TO SECTION (USING ID) */}
+											<p id="nav-item">About</p>
+										</div>
+									</div>
 								</div>
 							)}
 						</div>
 					</nav>
 				</nav>
-				<main className="mt-12 max-w-screen font-regular flex flex-col overflow-x-hidden bg-white px-8 lowercase text-black">
 
-
+				<main className="max-w-screen font-regular mt-12 flex flex-col overflow-x-hidden bg-white px-8 lowercase text-black">
 					<section id="home">
 						<main className="h-screen w-screen overflow-y-hidden">
 							{/* START: MAIN CONTENT CONTAINER */}
@@ -134,7 +153,8 @@ export default function Index() {
 										</p>
 										<p
 											className="xs:text-md font-thin xs:w-48 sm:w-64 sm:text-lg md:w-64 md:text-lg lg:w-72 lg:text-xl xl:w-72 xl:text-2xl
-                ">
+                "
+										>
 											scholar, game maker, web developer, writer.
 										</p>
 									</div>
@@ -145,15 +165,10 @@ export default function Index() {
 							{/* END: MAIN CONTENT CONTAINER */}
 							{/* END: HOME SCREEN CONTENT */}
 						</main>
-
-
-
-
-
 					</section>
 
 					<section id="about">
-						<Title text='About' />
+						<Title text="About" />
 
 						{/* START: NOTE */}
 						<div className="flex justify-center">
@@ -164,7 +179,8 @@ export default function Index() {
 										note: summer <span className="text-sm">2023</span>
 									</p>
 									<p>
-										if you&apos;d like to hire me, i am currently able to take on:{' '}
+										if you&apos;d like to hire me, i am currently able to take
+										on:{' '}
 									</p>
 									<ul className="my-3 font-normal">
 										<li>videogame related articles</li>
@@ -179,23 +195,23 @@ export default function Index() {
 						<section id="taglineCard" className="flex justify-center">
 							<div
 								id="profileContainer"
-								className="mb-5 mt-3 flex flex-col max-w-[800px]"
+								className="mb-5 mt-3 flex max-w-[800px] flex-col"
 							>
 								<div
 									id="academicProfileTextprofileContainer"
-									className='text-xl'
+									className="text-xl"
 								>
-									<p className='font-bold'>{academicProfileText.title}</p>
-									<p className='text-xl max-w-144 mb-6'>
+									<p className="font-bold">{academicProfileText.title}</p>
+									<p className="max-w-144 mb-6 text-xl">
 										{academicProfileText.sentences}
 									</p>
 								</div>
 								<div
 									id="developerProfileTextprofileContainer"
-									className='text-xl'
+									className="text-xl"
 								>
-									<p className='font-bold'>{developerProfileText.title}</p>
-									<p className='text-xl max-w-144 mb-6'>
+									<p className="font-bold">{developerProfileText.title}</p>
+									<p className="max-w-144 mb-6 text-xl">
 										{developerProfileText.sentences}
 									</p>
 								</div>
@@ -206,7 +222,7 @@ export default function Index() {
 
 					<section id="projects">
 						{/* START: TITLE */}
-						<Title text='Projects' />
+						<Title text="Projects" />
 						<section
 							id="projectListContainer"
 							className="flex flex-col justify-start "
@@ -231,12 +247,11 @@ export default function Index() {
 						</section>
 					</section>
 
-
 					<section id="contact">
 						{/* START: MAIN CONTENT CONTAINER */}
-						<section className="flex h-screen flex-row justify-center overflow-y-hidden px-4" >
+						<section className="flex h-screen flex-row justify-center overflow-y-hidden px-4">
 							{/* START: PAGE TITLE CONTAINER*/}
-							< div className="flex flex-col justify-center text-end" >
+							<div className="flex flex-col justify-center text-end">
 								<p
 									className="origin-top-left -rotate-6 font-bold 
           xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl xl:text-4xl"
@@ -254,7 +269,7 @@ export default function Index() {
 									/>
 								</div>
 								{/* END: GHOST IMAGE*/}
-							</div >
+							</div>
 							{/* END: PAGE TITLE CONTAINER */}
 							{/* START: CONTACT TEXT CONTAINER*/}
 							<div className="flex flex-row flex-wrap justify-center text-start">
@@ -350,10 +365,9 @@ export default function Index() {
 								{/* END: CONTACT TEXT*/}
 							</div>
 							{/* END: CONTACT TEXT CONTAINER*/}
-						</section >
+						</section>
 						{/* END: MAIN CONTENT CONTAINER */}
 					</section>
-
 				</main>
 				<footer className="mt-5 flex w-screen justify-center text-center">
 					<div className="flex flex-col">
@@ -372,7 +386,7 @@ export default function Index() {
 						</div>
 					</div>
 				</footer>
-			</div>
+			</div >
 		</>
 	)
 }

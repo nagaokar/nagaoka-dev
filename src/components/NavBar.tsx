@@ -12,12 +12,16 @@ interface NavItemProps {
   imageProps?: ImageProps
 }
 
-export const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
+export const NavItem: React.FC<NavItemProps> = ({
+  href,
+  children,
+  imageProps,
+}) => {
   const { asPath } = useRouter()
   const isCurrent = asPath === href
 
   return (
-    <div className="xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5 flex flex-col items-center">
+    <div className="flex flex-col items-center xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
       <Link href={href} className="flex hover:font-bold">
         {children}
       </Link>
@@ -47,7 +51,8 @@ export default function Nav() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) { // 768 is the width for md breakpoint
+      if (window.innerWidth < 768) {
+        // 768 is the width for md breakpoint
         setIsCollapsed(true)
       } else {
         setIsCollapsed(false)
@@ -63,16 +68,26 @@ export default function Nav() {
 
   return (
     <nav
-      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${isCollapsed ? 'collapsed' : ''
-        }`}
+      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${
+        isCollapsed ? 'collapsed' : ''
+      }`}
     >
       <div className="flex flex-col justify-center text-center align-middle font-thin">
         <div className="flex justify-center text-center md:hidden">
-          <button className="mb-2 flex items-center bg-white px-3 text-center" onClick={toggleCollapse}>
+          <button
+            className="mb-2 flex items-center bg-white px-3 text-center"
+            onClick={toggleCollapse}
+          >
             {isCollapsed ? (
               <Image src={CircledPlus} width={25} height={25} alt="" />
             ) : (
-              <Image className="rotate-90" src={CircledPlus} width={25} height={25} alt="" />
+              <Image
+                className="rotate-90"
+                src={CircledPlus}
+                width={25}
+                height={25}
+                alt=""
+              />
             )}
           </button>
         </div>
@@ -86,5 +101,5 @@ export default function Nav() {
         )}
       </div>
     </nav>
-  );
+  )
 }

@@ -9,8 +9,8 @@ import commitIcon from '../icons/undraw/undraw_x-mark.svg'
 import underline from '../icons/undraw/undraw_underline.svg'
 
 interface GitBranchCardProps {
-  commit: Commit,
-  nodeCount: number;
+  commit: Commit
+  nodeCount: number
   index: number
 }
 
@@ -28,82 +28,81 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        closePopup();
+        closePopup()
       }
-    };
-    window.addEventListener('keydown', handleKeyPress);
+    }
+    window.addEventListener('keydown', handleKeyPress)
     return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [])
 
   useEffect(() => {
     if (isPopupOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'auto'
     }
     return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isPopupOpen]);
+      document.body.style.overflow = 'auto'
+    }
+  }, [isPopupOpen])
 
   const branchMarginMap: { [branch: string]: string } = {
-    'main': "ml-0",
-    'develop/layout': "ml-8",
-    'develop/work': "ml-12",
-    'feature/gitgraph': "ml-16",
-    'feature/spa': "ml-24",
-  };
+    main: 'ml-0',
+    'develop/layout': 'ml-8',
+    'develop/work': 'ml-12',
+    'feature/gitgraph': 'ml-16',
+    'feature/spa': 'ml-24',
+  }
 
   const branchWidthMap: { [branch: string]: string } = {
-    'main': "w-4",
-    'develop/layout': "w-10",
-    'develop/work': "w-12",
-    'feature/gitgraph': "w-16",
-    'feature/spa': "w-24",
-  };
+    main: 'w-4',
+    'develop/layout': 'w-10',
+    'develop/work': 'w-12',
+    'feature/gitgraph': 'w-16',
+    'feature/spa': 'w-24',
+  }
 
+  const branchMargin = branchMarginMap[commit.branch]
+  const branchWidth = branchWidthMap[commit.branch]
 
-  const branchMargin = branchMarginMap[commit.branch];
-  const branchWidth = branchWidthMap[commit.branch];
-
-
-  const branchLineHeight = 48;
-  const branchLineTopOffset = branchLineHeight / 2;
-  const connectingLinesHeight = branchLineHeight * (nodeCount - 1);
-  const connectingLinesTopOffset = branchLineTopOffset - connectingLinesHeight / 2;
-
+  const branchLineHeight = 48
+  const branchLineTopOffset = branchLineHeight / 2
+  const connectingLinesHeight = branchLineHeight * (nodeCount - 1)
+  const connectingLinesTopOffset =
+    branchLineTopOffset - connectingLinesHeight / 2
 
   return (
     <>
       {/* START: GRAPHCONTAINER */}
       <section id="graphContainer">
         {/* START: GRAPH */}
-        <div className="flex flex-row w-content justify-start text-start 
-        hover:underline">
+        <div
+          className="w-content flex flex-row justify-start text-start 
+        hover:underline"
+        >
           {/* <div className='w-[5px] bg-black'></div> */}
           {/* START: COMMITCARD */}
           <button
             id={`project${commit.sha}Card`}
-            className={`text-start flex flex-row bg-white h-content`}
+            className={`h-content flex flex-row bg-white text-start`}
             onClick={openPopup}
           >
-            <div className='flex mr-1 text-end justify-end'>
-              <p className='opacity-70'>{commit.sha}</p>
+            <div className="mr-1 flex justify-end text-end">
+              <p className="opacity-70">{commit.sha}</p>
             </div>
 
-            <div className={`${branchWidth} h-[5px] border-b-2 mt-3 
-            border-black flex align-middle`}>
-            </div>
+            <div
+              className={`${branchWidth} mt-3 flex h-[5px] 
+            border-b-2 border-black align-middle`}
+            ></div>
 
             {/* START: GRAPHNODE */}
-            <div id={`${commit.sha}Node`}
-              className='flex text-start'>
-            </div>
+            <div id={`${commit.sha}Node`} className="flex text-start"></div>
             {/* END: GRAPHNODE */}
-            <div className='flex flex-row justify-start'>
-              <p className="text-lg text-start">{commit.branch}</p>
+            <div className="flex flex-row justify-start">
+              <p className="text-start text-lg">{commit.branch}</p>
               {/* <p className="ml-2 flex flex-col text-xs justify-center opacity-30">{commit.date}</p> */}
             </div>
           </button>
@@ -113,29 +112,29 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
 
         {/* START: POPUP */}
         {isPopupOpen && (
-          <div className='flex flex-col h-content justify-center items-center max-w-screen min-w-72'>
+          <div className="h-content max-w-screen min-w-72 flex flex-col items-center justify-center">
             <Popup onClick={closePopup}>
               {/* START REFACTOR? PROJECTPOPUP */}
               <>
-                <div className="flex flex-col h-content">
-                  <div className="flex flex-col text-4xl m-3 mb-6 mt-6 justify-center text-center">
-                    <p className='font-bold underline'>{commit.branch}</p>
-                    <p className='text-sm'>branch</p>
+                <div className="h-content flex flex-col">
+                  <div className="m-3 mb-6 mt-6 flex flex-col justify-center text-center text-4xl">
+                    <p className="font-bold underline">{commit.branch}</p>
+                    <p className="text-sm">branch</p>
                   </div>
-                  <div className="flex text-center text-xl justify-center h-content">
+                  <div className="h-content flex justify-center text-center text-xl">
                     <p>{commit.sha}</p>
                   </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <div className="text-center my-3 opacity-50">
+                  <div className="flex h-full flex-col justify-center">
+                    <div className="my-3 text-center opacity-50">
                       <p>{commit.date}</p>
                     </div>
                     <Spacer />
-                    <p className='text-md underline'>message:</p>
-                    <div className="flex flex-col text-start text-xl my-2 min-w-[300px]">
+                    <p className="text-md underline">message:</p>
+                    <div className="my-2 flex min-w-[300px] flex-col text-start text-xl">
                       <p>{commit.message}</p>
                     </div>
                     <Spacer />
-                    <div className="flex justify-end text-end text-2xl mb-3">
+                    <div className="mb-3 flex justify-end text-end text-2xl">
                       <p>- {commit.author}</p>
                     </div>
                   </div>
@@ -146,14 +145,11 @@ const GitBranchCard: React.FC<GitBranchCardProps> = ({ commit, nodeCount }) => {
         )}
         {/* END: POPUP */}
       </section>
-
     </>
   )
 }
 
 export default GitBranchCard
-
-
 
 // {/* START: COMMITCARD */}
 // <button

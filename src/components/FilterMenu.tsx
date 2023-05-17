@@ -14,7 +14,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
   return (
     <div className="mx-2 lowercase">
       <ul className="flex flex-row flex-wrap">
-        <p className='font-bold m-2'>type</p>
+        <p className="m-2 font-bold">type</p>
         {categories.map((category) => (
           <li
             className={`m-2 cursor-pointer hover:underline ${

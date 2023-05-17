@@ -1,42 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import escBtn from '../icons/undraw/undraw_escape-button.svg';
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
+import escBtn from '../icons/undraw/undraw_escape-button.svg'
 
 export interface PopupProps {
-  children: React.ReactNode;
-  onClick?: () => void;
+  children: React.ReactNode
+  onClick?: () => void
 }
 
 const Popup: React.FC<PopupProps> = ({ children, onClick }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const togglePopup = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen)
     if (onClick) {
-      onClick();
+      onClick()
     }
-  };
+  }
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerHeight < document.documentElement.scrollHeight) {
-        setIsOpen(true);
+        setIsOpen(true)
       }
-    };
+    }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <>
       <div
         className={`fixed inset-0 z-10 flex items-${
           isOpen ? 'start' : 'center'
-        } py-1 justify-center overflow-y-scroll xs:items-start sm:items-start md:items-center xl:items-center 2xl:items-center`}
+        } justify-center overflow-y-scroll py-1 xs:items-start sm:items-start md:items-center xl:items-center 2xl:items-center`}
       >
         <div
           className={`h-content m-2 flex flex-col border-2 border-black bg-white p-4 md:w-2/3 ${
@@ -44,7 +44,7 @@ const Popup: React.FC<PopupProps> = ({ children, onClick }) => {
           }`}
         >
           {/* BUTTON */}
-          <button className="flex justify-start mb-6" onClick={togglePopup}>
+          <button className="mb-6 flex justify-start" onClick={togglePopup}>
             <Image
               className="absolute hover:w-[50px]"
               src={escBtn}
@@ -60,7 +60,7 @@ const Popup: React.FC<PopupProps> = ({ children, onClick }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Popup;
+export default Popup

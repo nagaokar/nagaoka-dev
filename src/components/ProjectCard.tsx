@@ -7,7 +7,6 @@ import Spacer from './Spacer'
 import circledArrow from '../icons/undraw/undraw_circled-arrow.svg'
 import GitgraphViewer from './GitgraphViewer'
 
-
 interface ProjectCardProps {
   post: Post
   index: number
@@ -27,38 +26,35 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        closePopup();
+        closePopup()
       }
-    };
-    window.addEventListener('keydown', handleKeyPress);
+    }
+    window.addEventListener('keydown', handleKeyPress)
     return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [])
 
   useEffect(() => {
     if (isPopupOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'auto'
     }
     return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isPopupOpen]);
+      document.body.style.overflow = 'auto'
+    }
+  }, [isPopupOpen])
 
-
-  const isNagaokaDev = post.organisation === 'Nagaoka.dev';
+  const isNagaokaDev = post.organisation === 'Nagaoka.dev'
 
   return (
     <section
-      id="projectCardContainer" className="flex flex-col flex-wrap justify-center md:flex-row">
-
+      id="projectCardContainer"
+      className="flex flex-col flex-wrap justify-center md:flex-row"
+    >
       {/* START REFACTOR? PROJECTCARD */}
-      <button
-        className="m-3 border-2 border-black p-2"
-        onClick={openPopup}
-      >
+      <button className="m-3 border-2 border-black p-2" onClick={openPopup}>
         <div
           id={`project${post.id}Card`}
           className="m-5 flex h-64 w-52 flex-col justify-center p-5 lowercase md:w-64"
@@ -68,17 +64,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
           </div>
 
           <div className="flex flex-col justify-center text-center">
-            <p className="text-lg font-bold text-center">
-              {post.organisation}
-            </p>
+            <p className="text-center text-lg font-bold">{post.organisation}</p>
           </div>
           <div className="flex flex-col justify-start text-center text-lg">
             <p>{post.title}</p>
           </div>
           <div className="flex flex-col justify-center text-center">
-            <p className="mt-2 text-sm opacity-30">
-              {post.date}
-            </p>
+            <p className="mt-2 text-sm opacity-30">{post.date}</p>
           </div>
         </div>
       </button>
@@ -88,20 +80,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
         <Popup onClick={closePopup}>
           {/* START REFACTOR? PROJECTPOPUP */}
           <>
-            <div className="flex flex-col h-content">
-              <div className="flex text-5xl m-3 justify-center text-center">
+            <div className="h-content flex flex-col">
+              <div className="m-3 flex justify-center text-center text-5xl">
                 <p>{post.title}</p>
               </div>
             </div>
-            <div className="flex text-center text-3xl h-content">
+            <div className="h-content flex text-center text-3xl">
               <p>{post.organisation}</p>
             </div>
-            <div className="flex flex-col h-full justify-center">
-              <div className="text-xl text-red-500 text-center my-3">
+            <div className="flex h-full flex-col justify-center">
+              <div className="my-3 text-center text-xl text-red-500">
                 <p>{post.date}</p>
               </div>
               <Spacer />
-              <div className="flex text-xl my-2">
+              <div className="my-2 flex text-xl">
                 <p>{post.desc}</p>
               </div>
               <Spacer />
@@ -121,11 +113,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                 </>
               )} */}
               {/* START: IMAGE LINK */}
-              {post.link && post.link !== "" && (
-                <div className='mb-12'>
+              {post.link && post.link !== '' && (
+                <div className="mb-12">
                   <a
-                    className='flex justify-center mt-5'
-                    href={post.link} target="_blank" rel="noopener noreferrer">
+                    className="mt-5 flex justify-center"
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       className="absolute -rotate-90 hover:w-[45px]"
                       src={circledArrow}
@@ -136,12 +131,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ post, index }) => {
                   </a>
                 </div>
               )}
-                {/* END: IMAGE LINK */}
+              {/* END: IMAGE LINK */}
             </div>
           </>
         </Popup>
-      )
-      }
+      )}
     </section>
   )
 }
