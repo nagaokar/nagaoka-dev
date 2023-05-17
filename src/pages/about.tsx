@@ -2,12 +2,6 @@ import React from 'react'
 import Spacer from '@/components/Spacer'
 import Layout from '@/components/layouts/layout'
 import { textData } from '@/lib/TextDatabase'
-import { posts } from '@/lib/ContentDatabase'
-import PostList from '@/components/PostList'
-
-import Image from 'next/image'
-import curvedUnderline from '../icons/undraw/undraw_curved-underline.svg'
-import StarSpacer from '@/components/StarSpacer'
 
 export default function About() {
   const taglineText = textData.find((item) => item.tag === 'tagline')
@@ -16,12 +10,6 @@ export default function About() {
   if (!taglineText) { return null }
   if (!academicProfileText) { return null }
   if (!developerProfileText) { return null }
-
-  const employmentPosts = posts.filter((post) => post.tag === 'employment');
-  const academicPosts = posts.filter((post) => post.tag === 'academic');
-  const educationPosts = posts.filter((post) => post.tag === 'education');
-  const gamesPosts = posts.filter((post) => post.tag === 'game');
-
   return (
     <>
       <Layout>
@@ -35,7 +23,6 @@ export default function About() {
             alt=""
           />
         </div> */}
-        <TaglineSection />
         <div className="flex justify-center">
           <div className="w-144 sm:text-md my-6 flex flex-col justify-center border-2 border-black p-6 text-center text-2xl font-bold">
             <Spacer />
