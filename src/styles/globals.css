@@ -15,7 +15,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-.html {
+html {
   text-transform: lowercase;
 }
 
@@ -23,7 +23,6 @@ body {
     background-color: white;
     font-family: More Sugar, sans-serif;
     text-transform: lowercase;
-
 }
 
 h1 {

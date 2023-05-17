@@ -45,24 +45,10 @@ export default function Nav() {
     setIsCollapsed((prevCollapsed) => !prevCollapsed)
   }
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsCollapsed(window.innerWidth < 640); // Set isCollapsed to true for sm and xs breakpoints
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Call handleResize initially to set the initial state based on the window width
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <nav
-      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${
-        isCollapsed ? 'collapsed' : ''
-      }`}
+      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${isCollapsed ? 'collapsed' : ''
+        }`}
     >
       <div className="flex flex-col justify-center text-center align-middle font-thin">
         <div className="flex justify-center text-center md:hidden">
