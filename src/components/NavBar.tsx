@@ -39,7 +39,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
 }
 
 export default function Nav() {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
   const toggleCollapse = () => {
     setIsCollapsed((prevCollapsed) => !prevCollapsed)
@@ -47,22 +47,24 @@ export default function Nav() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsCollapsed(window.innerWidth < 640); // Set isCollapsed to true for sm and xs breakpoints
-    };
+      if (window.innerWidth < 768) { // 768 is the width for md breakpoint
+        setIsCollapsed(true)
+      } else {
+        setIsCollapsed(false)
+      }
+    }
 
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Call handleResize initially to set the initial state based on the window width
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <nav
-      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${
-        isCollapsed ? 'collapsed' : ''
-      }`}
+      className={`z-40 flex flex-col items-center justify-center border-b-2 border-black bg-white py-3 ${isCollapsed ? 'collapsed' : ''
+        }`}
     >
       <div className="flex flex-col justify-center text-center align-middle font-thin">
         <div className="flex justify-center text-center md:hidden">

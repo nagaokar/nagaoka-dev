@@ -19,7 +19,7 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory }) => {
   )
 
   return (
-    <div>
+    <>
       <div className="h-content w-100 flex flex-wrap justify-start lowercase">
         {sortedPosts.map((post) => (
           <div key={post.id}>
@@ -27,7 +27,7 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory }) => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   )
 }
 

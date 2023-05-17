@@ -2,12 +2,6 @@ import React from 'react'
 import Spacer from '@/components/Spacer'
 import Layout from '@/components/layouts/layout'
 import { textData } from '@/lib/TextDatabase'
-import { posts } from '@/lib/ContentDatabase'
-import PostList from '@/components/PostList'
-
-import Image from 'next/image'
-import curvedUnderline from '../icons/undraw/undraw_curved-underline.svg'
-import StarSpacer from '@/components/StarSpacer'
 
 export default function About() {
   const taglineText = textData.find((item) => item.tag === 'tagline')
@@ -16,44 +10,19 @@ export default function About() {
   if (!taglineText) { return null }
   if (!academicProfileText) { return null }
   if (!developerProfileText) { return null }
-
-  const employmentPosts = posts.filter((post) => post.tag === 'employment');
-  const academicPosts = posts.filter((post) => post.tag === 'academic');
-  const educationPosts = posts.filter((post) => post.tag === 'education');
-  const gamesPosts = posts.filter((post) => post.tag === 'game');
-
   return (
     <>
       <Layout>
-
-      {/* START: TITLE */}
-      <div className='flex justify-center text-6xl mt-3 mb-12 rotate-3'>
-        <p>About</p>
-      </div>
-      {/* END: TITLE */}
-
-        <section id="taglineCard" className="flex justify-center">
-          <div className="m-3">
-            <p className="max-w-[800px] text-xl font-bold">{taglineText.sentences}</p>
-            <div className="mt-8 flex justify-center"></div>
-          </div>
-        </section>
-
-        <section id="profileCard" className="flex justify-center">
-          <div className="m-3">
-            <p className="max-w-[800px] text-xl">{academicProfileText.sentences}</p>
-            <div className="mt-8 flex justify-center"></div>
-          </div>
-        </section>
-
-        <section id="profileCard" className="flex justify-center">
-          <div className="m-3">
-            <p className="max-w-[800px] text-xl">{developerProfileText.sentences}</p>
-            <div className="mt-8 flex justify-center"></div>
-          </div>
-        </section>
-
-        {/* START: NOTE */}
+        {/* <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
+          <p className="-rotate-2">About</p>
+          <Image
+            className="justify-center"
+            src={curvedUnderline}
+            width={200}
+            height={100}
+            alt=""
+          />
+        </div> */}
         <div className="flex justify-center">
           <div className="w-144 sm:text-md my-6 flex flex-col justify-center border-2 border-black p-6 text-center text-2xl font-bold">
             <Spacer />
