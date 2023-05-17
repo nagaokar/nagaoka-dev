@@ -23,8 +23,15 @@ export default function About() {
             alt=""
           />
         </div> */}
+        {/* START: TITLE */}
+        <div className='flex justify-center text-6xl mt-3 mb-12 -rotate-3'>
+          <p>projects</p>
+        </div>
+        {/* END: TITLE */}
+        
+        {/* START: NOTE */}
         <div className="flex justify-center">
-          <div className="w-144 sm:text-md my-6 flex flex-col justify-center border-2 border-black p-6 text-center text-2xl font-bold">
+          <div className="max-w-144 sm:text-md my-6 flex flex-col justify-center p-6 text-center text-2xl font-bold">
             <Spacer />
             <div className="my-4">
               <p className="my-2 bg-white text-xl font-bold underline decoration-2">
@@ -42,30 +49,33 @@ export default function About() {
           </div>
         </div>
         {/* END: NOTE */}
-
-
-        {/* <section id="cv">
-
-        START: TITLE
-        <div className='flex justify-center text-6xl mt-3 mb-12 rotate-3'>
-        <p>About</p>
-        </div>
-        END: TITLE
-        
-        
+        {/* START: ABOUT */}
+        <section id="taglineCard" className="flex justify-center">
+          <div
+            id="profileContainer"
+            className="mb-5 mt-3 flex flex-col max-w-[800px]"
+          >
+            <div
+              id="academicProfileTextprofileContainer"
+              className='text-xl'
+            >
+              <p className='font-bold'>{academicProfileText.title}</p>
+              <p className='text-xl max-w-144 mb-6'>
+                {academicProfileText.sentences}
+              </p>
+            </div>
+            <div
+              id="developerProfileTextprofileContainer"
+              className='text-xl'
+            >
+              <p className='font-bold'>{developerProfileText.title}</p>
+              <p className='text-xl max-w-144 mb-6'>
+                {developerProfileText.sentences}
+              </p>
+            </div>
+          </div>
         </section>
-          <section id="cvContent"
-            className="flex flex-row-reverse flex-wrap justify-center">
-            <div id="cv-column" className="flex flex-col">
-              <PostList title="Academic" posts={academicPosts} />
-              <PostList title="Games" posts={gamesPosts} />
-            </div>
-            <div id="cv-column" className="flex flex-col">
-              <PostList title="Employment" posts={employmentPosts} />
-              <PostList title="Education" posts={educationPosts} />
-            </div>
-          </section>
-        </section> */}
+        {/* END: ABOUT */}
 
       </Layout>
     </>
