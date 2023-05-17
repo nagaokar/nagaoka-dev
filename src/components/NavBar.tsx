@@ -12,7 +12,7 @@ interface NavItemProps {
   imageProps?: ImageProps
 }
 
-const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
+export const NavItem: React.FC<NavItemProps> = ({ href, children, imageProps }) => {
   const { asPath } = useRouter()
   const isCurrent = asPath === href
 
