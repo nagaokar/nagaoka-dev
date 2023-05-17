@@ -12,7 +12,8 @@ import linkedInIcon from '../icons/remix/linkedin-box-line.svg'
 import TwitterIcon from '../icons/remix/twitter-line.svg'
 import CircledPlus from '../icons/undraw/undraw_circled-plus.svg'
 import DoubleUnderline from '../icons/undraw/undraw_double-underline.svg'
-import { NavItem } from '@/components/NavBar'
+import Nav from '@/components/navigation/NavBar'
+import { NavItem } from '@/components/navigation/NavItem'
 
 export default function Index() {
 	const taglineText = textData.find((item) => item.tag === 'tagline')
@@ -76,47 +77,8 @@ export default function Index() {
 
 	return (
 		<>
+			<Nav />
 			<div className="flex min-h-screen flex-col">
-
-				<nav
-					className={`z-99 overflow-x-hidden ${isScrolled ? 'sticky top-0' : ''
-						}`}
-				>
-					<nav
-						className={`
-							z-99 z-40 flex flex-col items-center justify-center overflow-x-hidden border-b-2 border-black bg-white py-3 
-							${isScrolled ? 'sticky top-0' : ''}
-							${isCollapsed ? 'collapsed' : ''}
-						`}
-					>
-						<div className="flex flex-col justify-center text-center align-middle font-thin">
-							<div className="flex justify-center text-center md:hidden">
-								<button
-									className="mb-2 flex items-center bg-white px-3 text-center"
-									onClick={toggleCollapse}
-								>
-									<Image
-										src={CircledPlus}
-										width={25}
-										height={25}
-										alt=""
-										className={isCollapsed ? '' : 'rotate-90'}
-									/>
-								</button>
-							</div>
-							{!isCollapsed && (
-								<div className="flex-col items-center justify-center bg-white md:flex md:flex-row">
-									<div className="flex flex-col items-center xs:px-2 sm:px-3 md:px-3 lg:px-5 xl:px-5 2xl:px-5">
-										<div>
-											{/* TODO: JUMP TO SECTION (USING ID) */}
-											<p id="nav-item">About</p>
-										</div>
-									</div>
-								</div>
-							)}
-						</div>
-					</nav>
-				</nav>
 
 				<main className="max-w-screen font-regular mt-12 flex flex-col overflow-x-hidden bg-white px-8 lowercase text-black">
 					<section id="home">
@@ -386,7 +348,7 @@ export default function Index() {
 						</div>
 					</div>
 				</footer>
-			</div >
+			</div>
 		</>
 	)
 }
