@@ -113,7 +113,7 @@ export const posts: Post[] = [
     title: 'Ph.D. Architecture',
     organisation: 'Manchester Metropolitan University',
     desc: "Due to be completed in 2026, my research is Leverhulme-funded and uses online multiplayer games to understand player behaviour when the systemic consequences of climate change are revealed. I work across the MMU Postgraduate School of Arts and Humanities and the Manchester School of Architecture (MSA). My supervisors are Ulysess Sengupta (CPU Lab, MSA), Paul Wake (Dept. of English, MMU), and Bodhi Chattopadhyay (CoFutures Lab, University of Oslo)",
-    link: '',
+    link: 'https://manchestergamecentre.org/research-students',
     date: '2026',
     slug: 'phd'
 
