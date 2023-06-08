@@ -1,6 +1,7 @@
 import React from 'react'
 import Spacer from '@/components/Spacer'
 import Layout from '@/components/layouts/layout'
+import LayoutNoFooter from '@/components/layouts/layout-no_footer'
 import { textData } from '@/lib/TextDatabase'
 
 export default function About() {
@@ -12,7 +13,7 @@ export default function About() {
   if (!developerProfileText) { return null }
   return (
     <>
-      <Layout>
+      <LayoutNoFooter>
         {/* <div className="font-bold my-3 flex flex-col text-5xl items-center text-center mb-12">
           <p className="-rotate-2">About</p>
           <Image
@@ -58,7 +59,7 @@ export default function About() {
         </section>
         {/* END: ABOUT */}
 
-      </Layout>
+      </LayoutNoFooter>
     </>
   )
 }
