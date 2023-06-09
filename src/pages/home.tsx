@@ -42,7 +42,7 @@ export default function Home() {
               className="xs:text-md font-thin xs:w-48 sm:w-64 sm:text-lg md:w-64 md:text-lg lg:w-72 lg:text-xl xl:w-72 xl:text-2xl
                 "
             >
-              scholar, game maker, web developer, writer.
+              phd researcher, game developer, full-stack web developer, writer.
             </p>
           </div>
           {/* END: INTRO TEXT*/}
