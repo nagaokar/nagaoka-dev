@@ -277,4 +277,16 @@ export const posts: Post[] = [
     date: '2023',
     slug: 'urexbfbandwebsite'
   },
+  {
+    id: 22,
+    tag: 'employment',
+    subtag: 'publication',
+    title: 'writer',
+    organisation: 'The Whip',
+    desc: "A freelance writer for the satirical student newspaper 'The Whip'.",
+    link: '',
+    date: '2019-2020',
+    slug: 'the-whip'
+  },
 ]
+s

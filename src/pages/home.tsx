@@ -39,8 +39,7 @@ export default function Home() {
               I&apos;m reiji nagaoka.
             </p>
             <p
-              className="xs:text-md font-thin xs:w-48 sm:w-64 sm:text-lg md:w-64 md:text-lg lg:w-72 lg:text-xl xl:w-72 xl:text-2xl
-                "
+              className="xs:text-md font-thin xs:w-48 sm:w-64 sm:text-lg md:w-64 md:text-lg lg:w-72 lg:text-xl xl:w-72 xl:text-2xl"
             >
               phd researcher, game developer, full-stack web developer, writer.
             </p>
