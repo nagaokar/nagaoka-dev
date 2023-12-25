@@ -228,7 +228,7 @@ export const posts: Post[] = [
     subtag:'music',
     title: 'drummer',
     organisation: 'ur ex-bf',
-    desc: "I am the drummer for the post-punk / indie rock band 'Ur EX-BF' formed in Manchester, with two singles arriving soon.",
+    desc: "drummer for the post-punk / indie rock band 'Ur EX-BF' formed in Manchester, with two singles arriving soon.",
     link: 'https://www.instagram.com/urexbfband/',
     date: '2023',
     slug: 'urexbf-band'
@@ -266,17 +266,17 @@ export const posts: Post[] = [
     date: '2019',
     slug: 'ma-architecture-generative-housing'
   },  
-  {
-    id: 22,
-    tag: 'hobby',
-    subtag: 'web development',
-    title: 'designer + developer',
-    organisation: 'ur exbf',
-    desc: "design and development (currently ongoing) of a website for the band: ur ex-bf.",
-    link: '',
-    date: '2023',
-    slug: 'urexbfbandwebsite'
-  },
+  // {
+  //   id: 22,
+  //   tag: 'hobby',
+  //   subtag: 'web development',
+  //   title: 'designer + developer',
+  //   organisation: 'ur exbf',
+  //   desc: "design and development (currently ongoing) of a website for the band: ur ex-bf.",
+  //   link: '',
+  //   date: '2023',
+  //   slug: 'urexbfbandwebsite'
+  // },
   {
     id: 22,
     tag: 'employment',
