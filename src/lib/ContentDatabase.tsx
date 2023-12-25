@@ -288,4 +288,15 @@ export const posts: Post[] = [
     date: '2019-2020',
     slug: 'the-whip'
   },
+  {
+    id: 23,
+    tag: 'employment',
+    subtag: 'academic',
+    title: 'lecturer',
+    organisation: 'Manchester School of Architecture',
+    desc: "Lecturer in Architectural Digital Design.",
+    link: 'https://www.msa.ac.uk/staff/rnagaoka/',
+    date: '2022-2023',
+    slug: 'msa-add'
+  },
 ]

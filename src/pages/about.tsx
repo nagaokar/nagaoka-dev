@@ -30,9 +30,26 @@ export default function About() {
           <p>About</p>
         </div>
         {/* END: TITLE */}
-        
-        {/* START: ABOUT */}
+
         <section id="taglineCard" className="flex justify-center">
+          <div
+            id="profileContainer"
+            className="mb-5 mt-3 flex flex-col max-w-[800px]"
+          >
+            <div
+              id="academicProfileTextprofileContainer"
+              className='text-xl'
+            >
+              <p className='font-bold'>{academicProfileText.title}</p>
+              <p className='text-xl max-w-144 mb-6'>
+                {academicProfileText.sentences}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* START: ABOUT */}
+        {/* <section id="taglineCard" className="flex justify-center">
           <div
             id="profileContainer"
             className="mb-5 mt-3 flex flex-col max-w-[800px]"
@@ -56,7 +73,7 @@ export default function About() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* END: ABOUT */}
 
       </LayoutNoFooter>
