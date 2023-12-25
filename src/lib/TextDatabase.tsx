@@ -41,6 +41,6 @@ export const textData: Text[] = [
       "I am a Leverhulme Doctoral Scholar within the Leverhulme Unit for the Design for cities of the Future (LUDEC) and a  Lecturer at the Manchester School of Architecture in the Architectural Digital Design department",
       "My PhD project is situated in the domains of urban planning, game studies, and climate change communication. My research group affliations are the Manchester Game Centre and the Complexity, and Urbanism [CPU] Lab.",
     ],
-    tag: "academicProfile",
+    tag: "aboutProfile",
   },
 ]

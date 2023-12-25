@@ -6,9 +6,11 @@ import { textData } from '@/lib/TextDatabase'
 
 export default function About() {
   const taglineText = textData.find((item) => item.tag === 'tagline')
+  const aboutProfileText = textData.find((item) => item.tag === 'aboutProfile')
   const academicProfileText = textData.find((item) => item.tag === 'academicProfile')
   const developerProfileText = textData.find((item) => item.tag === 'developerProfile')
   if (!taglineText) { return null }
+  if (!aboutProfileText) { return null }
   if (!academicProfileText) { return null }
   if (!developerProfileText) { return null }
   return (
@@ -40,9 +42,9 @@ export default function About() {
               id="academicProfileTextprofileContainer"
               className='text-xl'
             >
-              <p className='font-bold'>{academicProfileText.title}</p>
+              <p className='font-bold'>{aboutProfileText.title}</p>
               <p className='text-xl max-w-144 mb-6'>
-                {academicProfileText.sentences}
+                {aboutProfileText.sentences}
               </p>
             </div>
           </div>
